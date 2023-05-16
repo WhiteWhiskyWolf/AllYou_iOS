@@ -14,7 +14,7 @@ class AlterRepository {
     private lazy var database: Databases = { Databases(appwriteClient.getClient()) }()
     private let logger = Logger(subsystem: "UserRepository", category: "background")
     
-    private let collectionId = ""
+    
     
     func getAltersById(id: String) async ->AlterModel? {
         do {

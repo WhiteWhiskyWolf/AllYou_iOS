@@ -14,8 +14,6 @@ class FrontRepository {
     private lazy var database: Databases = { Databases(appwriteClient.getClient()) }()
     private let logger = Logger(subsystem: "FrontRepository", category: "background")
     
-    private let collectionId = ""
-    
     func getLastFrontRecordForAlter(alterId: String) async -> FrontRecord? {
         do {
             let documents = try await database.listDocuments(
