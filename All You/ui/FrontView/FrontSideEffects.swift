@@ -2,7 +2,7 @@
 //  FrontSideEffects.swift
 //  AllYou
 //
-//  Created by Cate Daniel on 2023-05-01.
+//  Created by Cate Daniel on 2023-05-16.
 //
 
 import Foundation
@@ -10,11 +10,22 @@ import Foundation
 class FrontSideEffects {
     @Service var getCurrentUserUseCase: GetCurrentUserUseCase
     @Service var getUserAltersUseCase: GetUserAltersUseCase
+    @Service var searchAltersUseCase: SearchAltersUseCase
     
     func sideEffects() -> [SideEffect<FrontState, FrontActions>] {
         return [
-            onLoadSideEffect
+            onLoadSideEffect,
+            onSearchSideEffect
         ]
+    }
+    
+    private func onSearchSideEffect(previousState: FrontState, newState: FrontState, action: FrontActions, dispatch: Dispatch<FrontActions>) async {
+        if case .SearchAlter(let searchString) = action {
+            if .Loaded(_, _, _, let selectedUser, _) = newState {
+                let foundAlters = searchAltersUseCase.invoke(userId: selectedUser.id, search: searchString)
+                dispatch(FrontActions.SetAlters(alters: foundAlters))
+            }
+        }
     }
     
     private func onLoadSideEffect(previousState: FrontState, newState: FrontState, action: FrontActions, dispatch: Dispatch<FrontActions>) async {

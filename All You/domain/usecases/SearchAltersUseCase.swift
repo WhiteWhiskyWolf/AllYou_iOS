@@ -1,20 +1,19 @@
 //
-//  GetUserAltersUseCase.swift
-//  AllYou
+//  SearchAltersUseCase.swift
+//  All You
 //
 //  Created by Cate Daniel on 2023-05-16.
 //
 
 import Foundation
 
-class GetUserAltersUseCase {
+class SearchAltersUseCase {
     @Service var alterRepository: AlterRepository
     @Service var profilePhotoRepository: ProfilePhotoRepository
     @Service var frontRepository: FrontRepository
     
-    func invoke(userId: String, lastAlterId: String?) async -> [AlterUIModel] {
-        let alters = await alterRepository.getAltersForUser(lastAlterId: lastAlterId, userId: userId)
-        return await alters.asyncMap { alter in
+    func invoke(userId: String, search: String) async -> [AlterUIModel] {
+        return alterRepository.searchUserAlters(userId: userId, search: search).map { alter in
             var profilePhoto: Data? = nil
             if (alter.alterProfilePhoto != nil) {
                 profilePhoto = await profilePhotoRepository.getPhotoForUser(id: alter.alterProfilePhoto!)

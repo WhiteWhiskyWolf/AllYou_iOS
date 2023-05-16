@@ -209,6 +209,10 @@
 		030C23522A13B5BE00625532 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 030C22912A13B5BE00625532 /* Info.plist */; };
 		030C23532A13B5BE00625532 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 030C22912A13B5BE00625532 /* Info.plist */; };
 		030C23542A13B5BE00625532 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 030C22912A13B5BE00625532 /* Info.plist */; };
+		030C23572A13B83900625532 /* Appwrite in Frameworks */ = {isa = PBXBuildFile; productRef = 030C23562A13B83900625532 /* Appwrite */; };
+		030C23592A13B97E00625532 /* SearchAltersUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C23582A13B97E00625532 /* SearchAltersUseCase.swift */; };
+		030C235A2A13B97E00625532 /* SearchAltersUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C23582A13B97E00625532 /* SearchAltersUseCase.swift */; };
+		030C235B2A13B97E00625532 /* SearchAltersUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C23582A13B97E00625532 /* SearchAltersUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -304,6 +308,7 @@
 		030C228E2A13B5BE00625532 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		030C22902A13B5BE00625532 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		030C22912A13B5BE00625532 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = SOURCE_ROOT; };
+		030C23582A13B97E00625532 /* SearchAltersUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAltersUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -311,6 +316,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				030C23572A13B83900625532 /* Appwrite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,6 +453,7 @@
 				030C22502A13B5BE00625532 /* UploadProfilePhotoUseCase.swift */,
 				030C22512A13B5BE00625532 /* SignInWithGoogleUseCase.swift */,
 				030C22522A13B5BE00625532 /* IsUserSignedInUseCase.swift */,
+				030C23582A13B97E00625532 /* SearchAltersUseCase.swift */,
 			);
 			path = usecases;
 			sourceTree = "<group>";
@@ -644,6 +651,9 @@
 			dependencies = (
 			);
 			name = "All You";
+			packageProductDependencies = (
+				030C23562A13B83900625532 /* Appwrite */,
+			);
 			productName = "All You";
 			productReference = 030C220E2A13B2FE00625532 /* All You.app */;
 			productType = "com.apple.product-type.application";
@@ -716,6 +726,9 @@
 				Base,
 			);
 			mainGroup = 030C22052A13B2FE00625532;
+			packageReferences = (
+				030C23552A13B83900625532 /* XCRemoteSwiftPackageReference "sdk-for-swift" */,
+			);
 			productRefGroup = 030C220F2A13B2FE00625532 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -797,6 +810,7 @@
 				030C22BF2A13B5BE00625532 /* GetUserAltersUseCase.swift in Sources */,
 				030C229B2A13B5BE00625532 /* AuthenticationRepository.swift in Sources */,
 				030C230D2A13B5BE00625532 /* SettingsView.swift in Sources */,
+				030C23592A13B97E00625532 /* SearchAltersUseCase.swift in Sources */,
 				030C23462A13B5BE00625532 /* ServiceContainer.swift in Sources */,
 				030C22DA2A13B5BE00625532 /* FrontActions.swift in Sources */,
 				030C22A72A13B5BE00625532 /* AppwriteClient.swift in Sources */,
@@ -868,6 +882,7 @@
 				030C23442A13B5BE00625532 /* NotificationsPermissions.swift in Sources */,
 				030C231A2A13B5BE00625532 /* LoginActions.swift in Sources */,
 				030C23292A13B5BE00625532 /* WelcomePage.swift in Sources */,
+				030C235A2A13B97E00625532 /* SearchAltersUseCase.swift in Sources */,
 				030C22E72A13B5BE00625532 /* AlterView.swift in Sources */,
 				030C22AB2A13B5BE00625532 /* FrontRecord.swift in Sources */,
 				030C22C02A13B5BE00625532 /* GetUserAltersUseCase.swift in Sources */,
@@ -938,6 +953,7 @@
 				030C22C12A13B5BE00625532 /* GetUserAltersUseCase.swift in Sources */,
 				030C229D2A13B5BE00625532 /* AuthenticationRepository.swift in Sources */,
 				030C230F2A13B5BE00625532 /* SettingsView.swift in Sources */,
+				030C235B2A13B97E00625532 /* SearchAltersUseCase.swift in Sources */,
 				030C23482A13B5BE00625532 /* ServiceContainer.swift in Sources */,
 				030C22DC2A13B5BE00625532 /* FrontActions.swift in Sources */,
 				030C22A92A13B5BE00625532 /* AppwriteClient.swift in Sources */,
@@ -1279,6 +1295,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		030C23552A13B83900625532 /* XCRemoteSwiftPackageReference "sdk-for-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/appwrite/sdk-for-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		030C23562A13B83900625532 /* Appwrite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 030C23552A13B83900625532 /* XCRemoteSwiftPackageReference "sdk-for-swift" */;
+			productName = Appwrite;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 030C22062A13B2FE00625532 /* Project object */;
 }

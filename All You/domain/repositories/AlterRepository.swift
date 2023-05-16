@@ -14,7 +14,29 @@ class AlterRepository {
     private lazy var database: Databases = { Databases(appwriteClient.getClient()) }()
     private let logger = Logger(subsystem: "UserRepository", category: "background")
     
-    
+    func searchUserAlters(userId: String, search: String) async -> [AlterModel] {
+        do {
+            let documents = try await database.listDocuments(
+                databaseId: appwriteClient.getDatabaseId(),
+                collectionId: appwriteClient.getAlterRepisotry(),
+                queries: [
+                    Query.equal("userId", value: userId),
+                    Query.search("text_search", value: search)
+                ]
+            )
+            
+            if (documents.documents.isEmpty) {
+                return []
+            }
+            
+            return documents.documents.map { alter in
+                return AlterModel(fromMap: alter.data)
+            }
+        } catch {
+            logger.error("Unable to search alters: \(error.localizedDescription)")
+            return []
+        }
+    }
     
     func getAltersById(id: String) async ->AlterModel? {
         do {

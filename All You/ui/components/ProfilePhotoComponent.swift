@@ -2,7 +2,7 @@
 //  ProfilePhotoComponent.swift
 //  AllYou
 //
-//  Created by Cate Daniel on 2023-05-03.
+//  Created by Cate Daniel on 2023-05-16.
 //
 
 import SwiftUI
