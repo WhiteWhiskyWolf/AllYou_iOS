@@ -14,6 +14,201 @@
 		030C22232A13B2FF00625532 /* All_YouTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22222A13B2FF00625532 /* All_YouTests.swift */; };
 		030C222D2A13B2FF00625532 /* All_YouUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C222C2A13B2FF00625532 /* All_YouUITests.swift */; };
 		030C222F2A13B2FF00625532 /* All_YouUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C222E2A13B2FF00625532 /* All_YouUITestsLaunchTests.swift */; };
+		030C22922A13B5BE00625532 /* SequenceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C223C2A13B5BE00625532 /* SequenceUtils.swift */; };
+		030C22932A13B5BE00625532 /* SequenceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C223C2A13B5BE00625532 /* SequenceUtils.swift */; };
+		030C22942A13B5BE00625532 /* SequenceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C223C2A13B5BE00625532 /* SequenceUtils.swift */; };
+		030C22952A13B5BE00625532 /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C223D2A13B5BE00625532 /* ColorUtils.swift */; };
+		030C22962A13B5BE00625532 /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C223D2A13B5BE00625532 /* ColorUtils.swift */; };
+		030C22972A13B5BE00625532 /* ColorUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C223D2A13B5BE00625532 /* ColorUtils.swift */; };
+		030C22982A13B5BE00625532 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22402A13B5BE00625532 /* UserRepository.swift */; };
+		030C22992A13B5BE00625532 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22402A13B5BE00625532 /* UserRepository.swift */; };
+		030C229A2A13B5BE00625532 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22402A13B5BE00625532 /* UserRepository.swift */; };
+		030C229B2A13B5BE00625532 /* AuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22412A13B5BE00625532 /* AuthenticationRepository.swift */; };
+		030C229C2A13B5BE00625532 /* AuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22412A13B5BE00625532 /* AuthenticationRepository.swift */; };
+		030C229D2A13B5BE00625532 /* AuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22412A13B5BE00625532 /* AuthenticationRepository.swift */; };
+		030C229E2A13B5BE00625532 /* ProfilePhotoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22422A13B5BE00625532 /* ProfilePhotoRepository.swift */; };
+		030C229F2A13B5BE00625532 /* ProfilePhotoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22422A13B5BE00625532 /* ProfilePhotoRepository.swift */; };
+		030C22A02A13B5BE00625532 /* ProfilePhotoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22422A13B5BE00625532 /* ProfilePhotoRepository.swift */; };
+		030C22A12A13B5BE00625532 /* FrontRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22432A13B5BE00625532 /* FrontRepository.swift */; };
+		030C22A22A13B5BE00625532 /* FrontRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22432A13B5BE00625532 /* FrontRepository.swift */; };
+		030C22A32A13B5BE00625532 /* FrontRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22432A13B5BE00625532 /* FrontRepository.swift */; };
+		030C22A42A13B5BE00625532 /* AlterRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22442A13B5BE00625532 /* AlterRepository.swift */; };
+		030C22A52A13B5BE00625532 /* AlterRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22442A13B5BE00625532 /* AlterRepository.swift */; };
+		030C22A62A13B5BE00625532 /* AlterRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22442A13B5BE00625532 /* AlterRepository.swift */; };
+		030C22A72A13B5BE00625532 /* AppwriteClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22452A13B5BE00625532 /* AppwriteClient.swift */; };
+		030C22A82A13B5BE00625532 /* AppwriteClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22452A13B5BE00625532 /* AppwriteClient.swift */; };
+		030C22A92A13B5BE00625532 /* AppwriteClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22452A13B5BE00625532 /* AppwriteClient.swift */; };
+		030C22AA2A13B5BE00625532 /* FrontRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22472A13B5BE00625532 /* FrontRecord.swift */; };
+		030C22AB2A13B5BE00625532 /* FrontRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22472A13B5BE00625532 /* FrontRecord.swift */; };
+		030C22AC2A13B5BE00625532 /* FrontRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22472A13B5BE00625532 /* FrontRecord.swift */; };
+		030C22AD2A13B5BE00625532 /* AlterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22482A13B5BE00625532 /* AlterModel.swift */; };
+		030C22AE2A13B5BE00625532 /* AlterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22482A13B5BE00625532 /* AlterModel.swift */; };
+		030C22AF2A13B5BE00625532 /* AlterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22482A13B5BE00625532 /* AlterModel.swift */; };
+		030C22B02A13B5BE00625532 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22492A13B5BE00625532 /* UserModel.swift */; };
+		030C22B12A13B5BE00625532 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22492A13B5BE00625532 /* UserModel.swift */; };
+		030C22B22A13B5BE00625532 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22492A13B5BE00625532 /* UserModel.swift */; };
+		030C22B32A13B5BE00625532 /* SignInWithAppleUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C224B2A13B5BE00625532 /* SignInWithAppleUseCase.swift */; };
+		030C22B42A13B5BE00625532 /* SignInWithAppleUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C224B2A13B5BE00625532 /* SignInWithAppleUseCase.swift */; };
+		030C22B52A13B5BE00625532 /* SignInWithAppleUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C224B2A13B5BE00625532 /* SignInWithAppleUseCase.swift */; };
+		030C22B62A13B5BE00625532 /* HasUserCompletedOnboardingUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C224C2A13B5BE00625532 /* HasUserCompletedOnboardingUseCase.swift */; };
+		030C22B72A13B5BE00625532 /* HasUserCompletedOnboardingUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C224C2A13B5BE00625532 /* HasUserCompletedOnboardingUseCase.swift */; };
+		030C22B82A13B5BE00625532 /* HasUserCompletedOnboardingUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C224C2A13B5BE00625532 /* HasUserCompletedOnboardingUseCase.swift */; };
+		030C22B92A13B5BE00625532 /* GetCurrentUserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C224D2A13B5BE00625532 /* GetCurrentUserUseCase.swift */; };
+		030C22BA2A13B5BE00625532 /* GetCurrentUserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C224D2A13B5BE00625532 /* GetCurrentUserUseCase.swift */; };
+		030C22BB2A13B5BE00625532 /* GetCurrentUserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C224D2A13B5BE00625532 /* GetCurrentUserUseCase.swift */; };
+		030C22BC2A13B5BE00625532 /* SaveOnboardingUserProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C224E2A13B5BE00625532 /* SaveOnboardingUserProfileUseCase.swift */; };
+		030C22BD2A13B5BE00625532 /* SaveOnboardingUserProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C224E2A13B5BE00625532 /* SaveOnboardingUserProfileUseCase.swift */; };
+		030C22BE2A13B5BE00625532 /* SaveOnboardingUserProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C224E2A13B5BE00625532 /* SaveOnboardingUserProfileUseCase.swift */; };
+		030C22BF2A13B5BE00625532 /* GetUserAltersUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C224F2A13B5BE00625532 /* GetUserAltersUseCase.swift */; };
+		030C22C02A13B5BE00625532 /* GetUserAltersUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C224F2A13B5BE00625532 /* GetUserAltersUseCase.swift */; };
+		030C22C12A13B5BE00625532 /* GetUserAltersUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C224F2A13B5BE00625532 /* GetUserAltersUseCase.swift */; };
+		030C22C22A13B5BE00625532 /* UploadProfilePhotoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22502A13B5BE00625532 /* UploadProfilePhotoUseCase.swift */; };
+		030C22C32A13B5BE00625532 /* UploadProfilePhotoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22502A13B5BE00625532 /* UploadProfilePhotoUseCase.swift */; };
+		030C22C42A13B5BE00625532 /* UploadProfilePhotoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22502A13B5BE00625532 /* UploadProfilePhotoUseCase.swift */; };
+		030C22C52A13B5BE00625532 /* SignInWithGoogleUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22512A13B5BE00625532 /* SignInWithGoogleUseCase.swift */; };
+		030C22C62A13B5BE00625532 /* SignInWithGoogleUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22512A13B5BE00625532 /* SignInWithGoogleUseCase.swift */; };
+		030C22C72A13B5BE00625532 /* SignInWithGoogleUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22512A13B5BE00625532 /* SignInWithGoogleUseCase.swift */; };
+		030C22C82A13B5BE00625532 /* IsUserSignedInUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22522A13B5BE00625532 /* IsUserSignedInUseCase.swift */; };
+		030C22C92A13B5BE00625532 /* IsUserSignedInUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22522A13B5BE00625532 /* IsUserSignedInUseCase.swift */; };
+		030C22CA2A13B5BE00625532 /* IsUserSignedInUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22522A13B5BE00625532 /* IsUserSignedInUseCase.swift */; };
+		030C22CB2A13B5BE00625532 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22552A13B5BE00625532 /* HomeView.swift */; };
+		030C22CC2A13B5BE00625532 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22552A13B5BE00625532 /* HomeView.swift */; };
+		030C22CD2A13B5BE00625532 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22552A13B5BE00625532 /* HomeView.swift */; };
+		030C22CE2A13B5BE00625532 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22572A13B5BE00625532 /* ChatView.swift */; };
+		030C22CF2A13B5BE00625532 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22572A13B5BE00625532 /* ChatView.swift */; };
+		030C22D02A13B5BE00625532 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22572A13B5BE00625532 /* ChatView.swift */; };
+		030C22D12A13B5BE00625532 /* FrontReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22592A13B5BE00625532 /* FrontReducer.swift */; };
+		030C22D22A13B5BE00625532 /* FrontReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22592A13B5BE00625532 /* FrontReducer.swift */; };
+		030C22D32A13B5BE00625532 /* FrontReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22592A13B5BE00625532 /* FrontReducer.swift */; };
+		030C22D42A13B5BE00625532 /* FrontState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C225A2A13B5BE00625532 /* FrontState.swift */; };
+		030C22D52A13B5BE00625532 /* FrontState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C225A2A13B5BE00625532 /* FrontState.swift */; };
+		030C22D62A13B5BE00625532 /* FrontState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C225A2A13B5BE00625532 /* FrontState.swift */; };
+		030C22D72A13B5BE00625532 /* FrontView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C225B2A13B5BE00625532 /* FrontView.swift */; };
+		030C22D82A13B5BE00625532 /* FrontView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C225B2A13B5BE00625532 /* FrontView.swift */; };
+		030C22D92A13B5BE00625532 /* FrontView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C225B2A13B5BE00625532 /* FrontView.swift */; };
+		030C22DA2A13B5BE00625532 /* FrontActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C225C2A13B5BE00625532 /* FrontActions.swift */; };
+		030C22DB2A13B5BE00625532 /* FrontActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C225C2A13B5BE00625532 /* FrontActions.swift */; };
+		030C22DC2A13B5BE00625532 /* FrontActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C225C2A13B5BE00625532 /* FrontActions.swift */; };
+		030C22DD2A13B5BE00625532 /* FrontSideEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C225D2A13B5BE00625532 /* FrontSideEffects.swift */; };
+		030C22DE2A13B5BE00625532 /* FrontSideEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C225D2A13B5BE00625532 /* FrontSideEffects.swift */; };
+		030C22DF2A13B5BE00625532 /* FrontSideEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C225D2A13B5BE00625532 /* FrontSideEffects.swift */; };
+		030C22E02A13B5BE00625532 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C225F2A13B5BE00625532 /* Store.swift */; };
+		030C22E12A13B5BE00625532 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C225F2A13B5BE00625532 /* Store.swift */; };
+		030C22E22A13B5BE00625532 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C225F2A13B5BE00625532 /* Store.swift */; };
+		030C22E32A13B5BE00625532 /* AlterViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22612A13B5BE00625532 /* AlterViewState.swift */; };
+		030C22E42A13B5BE00625532 /* AlterViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22612A13B5BE00625532 /* AlterViewState.swift */; };
+		030C22E52A13B5BE00625532 /* AlterViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22612A13B5BE00625532 /* AlterViewState.swift */; };
+		030C22E62A13B5BE00625532 /* AlterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22622A13B5BE00625532 /* AlterView.swift */; };
+		030C22E72A13B5BE00625532 /* AlterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22622A13B5BE00625532 /* AlterView.swift */; };
+		030C22E82A13B5BE00625532 /* AlterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22622A13B5BE00625532 /* AlterView.swift */; };
+		030C22E92A13B5BE00625532 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22642A13B5BE00625532 /* SearchBar.swift */; };
+		030C22EA2A13B5BE00625532 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22642A13B5BE00625532 /* SearchBar.swift */; };
+		030C22EB2A13B5BE00625532 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22642A13B5BE00625532 /* SearchBar.swift */; };
+		030C22EC2A13B5BE00625532 /* ProfilePhotoComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22652A13B5BE00625532 /* ProfilePhotoComponent.swift */; };
+		030C22ED2A13B5BE00625532 /* ProfilePhotoComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22652A13B5BE00625532 /* ProfilePhotoComponent.swift */; };
+		030C22EE2A13B5BE00625532 /* ProfilePhotoComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22652A13B5BE00625532 /* ProfilePhotoComponent.swift */; };
+		030C22EF2A13B5BE00625532 /* ProfileViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22662A13B5BE00625532 /* ProfileViewComponent.swift */; };
+		030C22F02A13B5BE00625532 /* ProfileViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22662A13B5BE00625532 /* ProfileViewComponent.swift */; };
+		030C22F12A13B5BE00625532 /* ProfileViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22662A13B5BE00625532 /* ProfileViewComponent.swift */; };
+		030C22F22A13B5BE00625532 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22682A13B5BE00625532 /* Buttons.swift */; };
+		030C22F32A13B5BE00625532 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22682A13B5BE00625532 /* Buttons.swift */; };
+		030C22F42A13B5BE00625532 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22682A13B5BE00625532 /* Buttons.swift */; };
+		030C22F52A13B5BE00625532 /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22692A13B5BE00625532 /* Spacing.swift */; };
+		030C22F62A13B5BE00625532 /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22692A13B5BE00625532 /* Spacing.swift */; };
+		030C22F72A13B5BE00625532 /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22692A13B5BE00625532 /* Spacing.swift */; };
+		030C22F82A13B5BE00625532 /* TextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C226A2A13B5BE00625532 /* TextInput.swift */; };
+		030C22F92A13B5BE00625532 /* TextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C226A2A13B5BE00625532 /* TextInput.swift */; };
+		030C22FA2A13B5BE00625532 /* TextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C226A2A13B5BE00625532 /* TextInput.swift */; };
+		030C22FB2A13B5BE00625532 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C226B2A13B5BE00625532 /* Colors.swift */; };
+		030C22FC2A13B5BE00625532 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C226B2A13B5BE00625532 /* Colors.swift */; };
+		030C22FD2A13B5BE00625532 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C226B2A13B5BE00625532 /* Colors.swift */; };
+		030C22FE2A13B5BE00625532 /* RootActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C226D2A13B5BE00625532 /* RootActions.swift */; };
+		030C22FF2A13B5BE00625532 /* RootActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C226D2A13B5BE00625532 /* RootActions.swift */; };
+		030C23002A13B5BE00625532 /* RootActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C226D2A13B5BE00625532 /* RootActions.swift */; };
+		030C23012A13B5BE00625532 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C226E2A13B5BE00625532 /* RootView.swift */; };
+		030C23022A13B5BE00625532 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C226E2A13B5BE00625532 /* RootView.swift */; };
+		030C23032A13B5BE00625532 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C226E2A13B5BE00625532 /* RootView.swift */; };
+		030C23042A13B5BE00625532 /* RootSideEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C226F2A13B5BE00625532 /* RootSideEffect.swift */; };
+		030C23052A13B5BE00625532 /* RootSideEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C226F2A13B5BE00625532 /* RootSideEffect.swift */; };
+		030C23062A13B5BE00625532 /* RootSideEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C226F2A13B5BE00625532 /* RootSideEffect.swift */; };
+		030C23072A13B5BE00625532 /* RootState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22702A13B5BE00625532 /* RootState.swift */; };
+		030C23082A13B5BE00625532 /* RootState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22702A13B5BE00625532 /* RootState.swift */; };
+		030C23092A13B5BE00625532 /* RootState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22702A13B5BE00625532 /* RootState.swift */; };
+		030C230A2A13B5BE00625532 /* RootReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22712A13B5BE00625532 /* RootReducer.swift */; };
+		030C230B2A13B5BE00625532 /* RootReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22712A13B5BE00625532 /* RootReducer.swift */; };
+		030C230C2A13B5BE00625532 /* RootReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22712A13B5BE00625532 /* RootReducer.swift */; };
+		030C230D2A13B5BE00625532 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22732A13B5BE00625532 /* SettingsView.swift */; };
+		030C230E2A13B5BE00625532 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22732A13B5BE00625532 /* SettingsView.swift */; };
+		030C230F2A13B5BE00625532 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22732A13B5BE00625532 /* SettingsView.swift */; };
+		030C23102A13B5BE00625532 /* UserUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22752A13B5BE00625532 /* UserUIModel.swift */; };
+		030C23112A13B5BE00625532 /* UserUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22752A13B5BE00625532 /* UserUIModel.swift */; };
+		030C23122A13B5BE00625532 /* UserUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22752A13B5BE00625532 /* UserUIModel.swift */; };
+		030C23132A13B5BE00625532 /* AlterUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22762A13B5BE00625532 /* AlterUIModel.swift */; };
+		030C23142A13B5BE00625532 /* AlterUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22762A13B5BE00625532 /* AlterUIModel.swift */; };
+		030C23152A13B5BE00625532 /* AlterUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22762A13B5BE00625532 /* AlterUIModel.swift */; };
+		030C23162A13B5BE00625532 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22782A13B5BE00625532 /* LoginView.swift */; };
+		030C23172A13B5BE00625532 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22782A13B5BE00625532 /* LoginView.swift */; };
+		030C23182A13B5BE00625532 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22782A13B5BE00625532 /* LoginView.swift */; };
+		030C23192A13B5BE00625532 /* LoginActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22792A13B5BE00625532 /* LoginActions.swift */; };
+		030C231A2A13B5BE00625532 /* LoginActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22792A13B5BE00625532 /* LoginActions.swift */; };
+		030C231B2A13B5BE00625532 /* LoginActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22792A13B5BE00625532 /* LoginActions.swift */; };
+		030C231C2A13B5BE00625532 /* LoginState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C227A2A13B5BE00625532 /* LoginState.swift */; };
+		030C231D2A13B5BE00625532 /* LoginState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C227A2A13B5BE00625532 /* LoginState.swift */; };
+		030C231E2A13B5BE00625532 /* LoginState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C227A2A13B5BE00625532 /* LoginState.swift */; };
+		030C231F2A13B5BE00625532 /* LoginReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C227B2A13B5BE00625532 /* LoginReducer.swift */; };
+		030C23202A13B5BE00625532 /* LoginReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C227B2A13B5BE00625532 /* LoginReducer.swift */; };
+		030C23212A13B5BE00625532 /* LoginReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C227B2A13B5BE00625532 /* LoginReducer.swift */; };
+		030C23222A13B5BE00625532 /* LoginSideEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C227C2A13B5BE00625532 /* LoginSideEffects.swift */; };
+		030C23232A13B5BE00625532 /* LoginSideEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C227C2A13B5BE00625532 /* LoginSideEffects.swift */; };
+		030C23242A13B5BE00625532 /* LoginSideEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C227C2A13B5BE00625532 /* LoginSideEffects.swift */; };
+		030C23252A13B5BE00625532 /* SavingProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C227E2A13B5BE00625532 /* SavingProfile.swift */; };
+		030C23262A13B5BE00625532 /* SavingProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C227E2A13B5BE00625532 /* SavingProfile.swift */; };
+		030C23272A13B5BE00625532 /* SavingProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C227E2A13B5BE00625532 /* SavingProfile.swift */; };
+		030C23282A13B5BE00625532 /* WelcomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C227F2A13B5BE00625532 /* WelcomePage.swift */; };
+		030C23292A13B5BE00625532 /* WelcomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C227F2A13B5BE00625532 /* WelcomePage.swift */; };
+		030C232A2A13B5BE00625532 /* WelcomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C227F2A13B5BE00625532 /* WelcomePage.swift */; };
+		030C232B2A13B5BE00625532 /* OnboardingReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22812A13B5BE00625532 /* OnboardingReducer.swift */; };
+		030C232C2A13B5BE00625532 /* OnboardingReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22812A13B5BE00625532 /* OnboardingReducer.swift */; };
+		030C232D2A13B5BE00625532 /* OnboardingReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22812A13B5BE00625532 /* OnboardingReducer.swift */; };
+		030C232E2A13B5BE00625532 /* OnboardingSideEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22822A13B5BE00625532 /* OnboardingSideEffects.swift */; };
+		030C232F2A13B5BE00625532 /* OnboardingSideEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22822A13B5BE00625532 /* OnboardingSideEffects.swift */; };
+		030C23302A13B5BE00625532 /* OnboardingSideEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22822A13B5BE00625532 /* OnboardingSideEffects.swift */; };
+		030C23312A13B5BE00625532 /* OnboardingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22832A13B5BE00625532 /* OnboardingState.swift */; };
+		030C23322A13B5BE00625532 /* OnboardingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22832A13B5BE00625532 /* OnboardingState.swift */; };
+		030C23332A13B5BE00625532 /* OnboardingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22832A13B5BE00625532 /* OnboardingState.swift */; };
+		030C23342A13B5BE00625532 /* OnboardingActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22842A13B5BE00625532 /* OnboardingActions.swift */; };
+		030C23352A13B5BE00625532 /* OnboardingActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22842A13B5BE00625532 /* OnboardingActions.swift */; };
+		030C23362A13B5BE00625532 /* OnboardingActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22842A13B5BE00625532 /* OnboardingActions.swift */; };
+		030C23372A13B5BE00625532 /* SystemOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22852A13B5BE00625532 /* SystemOnboarding.swift */; };
+		030C23382A13B5BE00625532 /* SystemOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22852A13B5BE00625532 /* SystemOnboarding.swift */; };
+		030C23392A13B5BE00625532 /* SystemOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22852A13B5BE00625532 /* SystemOnboarding.swift */; };
+		030C233A2A13B5BE00625532 /* SystemOnbaordingState~.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22872A13B5BE00625532 /* SystemOnbaordingState~.swift */; };
+		030C233B2A13B5BE00625532 /* SystemOnbaordingState~.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22872A13B5BE00625532 /* SystemOnbaordingState~.swift */; };
+		030C233C2A13B5BE00625532 /* SystemOnbaordingState~.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22872A13B5BE00625532 /* SystemOnbaordingState~.swift */; };
+		030C233D2A13B5BE00625532 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22882A13B5BE00625532 /* Onboarding.swift */; };
+		030C233E2A13B5BE00625532 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22882A13B5BE00625532 /* Onboarding.swift */; };
+		030C233F2A13B5BE00625532 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22882A13B5BE00625532 /* Onboarding.swift */; };
+		030C23402A13B5BE00625532 /* AlterOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22892A13B5BE00625532 /* AlterOnboarding.swift */; };
+		030C23412A13B5BE00625532 /* AlterOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22892A13B5BE00625532 /* AlterOnboarding.swift */; };
+		030C23422A13B5BE00625532 /* AlterOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22892A13B5BE00625532 /* AlterOnboarding.swift */; };
+		030C23432A13B5BE00625532 /* NotificationsPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C228A2A13B5BE00625532 /* NotificationsPermissions.swift */; };
+		030C23442A13B5BE00625532 /* NotificationsPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C228A2A13B5BE00625532 /* NotificationsPermissions.swift */; };
+		030C23452A13B5BE00625532 /* NotificationsPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C228A2A13B5BE00625532 /* NotificationsPermissions.swift */; };
+		030C23462A13B5BE00625532 /* ServiceContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C228C2A13B5BE00625532 /* ServiceContainer.swift */; };
+		030C23472A13B5BE00625532 /* ServiceContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C228C2A13B5BE00625532 /* ServiceContainer.swift */; };
+		030C23482A13B5BE00625532 /* ServiceContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C228C2A13B5BE00625532 /* ServiceContainer.swift */; };
+		030C23492A13B5BE00625532 /* PropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C228D2A13B5BE00625532 /* PropertyWrapper.swift */; };
+		030C234A2A13B5BE00625532 /* PropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C228D2A13B5BE00625532 /* PropertyWrapper.swift */; };
+		030C234B2A13B5BE00625532 /* PropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C228D2A13B5BE00625532 /* PropertyWrapper.swift */; };
+		030C234C2A13B5BE00625532 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 030C228E2A13B5BE00625532 /* Assets.xcassets */; };
+		030C234D2A13B5BE00625532 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 030C228E2A13B5BE00625532 /* Assets.xcassets */; };
+		030C234E2A13B5BE00625532 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 030C228E2A13B5BE00625532 /* Assets.xcassets */; };
+		030C234F2A13B5BE00625532 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 030C22902A13B5BE00625532 /* Preview Assets.xcassets */; };
+		030C23502A13B5BE00625532 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 030C22902A13B5BE00625532 /* Preview Assets.xcassets */; };
+		030C23512A13B5BE00625532 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 030C22902A13B5BE00625532 /* Preview Assets.xcassets */; };
+		030C23522A13B5BE00625532 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 030C22912A13B5BE00625532 /* Info.plist */; };
+		030C23532A13B5BE00625532 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 030C22912A13B5BE00625532 /* Info.plist */; };
+		030C23542A13B5BE00625532 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 030C22912A13B5BE00625532 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +239,71 @@
 		030C22282A13B2FF00625532 /* All YouUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "All YouUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		030C222C2A13B2FF00625532 /* All_YouUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = All_YouUITests.swift; sourceTree = "<group>"; };
 		030C222E2A13B2FF00625532 /* All_YouUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = All_YouUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		030C223C2A13B5BE00625532 /* SequenceUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequenceUtils.swift; sourceTree = "<group>"; };
+		030C223D2A13B5BE00625532 /* ColorUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
+		030C22402A13B5BE00625532 /* UserRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		030C22412A13B5BE00625532 /* AuthenticationRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationRepository.swift; sourceTree = "<group>"; };
+		030C22422A13B5BE00625532 /* ProfilePhotoRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePhotoRepository.swift; sourceTree = "<group>"; };
+		030C22432A13B5BE00625532 /* FrontRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrontRepository.swift; sourceTree = "<group>"; };
+		030C22442A13B5BE00625532 /* AlterRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlterRepository.swift; sourceTree = "<group>"; };
+		030C22452A13B5BE00625532 /* AppwriteClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppwriteClient.swift; sourceTree = "<group>"; };
+		030C22472A13B5BE00625532 /* FrontRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrontRecord.swift; sourceTree = "<group>"; };
+		030C22482A13B5BE00625532 /* AlterModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlterModel.swift; sourceTree = "<group>"; };
+		030C22492A13B5BE00625532 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		030C224B2A13B5BE00625532 /* SignInWithAppleUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInWithAppleUseCase.swift; sourceTree = "<group>"; };
+		030C224C2A13B5BE00625532 /* HasUserCompletedOnboardingUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HasUserCompletedOnboardingUseCase.swift; sourceTree = "<group>"; };
+		030C224D2A13B5BE00625532 /* GetCurrentUserUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCurrentUserUseCase.swift; sourceTree = "<group>"; };
+		030C224E2A13B5BE00625532 /* SaveOnboardingUserProfileUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveOnboardingUserProfileUseCase.swift; sourceTree = "<group>"; };
+		030C224F2A13B5BE00625532 /* GetUserAltersUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetUserAltersUseCase.swift; sourceTree = "<group>"; };
+		030C22502A13B5BE00625532 /* UploadProfilePhotoUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadProfilePhotoUseCase.swift; sourceTree = "<group>"; };
+		030C22512A13B5BE00625532 /* SignInWithGoogleUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInWithGoogleUseCase.swift; sourceTree = "<group>"; };
+		030C22522A13B5BE00625532 /* IsUserSignedInUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IsUserSignedInUseCase.swift; sourceTree = "<group>"; };
+		030C22552A13B5BE00625532 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		030C22572A13B5BE00625532 /* ChatView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		030C22592A13B5BE00625532 /* FrontReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrontReducer.swift; sourceTree = "<group>"; };
+		030C225A2A13B5BE00625532 /* FrontState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrontState.swift; sourceTree = "<group>"; };
+		030C225B2A13B5BE00625532 /* FrontView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrontView.swift; sourceTree = "<group>"; };
+		030C225C2A13B5BE00625532 /* FrontActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrontActions.swift; sourceTree = "<group>"; };
+		030C225D2A13B5BE00625532 /* FrontSideEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrontSideEffects.swift; sourceTree = "<group>"; };
+		030C225F2A13B5BE00625532 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		030C22612A13B5BE00625532 /* AlterViewState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlterViewState.swift; sourceTree = "<group>"; };
+		030C22622A13B5BE00625532 /* AlterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlterView.swift; sourceTree = "<group>"; };
+		030C22642A13B5BE00625532 /* SearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		030C22652A13B5BE00625532 /* ProfilePhotoComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePhotoComponent.swift; sourceTree = "<group>"; };
+		030C22662A13B5BE00625532 /* ProfileViewComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewComponent.swift; sourceTree = "<group>"; };
+		030C22682A13B5BE00625532 /* Buttons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
+		030C22692A13B5BE00625532 /* Spacing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spacing.swift; sourceTree = "<group>"; };
+		030C226A2A13B5BE00625532 /* TextInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInput.swift; sourceTree = "<group>"; };
+		030C226B2A13B5BE00625532 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		030C226D2A13B5BE00625532 /* RootActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootActions.swift; sourceTree = "<group>"; };
+		030C226E2A13B5BE00625532 /* RootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		030C226F2A13B5BE00625532 /* RootSideEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootSideEffect.swift; sourceTree = "<group>"; };
+		030C22702A13B5BE00625532 /* RootState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootState.swift; sourceTree = "<group>"; };
+		030C22712A13B5BE00625532 /* RootReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootReducer.swift; sourceTree = "<group>"; };
+		030C22732A13B5BE00625532 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		030C22752A13B5BE00625532 /* UserUIModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserUIModel.swift; sourceTree = "<group>"; };
+		030C22762A13B5BE00625532 /* AlterUIModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlterUIModel.swift; sourceTree = "<group>"; };
+		030C22782A13B5BE00625532 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		030C22792A13B5BE00625532 /* LoginActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginActions.swift; sourceTree = "<group>"; };
+		030C227A2A13B5BE00625532 /* LoginState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginState.swift; sourceTree = "<group>"; };
+		030C227B2A13B5BE00625532 /* LoginReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginReducer.swift; sourceTree = "<group>"; };
+		030C227C2A13B5BE00625532 /* LoginSideEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginSideEffects.swift; sourceTree = "<group>"; };
+		030C227E2A13B5BE00625532 /* SavingProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavingProfile.swift; sourceTree = "<group>"; };
+		030C227F2A13B5BE00625532 /* WelcomePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomePage.swift; sourceTree = "<group>"; };
+		030C22812A13B5BE00625532 /* OnboardingReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingReducer.swift; sourceTree = "<group>"; };
+		030C22822A13B5BE00625532 /* OnboardingSideEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingSideEffects.swift; sourceTree = "<group>"; };
+		030C22832A13B5BE00625532 /* OnboardingState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingState.swift; sourceTree = "<group>"; };
+		030C22842A13B5BE00625532 /* OnboardingActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingActions.swift; sourceTree = "<group>"; };
+		030C22852A13B5BE00625532 /* SystemOnboarding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemOnboarding.swift; sourceTree = "<group>"; };
+		030C22872A13B5BE00625532 /* SystemOnbaordingState~.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SystemOnbaordingState~.swift"; sourceTree = "<group>"; };
+		030C22882A13B5BE00625532 /* Onboarding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
+		030C22892A13B5BE00625532 /* AlterOnboarding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlterOnboarding.swift; sourceTree = "<group>"; };
+		030C228A2A13B5BE00625532 /* NotificationsPermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsPermissions.swift; sourceTree = "<group>"; };
+		030C228C2A13B5BE00625532 /* ServiceContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceContainer.swift; sourceTree = "<group>"; };
+		030C228D2A13B5BE00625532 /* PropertyWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyWrapper.swift; sourceTree = "<group>"; };
+		030C228E2A13B5BE00625532 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		030C22902A13B5BE00625532 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		030C22912A13B5BE00625532 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +354,13 @@
 		030C22102A13B2FE00625532 /* All You */ = {
 			isa = PBXGroup;
 			children = (
+				030C228E2A13B5BE00625532 /* Assets.xcassets */,
+				030C228B2A13B5BE00625532 /* di */,
+				030C223E2A13B5BE00625532 /* domain */,
+				030C22912A13B5BE00625532 /* Info.plist */,
+				030C228F2A13B5BE00625532 /* Preview Content */,
+				030C22532A13B5BE00625532 /* ui */,
+				030C223B2A13B5BE00625532 /* uitls */,
 				030C22112A13B2FE00625532 /* All_YouApp.swift */,
 				030C22132A13B2FE00625532 /* ContentView.swift */,
 				030C22152A13B2FF00625532 /* Assets.xcassets */,
@@ -126,6 +393,240 @@
 			);
 			path = "All YouUITests";
 			sourceTree = "<group>";
+		};
+		030C223B2A13B5BE00625532 /* uitls */ = {
+			isa = PBXGroup;
+			children = (
+				030C223C2A13B5BE00625532 /* SequenceUtils.swift */,
+				030C223D2A13B5BE00625532 /* ColorUtils.swift */,
+			);
+			path = uitls;
+			sourceTree = SOURCE_ROOT;
+		};
+		030C223E2A13B5BE00625532 /* domain */ = {
+			isa = PBXGroup;
+			children = (
+				030C223F2A13B5BE00625532 /* repositories */,
+				030C22462A13B5BE00625532 /* model */,
+				030C224A2A13B5BE00625532 /* usecases */,
+			);
+			path = domain;
+			sourceTree = SOURCE_ROOT;
+		};
+		030C223F2A13B5BE00625532 /* repositories */ = {
+			isa = PBXGroup;
+			children = (
+				030C22402A13B5BE00625532 /* UserRepository.swift */,
+				030C22412A13B5BE00625532 /* AuthenticationRepository.swift */,
+				030C22422A13B5BE00625532 /* ProfilePhotoRepository.swift */,
+				030C22432A13B5BE00625532 /* FrontRepository.swift */,
+				030C22442A13B5BE00625532 /* AlterRepository.swift */,
+				030C22452A13B5BE00625532 /* AppwriteClient.swift */,
+			);
+			path = repositories;
+			sourceTree = "<group>";
+		};
+		030C22462A13B5BE00625532 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				030C22472A13B5BE00625532 /* FrontRecord.swift */,
+				030C22482A13B5BE00625532 /* AlterModel.swift */,
+				030C22492A13B5BE00625532 /* UserModel.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		030C224A2A13B5BE00625532 /* usecases */ = {
+			isa = PBXGroup;
+			children = (
+				030C224B2A13B5BE00625532 /* SignInWithAppleUseCase.swift */,
+				030C224C2A13B5BE00625532 /* HasUserCompletedOnboardingUseCase.swift */,
+				030C224D2A13B5BE00625532 /* GetCurrentUserUseCase.swift */,
+				030C224E2A13B5BE00625532 /* SaveOnboardingUserProfileUseCase.swift */,
+				030C224F2A13B5BE00625532 /* GetUserAltersUseCase.swift */,
+				030C22502A13B5BE00625532 /* UploadProfilePhotoUseCase.swift */,
+				030C22512A13B5BE00625532 /* SignInWithGoogleUseCase.swift */,
+				030C22522A13B5BE00625532 /* IsUserSignedInUseCase.swift */,
+			);
+			path = usecases;
+			sourceTree = "<group>";
+		};
+		030C22532A13B5BE00625532 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				030C22542A13B5BE00625532 /* home */,
+				030C22562A13B5BE00625532 /* ChatView */,
+				030C22582A13B5BE00625532 /* FrontView */,
+				030C225E2A13B5BE00625532 /* state */,
+				030C22602A13B5BE00625532 /* AlterView */,
+				030C22632A13B5BE00625532 /* components */,
+				030C22672A13B5BE00625532 /* theme */,
+				030C226C2A13B5BE00625532 /* root */,
+				030C22722A13B5BE00625532 /* SettingsView */,
+				030C22742A13B5BE00625532 /* UIModel */,
+				030C22772A13B5BE00625532 /* login */,
+				030C227D2A13B5BE00625532 /* onboarding */,
+			);
+			path = ui;
+			sourceTree = SOURCE_ROOT;
+		};
+		030C22542A13B5BE00625532 /* home */ = {
+			isa = PBXGroup;
+			children = (
+				030C22552A13B5BE00625532 /* HomeView.swift */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		030C22562A13B5BE00625532 /* ChatView */ = {
+			isa = PBXGroup;
+			children = (
+				030C22572A13B5BE00625532 /* ChatView.swift */,
+			);
+			path = ChatView;
+			sourceTree = "<group>";
+		};
+		030C22582A13B5BE00625532 /* FrontView */ = {
+			isa = PBXGroup;
+			children = (
+				030C22592A13B5BE00625532 /* FrontReducer.swift */,
+				030C225A2A13B5BE00625532 /* FrontState.swift */,
+				030C225B2A13B5BE00625532 /* FrontView.swift */,
+				030C225C2A13B5BE00625532 /* FrontActions.swift */,
+				030C225D2A13B5BE00625532 /* FrontSideEffects.swift */,
+			);
+			path = FrontView;
+			sourceTree = "<group>";
+		};
+		030C225E2A13B5BE00625532 /* state */ = {
+			isa = PBXGroup;
+			children = (
+				030C225F2A13B5BE00625532 /* Store.swift */,
+			);
+			path = state;
+			sourceTree = "<group>";
+		};
+		030C22602A13B5BE00625532 /* AlterView */ = {
+			isa = PBXGroup;
+			children = (
+				030C22612A13B5BE00625532 /* AlterViewState.swift */,
+				030C22622A13B5BE00625532 /* AlterView.swift */,
+			);
+			path = AlterView;
+			sourceTree = "<group>";
+		};
+		030C22632A13B5BE00625532 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				030C22642A13B5BE00625532 /* SearchBar.swift */,
+				030C22652A13B5BE00625532 /* ProfilePhotoComponent.swift */,
+				030C22662A13B5BE00625532 /* ProfileViewComponent.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		030C22672A13B5BE00625532 /* theme */ = {
+			isa = PBXGroup;
+			children = (
+				030C22682A13B5BE00625532 /* Buttons.swift */,
+				030C22692A13B5BE00625532 /* Spacing.swift */,
+				030C226A2A13B5BE00625532 /* TextInput.swift */,
+				030C226B2A13B5BE00625532 /* Colors.swift */,
+			);
+			path = theme;
+			sourceTree = "<group>";
+		};
+		030C226C2A13B5BE00625532 /* root */ = {
+			isa = PBXGroup;
+			children = (
+				030C226D2A13B5BE00625532 /* RootActions.swift */,
+				030C226E2A13B5BE00625532 /* RootView.swift */,
+				030C226F2A13B5BE00625532 /* RootSideEffect.swift */,
+				030C22702A13B5BE00625532 /* RootState.swift */,
+				030C22712A13B5BE00625532 /* RootReducer.swift */,
+			);
+			path = root;
+			sourceTree = "<group>";
+		};
+		030C22722A13B5BE00625532 /* SettingsView */ = {
+			isa = PBXGroup;
+			children = (
+				030C22732A13B5BE00625532 /* SettingsView.swift */,
+			);
+			path = SettingsView;
+			sourceTree = "<group>";
+		};
+		030C22742A13B5BE00625532 /* UIModel */ = {
+			isa = PBXGroup;
+			children = (
+				030C22752A13B5BE00625532 /* UserUIModel.swift */,
+				030C22762A13B5BE00625532 /* AlterUIModel.swift */,
+			);
+			path = UIModel;
+			sourceTree = "<group>";
+		};
+		030C22772A13B5BE00625532 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				030C22782A13B5BE00625532 /* LoginView.swift */,
+				030C22792A13B5BE00625532 /* LoginActions.swift */,
+				030C227A2A13B5BE00625532 /* LoginState.swift */,
+				030C227B2A13B5BE00625532 /* LoginReducer.swift */,
+				030C227C2A13B5BE00625532 /* LoginSideEffects.swift */,
+			);
+			path = login;
+			sourceTree = "<group>";
+		};
+		030C227D2A13B5BE00625532 /* onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				030C227E2A13B5BE00625532 /* SavingProfile.swift */,
+				030C227F2A13B5BE00625532 /* WelcomePage.swift */,
+				030C22802A13B5BE00625532 /* state */,
+				030C22852A13B5BE00625532 /* SystemOnboarding.swift */,
+				030C22862A13B5BE00625532 /* system */,
+				030C22882A13B5BE00625532 /* Onboarding.swift */,
+				030C22892A13B5BE00625532 /* AlterOnboarding.swift */,
+				030C228A2A13B5BE00625532 /* NotificationsPermissions.swift */,
+			);
+			path = onboarding;
+			sourceTree = "<group>";
+		};
+		030C22802A13B5BE00625532 /* state */ = {
+			isa = PBXGroup;
+			children = (
+				030C22812A13B5BE00625532 /* OnboardingReducer.swift */,
+				030C22822A13B5BE00625532 /* OnboardingSideEffects.swift */,
+				030C22832A13B5BE00625532 /* OnboardingState.swift */,
+				030C22842A13B5BE00625532 /* OnboardingActions.swift */,
+			);
+			path = state;
+			sourceTree = "<group>";
+		};
+		030C22862A13B5BE00625532 /* system */ = {
+			isa = PBXGroup;
+			children = (
+				030C22872A13B5BE00625532 /* SystemOnbaordingState~.swift */,
+			);
+			path = system;
+			sourceTree = "<group>";
+		};
+		030C228B2A13B5BE00625532 /* di */ = {
+			isa = PBXGroup;
+			children = (
+				030C228C2A13B5BE00625532 /* ServiceContainer.swift */,
+				030C228D2A13B5BE00625532 /* PropertyWrapper.swift */,
+			);
+			path = di;
+			sourceTree = SOURCE_ROOT;
+		};
+		030C228F2A13B5BE00625532 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				030C22902A13B5BE00625532 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -231,7 +732,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				030C234F2A13B5BE00625532 /* Preview Assets.xcassets in Resources */,
 				030C22192A13B2FF00625532 /* Preview Assets.xcassets in Resources */,
+				030C234C2A13B5BE00625532 /* Assets.xcassets in Resources */,
+				030C23522A13B5BE00625532 /* Info.plist in Resources */,
 				030C22162A13B2FF00625532 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,6 +744,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				030C23502A13B5BE00625532 /* Preview Assets.xcassets in Resources */,
+				030C234D2A13B5BE00625532 /* Assets.xcassets in Resources */,
+				030C23532A13B5BE00625532 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +754,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				030C23512A13B5BE00625532 /* Preview Assets.xcassets in Resources */,
+				030C234E2A13B5BE00625532 /* Assets.xcassets in Resources */,
+				030C23542A13B5BE00625532 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,8 +767,70 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				030C231C2A13B5BE00625532 /* LoginState.swift in Sources */,
+				030C22F22A13B5BE00625532 /* Buttons.swift in Sources */,
+				030C22D12A13B5BE00625532 /* FrontReducer.swift in Sources */,
+				030C230A2A13B5BE00625532 /* RootReducer.swift in Sources */,
+				030C22A42A13B5BE00625532 /* AlterRepository.swift in Sources */,
+				030C23132A13B5BE00625532 /* AlterUIModel.swift in Sources */,
+				030C23402A13B5BE00625532 /* AlterOnboarding.swift in Sources */,
+				030C22B92A13B5BE00625532 /* GetCurrentUserUseCase.swift in Sources */,
+				030C23252A13B5BE00625532 /* SavingProfile.swift in Sources */,
+				030C22CE2A13B5BE00625532 /* ChatView.swift in Sources */,
+				030C22C52A13B5BE00625532 /* SignInWithGoogleUseCase.swift in Sources */,
 				030C22142A13B2FE00625532 /* ContentView.swift in Sources */,
+				030C22A12A13B5BE00625532 /* FrontRepository.swift in Sources */,
+				030C22E62A13B5BE00625532 /* AlterView.swift in Sources */,
+				030C22CB2A13B5BE00625532 /* HomeView.swift in Sources */,
+				030C23432A13B5BE00625532 /* NotificationsPermissions.swift in Sources */,
 				030C22122A13B2FE00625532 /* All_YouApp.swift in Sources */,
+				030C231F2A13B5BE00625532 /* LoginReducer.swift in Sources */,
+				030C22B32A13B5BE00625532 /* SignInWithAppleUseCase.swift in Sources */,
+				030C22922A13B5BE00625532 /* SequenceUtils.swift in Sources */,
+				030C22EC2A13B5BE00625532 /* ProfilePhotoComponent.swift in Sources */,
+				030C22B02A13B5BE00625532 /* UserModel.swift in Sources */,
+				030C22C22A13B5BE00625532 /* UploadProfilePhotoUseCase.swift in Sources */,
+				030C232E2A13B5BE00625532 /* OnboardingSideEffects.swift in Sources */,
+				030C22E32A13B5BE00625532 /* AlterViewState.swift in Sources */,
+				030C23222A13B5BE00625532 /* LoginSideEffects.swift in Sources */,
+				030C22EF2A13B5BE00625532 /* ProfileViewComponent.swift in Sources */,
+				030C22BF2A13B5BE00625532 /* GetUserAltersUseCase.swift in Sources */,
+				030C229B2A13B5BE00625532 /* AuthenticationRepository.swift in Sources */,
+				030C230D2A13B5BE00625532 /* SettingsView.swift in Sources */,
+				030C23462A13B5BE00625532 /* ServiceContainer.swift in Sources */,
+				030C22DA2A13B5BE00625532 /* FrontActions.swift in Sources */,
+				030C22A72A13B5BE00625532 /* AppwriteClient.swift in Sources */,
+				030C22C82A13B5BE00625532 /* IsUserSignedInUseCase.swift in Sources */,
+				030C22982A13B5BE00625532 /* UserRepository.swift in Sources */,
+				030C23012A13B5BE00625532 /* RootView.swift in Sources */,
+				030C23072A13B5BE00625532 /* RootState.swift in Sources */,
+				030C22E92A13B5BE00625532 /* SearchBar.swift in Sources */,
+				030C22AD2A13B5BE00625532 /* AlterModel.swift in Sources */,
+				030C23312A13B5BE00625532 /* OnboardingState.swift in Sources */,
+				030C232B2A13B5BE00625532 /* OnboardingReducer.swift in Sources */,
+				030C22B62A13B5BE00625532 /* HasUserCompletedOnboardingUseCase.swift in Sources */,
+				030C22D72A13B5BE00625532 /* FrontView.swift in Sources */,
+				030C22FE2A13B5BE00625532 /* RootActions.swift in Sources */,
+				030C229E2A13B5BE00625532 /* ProfilePhotoRepository.swift in Sources */,
+				030C233D2A13B5BE00625532 /* Onboarding.swift in Sources */,
+				030C23162A13B5BE00625532 /* LoginView.swift in Sources */,
+				030C23042A13B5BE00625532 /* RootSideEffect.swift in Sources */,
+				030C22F52A13B5BE00625532 /* Spacing.swift in Sources */,
+				030C22F82A13B5BE00625532 /* TextInput.swift in Sources */,
+				030C23192A13B5BE00625532 /* LoginActions.swift in Sources */,
+				030C23102A13B5BE00625532 /* UserUIModel.swift in Sources */,
+				030C22FB2A13B5BE00625532 /* Colors.swift in Sources */,
+				030C22BC2A13B5BE00625532 /* SaveOnboardingUserProfileUseCase.swift in Sources */,
+				030C23492A13B5BE00625532 /* PropertyWrapper.swift in Sources */,
+				030C22D42A13B5BE00625532 /* FrontState.swift in Sources */,
+				030C23372A13B5BE00625532 /* SystemOnboarding.swift in Sources */,
+				030C23342A13B5BE00625532 /* OnboardingActions.swift in Sources */,
+				030C22952A13B5BE00625532 /* ColorUtils.swift in Sources */,
+				030C22AA2A13B5BE00625532 /* FrontRecord.swift in Sources */,
+				030C233A2A13B5BE00625532 /* SystemOnbaordingState~.swift in Sources */,
+				030C22E02A13B5BE00625532 /* Store.swift in Sources */,
+				030C23282A13B5BE00625532 /* WelcomePage.swift in Sources */,
+				030C22DD2A13B5BE00625532 /* FrontSideEffects.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,7 +838,69 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				030C22AE2A13B5BE00625532 /* AlterModel.swift in Sources */,
+				030C22FF2A13B5BE00625532 /* RootActions.swift in Sources */,
+				030C22B42A13B5BE00625532 /* SignInWithAppleUseCase.swift in Sources */,
+				030C233E2A13B5BE00625532 /* Onboarding.swift in Sources */,
+				030C22D22A13B5BE00625532 /* FrontReducer.swift in Sources */,
+				030C23172A13B5BE00625532 /* LoginView.swift in Sources */,
+				030C22C62A13B5BE00625532 /* SignInWithGoogleUseCase.swift in Sources */,
+				030C22ED2A13B5BE00625532 /* ProfilePhotoComponent.swift in Sources */,
+				030C234A2A13B5BE00625532 /* PropertyWrapper.swift in Sources */,
+				030C23232A13B5BE00625532 /* LoginSideEffects.swift in Sources */,
+				030C23112A13B5BE00625532 /* UserUIModel.swift in Sources */,
+				030C22B72A13B5BE00625532 /* HasUserCompletedOnboardingUseCase.swift in Sources */,
+				030C232C2A13B5BE00625532 /* OnboardingReducer.swift in Sources */,
+				030C22CF2A13B5BE00625532 /* ChatView.swift in Sources */,
+				030C23472A13B5BE00625532 /* ServiceContainer.swift in Sources */,
+				030C22F62A13B5BE00625532 /* Spacing.swift in Sources */,
+				030C23262A13B5BE00625532 /* SavingProfile.swift in Sources */,
+				030C23352A13B5BE00625532 /* OnboardingActions.swift in Sources */,
+				030C22EA2A13B5BE00625532 /* SearchBar.swift in Sources */,
+				030C23082A13B5BE00625532 /* RootState.swift in Sources */,
+				030C22A52A13B5BE00625532 /* AlterRepository.swift in Sources */,
+				030C233B2A13B5BE00625532 /* SystemOnbaordingState~.swift in Sources */,
+				030C230E2A13B5BE00625532 /* SettingsView.swift in Sources */,
+				030C22F02A13B5BE00625532 /* ProfileViewComponent.swift in Sources */,
+				030C22E12A13B5BE00625532 /* Store.swift in Sources */,
+				030C232F2A13B5BE00625532 /* OnboardingSideEffects.swift in Sources */,
+				030C22962A13B5BE00625532 /* ColorUtils.swift in Sources */,
+				030C23442A13B5BE00625532 /* NotificationsPermissions.swift in Sources */,
+				030C231A2A13B5BE00625532 /* LoginActions.swift in Sources */,
+				030C23292A13B5BE00625532 /* WelcomePage.swift in Sources */,
+				030C22E72A13B5BE00625532 /* AlterView.swift in Sources */,
+				030C22AB2A13B5BE00625532 /* FrontRecord.swift in Sources */,
+				030C22C02A13B5BE00625532 /* GetUserAltersUseCase.swift in Sources */,
+				030C22C32A13B5BE00625532 /* UploadProfilePhotoUseCase.swift in Sources */,
+				030C22932A13B5BE00625532 /* SequenceUtils.swift in Sources */,
+				030C22992A13B5BE00625532 /* UserRepository.swift in Sources */,
+				030C22D52A13B5BE00625532 /* FrontState.swift in Sources */,
+				030C229C2A13B5BE00625532 /* AuthenticationRepository.swift in Sources */,
+				030C22BA2A13B5BE00625532 /* GetCurrentUserUseCase.swift in Sources */,
+				030C229F2A13B5BE00625532 /* ProfilePhotoRepository.swift in Sources */,
+				030C22F92A13B5BE00625532 /* TextInput.swift in Sources */,
+				030C23202A13B5BE00625532 /* LoginReducer.swift in Sources */,
+				030C22A82A13B5BE00625532 /* AppwriteClient.swift in Sources */,
+				030C22F32A13B5BE00625532 /* Buttons.swift in Sources */,
+				030C22DE2A13B5BE00625532 /* FrontSideEffects.swift in Sources */,
+				030C22FC2A13B5BE00625532 /* Colors.swift in Sources */,
+				030C23052A13B5BE00625532 /* RootSideEffect.swift in Sources */,
+				030C22E42A13B5BE00625532 /* AlterViewState.swift in Sources */,
+				030C22CC2A13B5BE00625532 /* HomeView.swift in Sources */,
+				030C231D2A13B5BE00625532 /* LoginState.swift in Sources */,
+				030C23412A13B5BE00625532 /* AlterOnboarding.swift in Sources */,
+				030C22BD2A13B5BE00625532 /* SaveOnboardingUserProfileUseCase.swift in Sources */,
+				030C23142A13B5BE00625532 /* AlterUIModel.swift in Sources */,
+				030C230B2A13B5BE00625532 /* RootReducer.swift in Sources */,
+				030C22A22A13B5BE00625532 /* FrontRepository.swift in Sources */,
+				030C22B12A13B5BE00625532 /* UserModel.swift in Sources */,
 				030C22232A13B2FF00625532 /* All_YouTests.swift in Sources */,
+				030C23382A13B5BE00625532 /* SystemOnboarding.swift in Sources */,
+				030C23022A13B5BE00625532 /* RootView.swift in Sources */,
+				030C22DB2A13B5BE00625532 /* FrontActions.swift in Sources */,
+				030C23322A13B5BE00625532 /* OnboardingState.swift in Sources */,
+				030C22C92A13B5BE00625532 /* IsUserSignedInUseCase.swift in Sources */,
+				030C22D82A13B5BE00625532 /* FrontView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,8 +908,70 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				030C231E2A13B5BE00625532 /* LoginState.swift in Sources */,
+				030C22F42A13B5BE00625532 /* Buttons.swift in Sources */,
+				030C22D32A13B5BE00625532 /* FrontReducer.swift in Sources */,
+				030C230C2A13B5BE00625532 /* RootReducer.swift in Sources */,
+				030C22A62A13B5BE00625532 /* AlterRepository.swift in Sources */,
+				030C23152A13B5BE00625532 /* AlterUIModel.swift in Sources */,
+				030C23422A13B5BE00625532 /* AlterOnboarding.swift in Sources */,
+				030C22BB2A13B5BE00625532 /* GetCurrentUserUseCase.swift in Sources */,
+				030C23272A13B5BE00625532 /* SavingProfile.swift in Sources */,
+				030C22D02A13B5BE00625532 /* ChatView.swift in Sources */,
+				030C22C72A13B5BE00625532 /* SignInWithGoogleUseCase.swift in Sources */,
 				030C222F2A13B2FF00625532 /* All_YouUITestsLaunchTests.swift in Sources */,
+				030C22A32A13B5BE00625532 /* FrontRepository.swift in Sources */,
+				030C22E82A13B5BE00625532 /* AlterView.swift in Sources */,
+				030C22CD2A13B5BE00625532 /* HomeView.swift in Sources */,
+				030C23452A13B5BE00625532 /* NotificationsPermissions.swift in Sources */,
 				030C222D2A13B2FF00625532 /* All_YouUITests.swift in Sources */,
+				030C23212A13B5BE00625532 /* LoginReducer.swift in Sources */,
+				030C22B52A13B5BE00625532 /* SignInWithAppleUseCase.swift in Sources */,
+				030C22942A13B5BE00625532 /* SequenceUtils.swift in Sources */,
+				030C22EE2A13B5BE00625532 /* ProfilePhotoComponent.swift in Sources */,
+				030C22B22A13B5BE00625532 /* UserModel.swift in Sources */,
+				030C22C42A13B5BE00625532 /* UploadProfilePhotoUseCase.swift in Sources */,
+				030C23302A13B5BE00625532 /* OnboardingSideEffects.swift in Sources */,
+				030C22E52A13B5BE00625532 /* AlterViewState.swift in Sources */,
+				030C23242A13B5BE00625532 /* LoginSideEffects.swift in Sources */,
+				030C22F12A13B5BE00625532 /* ProfileViewComponent.swift in Sources */,
+				030C22C12A13B5BE00625532 /* GetUserAltersUseCase.swift in Sources */,
+				030C229D2A13B5BE00625532 /* AuthenticationRepository.swift in Sources */,
+				030C230F2A13B5BE00625532 /* SettingsView.swift in Sources */,
+				030C23482A13B5BE00625532 /* ServiceContainer.swift in Sources */,
+				030C22DC2A13B5BE00625532 /* FrontActions.swift in Sources */,
+				030C22A92A13B5BE00625532 /* AppwriteClient.swift in Sources */,
+				030C22CA2A13B5BE00625532 /* IsUserSignedInUseCase.swift in Sources */,
+				030C229A2A13B5BE00625532 /* UserRepository.swift in Sources */,
+				030C23032A13B5BE00625532 /* RootView.swift in Sources */,
+				030C23092A13B5BE00625532 /* RootState.swift in Sources */,
+				030C22EB2A13B5BE00625532 /* SearchBar.swift in Sources */,
+				030C22AF2A13B5BE00625532 /* AlterModel.swift in Sources */,
+				030C23332A13B5BE00625532 /* OnboardingState.swift in Sources */,
+				030C232D2A13B5BE00625532 /* OnboardingReducer.swift in Sources */,
+				030C22B82A13B5BE00625532 /* HasUserCompletedOnboardingUseCase.swift in Sources */,
+				030C22D92A13B5BE00625532 /* FrontView.swift in Sources */,
+				030C23002A13B5BE00625532 /* RootActions.swift in Sources */,
+				030C22A02A13B5BE00625532 /* ProfilePhotoRepository.swift in Sources */,
+				030C233F2A13B5BE00625532 /* Onboarding.swift in Sources */,
+				030C23182A13B5BE00625532 /* LoginView.swift in Sources */,
+				030C23062A13B5BE00625532 /* RootSideEffect.swift in Sources */,
+				030C22F72A13B5BE00625532 /* Spacing.swift in Sources */,
+				030C22FA2A13B5BE00625532 /* TextInput.swift in Sources */,
+				030C231B2A13B5BE00625532 /* LoginActions.swift in Sources */,
+				030C23122A13B5BE00625532 /* UserUIModel.swift in Sources */,
+				030C22FD2A13B5BE00625532 /* Colors.swift in Sources */,
+				030C22BE2A13B5BE00625532 /* SaveOnboardingUserProfileUseCase.swift in Sources */,
+				030C234B2A13B5BE00625532 /* PropertyWrapper.swift in Sources */,
+				030C22D62A13B5BE00625532 /* FrontState.swift in Sources */,
+				030C23392A13B5BE00625532 /* SystemOnboarding.swift in Sources */,
+				030C23362A13B5BE00625532 /* OnboardingActions.swift in Sources */,
+				030C22972A13B5BE00625532 /* ColorUtils.swift in Sources */,
+				030C22AC2A13B5BE00625532 /* FrontRecord.swift in Sources */,
+				030C233C2A13B5BE00625532 /* SystemOnbaordingState~.swift in Sources */,
+				030C22E22A13B5BE00625532 /* Store.swift in Sources */,
+				030C232A2A13B5BE00625532 /* WelcomePage.swift in Sources */,
+				030C22DF2A13B5BE00625532 /* FrontSideEffects.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
