@@ -10,9 +10,9 @@ import Foundation
 struct AlterSheetReducer {
     let reducer: Reducer<AlterSheetState, AlterSheetActions> = { state, action in
         switch (action) {
-        case .LoadAlter(let alterId: String):
+        case .LoadAlter(let alterId):
             return state
-        case .LoaedAlter(let alter, let isCurrentUser: String):
+        case .LoaedAlter(let alter, let isCurrentUser):
             return AlterSheetState.Loaeded(alter: alter, isCurrentUser: isCurrentUser)
         }
     }

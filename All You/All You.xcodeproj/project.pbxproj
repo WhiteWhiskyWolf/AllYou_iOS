@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		030C22122A13B2FE00625532 /* All_YouApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22112A13B2FE00625532 /* All_YouApp.swift */; };
-		030C22142A13B2FE00625532 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22132A13B2FE00625532 /* ContentView.swift */; };
 		030C22192A13B2FF00625532 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 030C22182A13B2FF00625532 /* Preview Assets.xcassets */; };
 		030C22232A13B2FF00625532 /* All_YouTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22222A13B2FF00625532 /* All_YouTests.swift */; };
 		030C222D2A13B2FF00625532 /* All_YouUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C222C2A13B2FF00625532 /* All_YouUITests.swift */; };
@@ -252,7 +251,6 @@
 /* Begin PBXFileReference section */
 		030C220E2A13B2FE00625532 /* All You.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "All You.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		030C22112A13B2FE00625532 /* All_YouApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = All_YouApp.swift; sourceTree = "<group>"; };
-		030C22132A13B2FE00625532 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		030C22152A13B2FF00625532 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		030C22182A13B2FF00625532 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		030C221E2A13B2FF00625532 /* All YouTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "All YouTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -394,7 +392,6 @@
 				030C22532A13B5BE00625532 /* ui */,
 				030C223B2A13B5BE00625532 /* uitls */,
 				030C22112A13B2FE00625532 /* All_YouApp.swift */,
-				030C22132A13B2FE00625532 /* ContentView.swift */,
 				030C22152A13B2FF00625532 /* Assets.xcassets */,
 				030C22172A13B2FF00625532 /* Preview Content */,
 			);
@@ -840,7 +837,6 @@
 				030C22CE2A13B5BE00625532 /* ChatView.swift in Sources */,
 				030C23632A13F89500625532 /* AlterSheetState.swift in Sources */,
 				030C22C52A13B5BE00625532 /* SignInWithGoogleUseCase.swift in Sources */,
-				030C22142A13B2FE00625532 /* ContentView.swift in Sources */,
 				030C22A12A13B5BE00625532 /* FrontRepository.swift in Sources */,
 				030C22E62A13B5BE00625532 /* AlterView.swift in Sources */,
 				030C22CB2A13B5BE00625532 /* HomeView.swift in Sources */,
