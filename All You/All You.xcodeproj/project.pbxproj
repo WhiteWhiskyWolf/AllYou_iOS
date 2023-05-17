@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		030C22122A13B2FE00625532 /* All_YouApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22112A13B2FE00625532 /* All_YouApp.swift */; };
 		030C22142A13B2FE00625532 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22132A13B2FE00625532 /* ContentView.swift */; };
-		030C22162A13B2FF00625532 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 030C22152A13B2FF00625532 /* Assets.xcassets */; };
 		030C22192A13B2FF00625532 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 030C22182A13B2FF00625532 /* Preview Assets.xcassets */; };
 		030C22232A13B2FF00625532 /* All_YouTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22222A13B2FF00625532 /* All_YouTests.swift */; };
 		030C222D2A13B2FF00625532 /* All_YouUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C222C2A13B2FF00625532 /* All_YouUITests.swift */; };
@@ -206,13 +205,31 @@
 		030C234F2A13B5BE00625532 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 030C22902A13B5BE00625532 /* Preview Assets.xcassets */; };
 		030C23502A13B5BE00625532 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 030C22902A13B5BE00625532 /* Preview Assets.xcassets */; };
 		030C23512A13B5BE00625532 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 030C22902A13B5BE00625532 /* Preview Assets.xcassets */; };
-		030C23522A13B5BE00625532 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 030C22912A13B5BE00625532 /* Info.plist */; };
 		030C23532A13B5BE00625532 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 030C22912A13B5BE00625532 /* Info.plist */; };
 		030C23542A13B5BE00625532 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 030C22912A13B5BE00625532 /* Info.plist */; };
 		030C23572A13B83900625532 /* Appwrite in Frameworks */ = {isa = PBXBuildFile; productRef = 030C23562A13B83900625532 /* Appwrite */; };
 		030C23592A13B97E00625532 /* SearchAltersUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C23582A13B97E00625532 /* SearchAltersUseCase.swift */; };
 		030C235A2A13B97E00625532 /* SearchAltersUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C23582A13B97E00625532 /* SearchAltersUseCase.swift */; };
 		030C235B2A13B97E00625532 /* SearchAltersUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C23582A13B97E00625532 /* SearchAltersUseCase.swift */; };
+		030C235F2A13BCE000625532 /* AlterSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C235E2A13BCE000625532 /* AlterSheet.swift */; };
+		030C23602A13BCE000625532 /* AlterSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C235E2A13BCE000625532 /* AlterSheet.swift */; };
+		030C23612A13BCE000625532 /* AlterSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C235E2A13BCE000625532 /* AlterSheet.swift */; };
+		030C23632A13F89500625532 /* AlterSheetState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C23622A13F89500625532 /* AlterSheetState.swift */; };
+		030C23642A13F89500625532 /* AlterSheetState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C23622A13F89500625532 /* AlterSheetState.swift */; };
+		030C23652A13F89500625532 /* AlterSheetState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C23622A13F89500625532 /* AlterSheetState.swift */; };
+		030C23672A13F8E000625532 /* AlterSheetActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C23662A13F8E000625532 /* AlterSheetActions.swift */; };
+		030C23682A13F8E000625532 /* AlterSheetActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C23662A13F8E000625532 /* AlterSheetActions.swift */; };
+		030C23692A13F8E000625532 /* AlterSheetActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C23662A13F8E000625532 /* AlterSheetActions.swift */; };
+		030C236F2A13F99A00625532 /* AlterSheetSideEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C236E2A13F99A00625532 /* AlterSheetSideEffects.swift */; };
+		030C23702A13F99A00625532 /* AlterSheetSideEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C236E2A13F99A00625532 /* AlterSheetSideEffects.swift */; };
+		030C23712A13F99A00625532 /* AlterSheetSideEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C236E2A13F99A00625532 /* AlterSheetSideEffects.swift */; };
+		030C23732A13F9BB00625532 /* AlterSheetReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C23722A13F9BA00625532 /* AlterSheetReducer.swift */; };
+		030C23742A13F9BB00625532 /* AlterSheetReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C23722A13F9BA00625532 /* AlterSheetReducer.swift */; };
+		030C23752A13F9BB00625532 /* AlterSheetReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C23722A13F9BA00625532 /* AlterSheetReducer.swift */; };
+		030C23772A13FA9700625532 /* GetAlterByIDUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C23762A13FA9700625532 /* GetAlterByIDUseCase.swift */; };
+		030C23782A13FA9700625532 /* GetAlterByIDUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C23762A13FA9700625532 /* GetAlterByIDUseCase.swift */; };
+		030C23792A13FA9700625532 /* GetAlterByIDUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C23762A13FA9700625532 /* GetAlterByIDUseCase.swift */; };
+		030C237C2A13FBF100625532 /* AnimatedTabBar in Frameworks */ = {isa = PBXBuildFile; productRef = 030C237B2A13FBF100625532 /* AnimatedTabBar */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -309,6 +326,13 @@
 		030C22902A13B5BE00625532 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		030C22912A13B5BE00625532 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = SOURCE_ROOT; };
 		030C23582A13B97E00625532 /* SearchAltersUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAltersUseCase.swift; sourceTree = "<group>"; };
+		030C235E2A13BCE000625532 /* AlterSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlterSheet.swift; sourceTree = "<group>"; };
+		030C23622A13F89500625532 /* AlterSheetState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlterSheetState.swift; sourceTree = "<group>"; };
+		030C23662A13F8E000625532 /* AlterSheetActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlterSheetActions.swift; sourceTree = "<group>"; };
+		030C236E2A13F99A00625532 /* AlterSheetSideEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlterSheetSideEffects.swift; sourceTree = "<group>"; };
+		030C23722A13F9BA00625532 /* AlterSheetReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlterSheetReducer.swift; sourceTree = "<group>"; };
+		030C23762A13FA9700625532 /* GetAlterByIDUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAlterByIDUseCase.swift; sourceTree = "<group>"; };
+		030C237D2A1509DD00625532 /* All You.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "All You.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -317,6 +341,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				030C23572A13B83900625532 /* Appwrite in Frameworks */,
+				030C237C2A13FBF100625532 /* AnimatedTabBar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +385,7 @@
 		030C22102A13B2FE00625532 /* All You */ = {
 			isa = PBXGroup;
 			children = (
+				030C237D2A1509DD00625532 /* All You.entitlements */,
 				030C228E2A13B5BE00625532 /* Assets.xcassets */,
 				030C228B2A13B5BE00625532 /* di */,
 				030C223E2A13B5BE00625532 /* domain */,
@@ -454,6 +480,7 @@
 				030C22512A13B5BE00625532 /* SignInWithGoogleUseCase.swift */,
 				030C22522A13B5BE00625532 /* IsUserSignedInUseCase.swift */,
 				030C23582A13B97E00625532 /* SearchAltersUseCase.swift */,
+				030C23762A13FA9700625532 /* GetAlterByIDUseCase.swift */,
 			);
 			path = usecases;
 			sourceTree = "<group>";
@@ -461,6 +488,7 @@
 		030C22532A13B5BE00625532 /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				030C235C2A13BC5000625532 /* Sheets */,
 				030C22542A13B5BE00625532 /* home */,
 				030C22562A13B5BE00625532 /* ChatView */,
 				030C22582A13B5BE00625532 /* FrontView */,
@@ -635,6 +663,26 @@
 			path = "Preview Content";
 			sourceTree = SOURCE_ROOT;
 		};
+		030C235C2A13BC5000625532 /* Sheets */ = {
+			isa = PBXGroup;
+			children = (
+				030C235D2A13BC5700625532 /* AlterSheet */,
+			);
+			path = Sheets;
+			sourceTree = "<group>";
+		};
+		030C235D2A13BC5700625532 /* AlterSheet */ = {
+			isa = PBXGroup;
+			children = (
+				030C23722A13F9BA00625532 /* AlterSheetReducer.swift */,
+				030C235E2A13BCE000625532 /* AlterSheet.swift */,
+				030C23622A13F89500625532 /* AlterSheetState.swift */,
+				030C23662A13F8E000625532 /* AlterSheetActions.swift */,
+				030C236E2A13F99A00625532 /* AlterSheetSideEffects.swift */,
+			);
+			path = AlterSheet;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -653,6 +701,7 @@
 			name = "All You";
 			packageProductDependencies = (
 				030C23562A13B83900625532 /* Appwrite */,
+				030C237B2A13FBF100625532 /* AnimatedTabBar */,
 			);
 			productName = "All You";
 			productReference = 030C220E2A13B2FE00625532 /* All You.app */;
@@ -728,6 +777,7 @@
 			mainGroup = 030C22052A13B2FE00625532;
 			packageReferences = (
 				030C23552A13B83900625532 /* XCRemoteSwiftPackageReference "sdk-for-swift" */,
+				030C237A2A13FBF100625532 /* XCRemoteSwiftPackageReference "AnimatedTabBar" */,
 			);
 			productRefGroup = 030C220F2A13B2FE00625532 /* Products */;
 			projectDirPath = "";
@@ -748,8 +798,6 @@
 				030C234F2A13B5BE00625532 /* Preview Assets.xcassets in Resources */,
 				030C22192A13B2FF00625532 /* Preview Assets.xcassets in Resources */,
 				030C234C2A13B5BE00625532 /* Assets.xcassets in Resources */,
-				030C23522A13B5BE00625532 /* Info.plist in Resources */,
-				030C22162A13B2FF00625532 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -790,6 +838,7 @@
 				030C22B92A13B5BE00625532 /* GetCurrentUserUseCase.swift in Sources */,
 				030C23252A13B5BE00625532 /* SavingProfile.swift in Sources */,
 				030C22CE2A13B5BE00625532 /* ChatView.swift in Sources */,
+				030C23632A13F89500625532 /* AlterSheetState.swift in Sources */,
 				030C22C52A13B5BE00625532 /* SignInWithGoogleUseCase.swift in Sources */,
 				030C22142A13B2FE00625532 /* ContentView.swift in Sources */,
 				030C22A12A13B5BE00625532 /* FrontRepository.swift in Sources */,
@@ -800,6 +849,8 @@
 				030C231F2A13B5BE00625532 /* LoginReducer.swift in Sources */,
 				030C22B32A13B5BE00625532 /* SignInWithAppleUseCase.swift in Sources */,
 				030C22922A13B5BE00625532 /* SequenceUtils.swift in Sources */,
+				030C235F2A13BCE000625532 /* AlterSheet.swift in Sources */,
+				030C236F2A13F99A00625532 /* AlterSheetSideEffects.swift in Sources */,
 				030C22EC2A13B5BE00625532 /* ProfilePhotoComponent.swift in Sources */,
 				030C22B02A13B5BE00625532 /* UserModel.swift in Sources */,
 				030C22C22A13B5BE00625532 /* UploadProfilePhotoUseCase.swift in Sources */,
@@ -823,6 +874,7 @@
 				030C23312A13B5BE00625532 /* OnboardingState.swift in Sources */,
 				030C232B2A13B5BE00625532 /* OnboardingReducer.swift in Sources */,
 				030C22B62A13B5BE00625532 /* HasUserCompletedOnboardingUseCase.swift in Sources */,
+				030C23772A13FA9700625532 /* GetAlterByIDUseCase.swift in Sources */,
 				030C22D72A13B5BE00625532 /* FrontView.swift in Sources */,
 				030C22FE2A13B5BE00625532 /* RootActions.swift in Sources */,
 				030C229E2A13B5BE00625532 /* ProfilePhotoRepository.swift in Sources */,
@@ -838,9 +890,11 @@
 				030C23492A13B5BE00625532 /* PropertyWrapper.swift in Sources */,
 				030C22D42A13B5BE00625532 /* FrontState.swift in Sources */,
 				030C23372A13B5BE00625532 /* SystemOnboarding.swift in Sources */,
+				030C23672A13F8E000625532 /* AlterSheetActions.swift in Sources */,
 				030C23342A13B5BE00625532 /* OnboardingActions.swift in Sources */,
 				030C22952A13B5BE00625532 /* ColorUtils.swift in Sources */,
 				030C22AA2A13B5BE00625532 /* FrontRecord.swift in Sources */,
+				030C23732A13F9BB00625532 /* AlterSheetReducer.swift in Sources */,
 				030C233A2A13B5BE00625532 /* SystemOnbaordingState~.swift in Sources */,
 				030C22E02A13B5BE00625532 /* Store.swift in Sources */,
 				030C23282A13B5BE00625532 /* WelcomePage.swift in Sources */,
@@ -863,6 +917,7 @@
 				030C234A2A13B5BE00625532 /* PropertyWrapper.swift in Sources */,
 				030C23232A13B5BE00625532 /* LoginSideEffects.swift in Sources */,
 				030C23112A13B5BE00625532 /* UserUIModel.swift in Sources */,
+				030C23702A13F99A00625532 /* AlterSheetSideEffects.swift in Sources */,
 				030C22B72A13B5BE00625532 /* HasUserCompletedOnboardingUseCase.swift in Sources */,
 				030C232C2A13B5BE00625532 /* OnboardingReducer.swift in Sources */,
 				030C22CF2A13B5BE00625532 /* ChatView.swift in Sources */,
@@ -903,7 +958,9 @@
 				030C22E42A13B5BE00625532 /* AlterViewState.swift in Sources */,
 				030C22CC2A13B5BE00625532 /* HomeView.swift in Sources */,
 				030C231D2A13B5BE00625532 /* LoginState.swift in Sources */,
+				030C23742A13F9BB00625532 /* AlterSheetReducer.swift in Sources */,
 				030C23412A13B5BE00625532 /* AlterOnboarding.swift in Sources */,
+				030C23642A13F89500625532 /* AlterSheetState.swift in Sources */,
 				030C22BD2A13B5BE00625532 /* SaveOnboardingUserProfileUseCase.swift in Sources */,
 				030C23142A13B5BE00625532 /* AlterUIModel.swift in Sources */,
 				030C230B2A13B5BE00625532 /* RootReducer.swift in Sources */,
@@ -916,6 +973,9 @@
 				030C23322A13B5BE00625532 /* OnboardingState.swift in Sources */,
 				030C22C92A13B5BE00625532 /* IsUserSignedInUseCase.swift in Sources */,
 				030C22D82A13B5BE00625532 /* FrontView.swift in Sources */,
+				030C23782A13FA9700625532 /* GetAlterByIDUseCase.swift in Sources */,
+				030C23602A13BCE000625532 /* AlterSheet.swift in Sources */,
+				030C23682A13F8E000625532 /* AlterSheetActions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -933,6 +993,7 @@
 				030C22BB2A13B5BE00625532 /* GetCurrentUserUseCase.swift in Sources */,
 				030C23272A13B5BE00625532 /* SavingProfile.swift in Sources */,
 				030C22D02A13B5BE00625532 /* ChatView.swift in Sources */,
+				030C23652A13F89500625532 /* AlterSheetState.swift in Sources */,
 				030C22C72A13B5BE00625532 /* SignInWithGoogleUseCase.swift in Sources */,
 				030C222F2A13B2FF00625532 /* All_YouUITestsLaunchTests.swift in Sources */,
 				030C22A32A13B5BE00625532 /* FrontRepository.swift in Sources */,
@@ -943,6 +1004,8 @@
 				030C23212A13B5BE00625532 /* LoginReducer.swift in Sources */,
 				030C22B52A13B5BE00625532 /* SignInWithAppleUseCase.swift in Sources */,
 				030C22942A13B5BE00625532 /* SequenceUtils.swift in Sources */,
+				030C23612A13BCE000625532 /* AlterSheet.swift in Sources */,
+				030C23712A13F99A00625532 /* AlterSheetSideEffects.swift in Sources */,
 				030C22EE2A13B5BE00625532 /* ProfilePhotoComponent.swift in Sources */,
 				030C22B22A13B5BE00625532 /* UserModel.swift in Sources */,
 				030C22C42A13B5BE00625532 /* UploadProfilePhotoUseCase.swift in Sources */,
@@ -966,6 +1029,7 @@
 				030C23332A13B5BE00625532 /* OnboardingState.swift in Sources */,
 				030C232D2A13B5BE00625532 /* OnboardingReducer.swift in Sources */,
 				030C22B82A13B5BE00625532 /* HasUserCompletedOnboardingUseCase.swift in Sources */,
+				030C23792A13FA9700625532 /* GetAlterByIDUseCase.swift in Sources */,
 				030C22D92A13B5BE00625532 /* FrontView.swift in Sources */,
 				030C23002A13B5BE00625532 /* RootActions.swift in Sources */,
 				030C22A02A13B5BE00625532 /* ProfilePhotoRepository.swift in Sources */,
@@ -981,9 +1045,11 @@
 				030C234B2A13B5BE00625532 /* PropertyWrapper.swift in Sources */,
 				030C22D62A13B5BE00625532 /* FrontState.swift in Sources */,
 				030C23392A13B5BE00625532 /* SystemOnboarding.swift in Sources */,
+				030C23692A13F8E000625532 /* AlterSheetActions.swift in Sources */,
 				030C23362A13B5BE00625532 /* OnboardingActions.swift in Sources */,
 				030C22972A13B5BE00625532 /* ColorUtils.swift in Sources */,
 				030C22AC2A13B5BE00625532 /* FrontRecord.swift in Sources */,
+				030C23752A13F9BB00625532 /* AlterSheetReducer.swift in Sources */,
 				030C233C2A13B5BE00625532 /* SystemOnbaordingState~.swift in Sources */,
 				030C22E22A13B5BE00625532 /* Store.swift in Sources */,
 				030C232A2A13B5BE00625532 /* WelcomePage.swift in Sources */,
@@ -1126,6 +1192,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "All You/All You.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"All You/Preview Content\"";
@@ -1142,7 +1209,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.whitewhiskywolf.All-You";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.whitewhiskywolf.AllYou-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1155,6 +1222,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "All You/All You.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"All You/Preview Content\"";
@@ -1171,7 +1239,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.whitewhiskywolf.All-You";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.whitewhiskywolf.AllYou-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1305,6 +1373,14 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		030C237A2A13FBF100625532 /* XCRemoteSwiftPackageReference "AnimatedTabBar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/exyte/AnimatedTabBar.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1312,6 +1388,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 030C23552A13B83900625532 /* XCRemoteSwiftPackageReference "sdk-for-swift" */;
 			productName = Appwrite;
+		};
+		030C237B2A13FBF100625532 /* AnimatedTabBar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 030C237A2A13FBF100625532 /* XCRemoteSwiftPackageReference "AnimatedTabBar" */;
+			productName = AnimatedTabBar;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

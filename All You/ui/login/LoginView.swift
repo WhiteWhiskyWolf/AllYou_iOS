@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import AuthenticationServices
 import Appwrite
 
 struct LoginView: View {
