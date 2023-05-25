@@ -206,7 +206,6 @@
 		030C23512A13B5BE00625532 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 030C22902A13B5BE00625532 /* Preview Assets.xcassets */; };
 		030C23532A13B5BE00625532 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 030C22912A13B5BE00625532 /* Info.plist */; };
 		030C23542A13B5BE00625532 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 030C22912A13B5BE00625532 /* Info.plist */; };
-		030C23572A13B83900625532 /* Appwrite in Frameworks */ = {isa = PBXBuildFile; productRef = 030C23562A13B83900625532 /* Appwrite */; };
 		030C23592A13B97E00625532 /* SearchAltersUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C23582A13B97E00625532 /* SearchAltersUseCase.swift */; };
 		030C235A2A13B97E00625532 /* SearchAltersUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C23582A13B97E00625532 /* SearchAltersUseCase.swift */; };
 		030C235B2A13B97E00625532 /* SearchAltersUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C23582A13B97E00625532 /* SearchAltersUseCase.swift */; };
@@ -229,6 +228,7 @@
 		030C23782A13FA9700625532 /* GetAlterByIDUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C23762A13FA9700625532 /* GetAlterByIDUseCase.swift */; };
 		030C23792A13FA9700625532 /* GetAlterByIDUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C23762A13FA9700625532 /* GetAlterByIDUseCase.swift */; };
 		030C237C2A13FBF100625532 /* AnimatedTabBar in Frameworks */ = {isa = PBXBuildFile; productRef = 030C237B2A13FBF100625532 /* AnimatedTabBar */; };
+		0313A2F02A16CBCD00FEC459 /* Appwrite in Frameworks */ = {isa = PBXBuildFile; productRef = 0313A2EF2A16CBCD00FEC459 /* Appwrite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -338,7 +338,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				030C23572A13B83900625532 /* Appwrite in Frameworks */,
+				0313A2F02A16CBCD00FEC459 /* Appwrite in Frameworks */,
 				030C237C2A13FBF100625532 /* AnimatedTabBar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -697,8 +697,8 @@
 			);
 			name = "All You";
 			packageProductDependencies = (
-				030C23562A13B83900625532 /* Appwrite */,
 				030C237B2A13FBF100625532 /* AnimatedTabBar */,
+				0313A2EF2A16CBCD00FEC459 /* Appwrite */,
 			);
 			productName = "All You";
 			productReference = 030C220E2A13B2FE00625532 /* All You.app */;
@@ -773,8 +773,8 @@
 			);
 			mainGroup = 030C22052A13B2FE00625532;
 			packageReferences = (
-				030C23552A13B83900625532 /* XCRemoteSwiftPackageReference "sdk-for-swift" */,
 				030C237A2A13FBF100625532 /* XCRemoteSwiftPackageReference "AnimatedTabBar" */,
+				0313A2EE2A16CBCD00FEC459 /* XCRemoteSwiftPackageReference "sdk-for-apple" */,
 			);
 			productRefGroup = 030C220F2A13B2FE00625532 /* Products */;
 			projectDirPath = "";
@@ -1361,14 +1361,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		030C23552A13B83900625532 /* XCRemoteSwiftPackageReference "sdk-for-swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/appwrite/sdk-for-swift";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
-			};
-		};
 		030C237A2A13FBF100625532 /* XCRemoteSwiftPackageReference "AnimatedTabBar" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/exyte/AnimatedTabBar.git";
@@ -1377,18 +1369,26 @@
 				minimumVersion = 0.0.2;
 			};
 		};
+		0313A2EE2A16CBCD00FEC459 /* XCRemoteSwiftPackageReference "sdk-for-apple" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/appwrite/sdk-for-apple";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		030C23562A13B83900625532 /* Appwrite */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 030C23552A13B83900625532 /* XCRemoteSwiftPackageReference "sdk-for-swift" */;
-			productName = Appwrite;
-		};
 		030C237B2A13FBF100625532 /* AnimatedTabBar */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 030C237A2A13FBF100625532 /* XCRemoteSwiftPackageReference "AnimatedTabBar" */;
 			productName = AnimatedTabBar;
+		};
+		0313A2EF2A16CBCD00FEC459 /* Appwrite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0313A2EE2A16CBCD00FEC459 /* XCRemoteSwiftPackageReference "sdk-for-apple" */;
+			productName = Appwrite;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
