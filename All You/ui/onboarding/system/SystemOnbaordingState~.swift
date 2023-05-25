@@ -8,13 +8,16 @@
 import Foundation
 
 struct SystemOnboardingState {
-    let systemName: String = ""
-    let systemPronouns: String = ""
-    let systemProfilePhoto: String? = nil
-    let systemColor: String = "#8bda85"
+    let systemName: String
+    let systemPronouns: String
+    let systemProfilePhoto: String?
+    let systemColor: String
     
     init() {
-        
+        self.systemName = ""
+        self.systemPronouns = ""
+        self.systemProfilePhoto = nil
+        self.systemColor = "#8bda85"
     }
     
     init(systemName: String, systemPronouns: String, systemProfilePhoto: String?, systemColor: String) {

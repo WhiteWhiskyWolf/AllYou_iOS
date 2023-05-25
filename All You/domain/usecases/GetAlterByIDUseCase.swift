@@ -13,13 +13,13 @@ class GetAlterByIDUseCase {
     @Service var frontRepository: FrontRepository
     
     func invoke(alterId: String) async -> AlterUIModel? {
-        return if let alter = await alterRepository.getAltersById(id: alterId) {
+        if let alter = await alterRepository.getAltersById(id: alterId) {
             var profilePhoto: Data? = nil
             if (alter.alterProfilePhoto != nil) {
                 profilePhoto = await profilePhotoRepository.getPhotoForUser(id: alter.alterProfilePhoto!)
             }
             let frontRecord = await frontRepository.getLastFrontRecordForAlter(alterId: alter.id)
-            var isFronting = frontRecord != nil && frontRecord?.endTime != nil
+            let isFronting = frontRecord != nil && frontRecord?.endTime != nil
             return AlterUIModel(
                 fromAlterModel: alter,
                 profilePhotoData: profilePhoto,
@@ -27,5 +27,6 @@ class GetAlterByIDUseCase {
                 frontingDate: frontRecord?.endTime ?? frontRecord?.startTime
             )
         }
+        return nil
     }
 }

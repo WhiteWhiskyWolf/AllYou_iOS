@@ -13,7 +13,7 @@ class SearchAltersUseCase {
     @Service var frontRepository: FrontRepository
     
     func invoke(userId: String, search: String) async -> [AlterUIModel] {
-        return alterRepository.searchUserAlters(userId: userId, search: search).map { alter in
+        return await alterRepository.searchUserAlters(userId: userId, search: search).asyncMap { alter in
             var profilePhoto: Data? = nil
             if (alter.alterProfilePhoto != nil) {
                 profilePhoto = await profilePhotoRepository.getPhotoForUser(id: alter.alterProfilePhoto!)

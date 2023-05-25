@@ -33,7 +33,6 @@ struct FrontReducer {
                 let isCurrentUser,
                 let selectedAlter,
                 let selectedSystem,
-                _,
                 _
             ) = state {
                 return FrontState.Loaded(

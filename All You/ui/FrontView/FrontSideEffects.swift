@@ -21,8 +21,8 @@ class FrontSideEffects {
     
     private func onSearchSideEffect(previousState: FrontState, newState: FrontState, action: FrontActions, dispatch: Dispatch<FrontActions>) async {
         if case .SearchAlter(let searchString) = action {
-            if .Loaded(_, _, _, let selectedUser, _) = newState {
-                let foundAlters = searchAltersUseCase.invoke(userId: selectedUser.id, search: searchString)
+            if case .Loaded(_, _, _, let selectedUser, _) = newState {
+                let foundAlters = await searchAltersUseCase.invoke(userId: selectedUser.id, search: searchString)
                 dispatch(FrontActions.SetAlters(alters: foundAlters))
             }
         }
