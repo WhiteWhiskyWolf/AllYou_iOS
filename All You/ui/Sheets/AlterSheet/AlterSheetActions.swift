@@ -10,4 +10,9 @@ import Foundation
 enum AlterSheetActions {
     case LoadAlter(alterId: String)
     case LoaedAlter(alter: AlterUIModel, isCurrentUser: Bool)
+    case UploadPhoto(alterId: String, alterPhoto: Data)
+    case UpdateName(name: String)
+    case UpdatePronouns(pronouns: String)
+    case UpdateColor(color: String)
+    case SaveAlter
 }

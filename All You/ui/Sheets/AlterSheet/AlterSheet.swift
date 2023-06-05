@@ -34,7 +34,7 @@ private struct AlterSheet_Internal: View {
         switch(state) {
         case .Loading:
             LoadingAlterSheet()
-        case .Loaeded(let alter, isCurrentUser: let isCurrentUser):
+        case .Loaded(let alter, isCurrentUser: let isCurrentUser):
             if (isCurrentUser) {
                 CurerntUserAlterSheet(
                     alter: alter,
@@ -61,7 +61,57 @@ private struct CurerntUserAlterSheet: View {
     let dispatch: Dispatch<AlterSheetActions>
     
     var body: some View {
-        Text("Hello Curent USer")
+        let alterNameBinding = Binding(
+            get: {
+                alter.alterName ?? ""
+            },
+            set: { newName in
+                dispatch(AlterSheetActions.UpdateName(name: newName))
+            }
+        )
+        let pronounBinding = Binding(
+            get: {alter.alterPronouns ?? ""},
+            set: { newPronouns in
+                dispatch(AlterSheetActions.UpdatePronouns(pronouns: newPronouns))
+            }
+        )
+        let colorBinding = Binding(
+            get: {Color(hex: alter.alterColor)},
+            set: { dispatch(AlterSheetActions.UpdateColor(color: $0.hexString())) }
+        )
+        VStack {
+            HStack {
+                ProfileViewComponent(
+                    onPictueSelected: { data in
+                        dispatch(AlterSheetActions.UploadPhoto(alterId: alter.id, alterPhoto: data))
+                    }
+                )
+                
+                Spacer()
+                    .oneHorizontal()
+                
+                VStack {
+                    TextField("Alter Name", text: alterNameBinding, axis: .horizontal)
+                        .textFieldStyle(OutlinedTextFieldStyle())
+                        .previewLayout(.sizeThatFits)
+                    
+                    TextField("Alter Pronouns", text: pronounBinding, axis: .horizontal)
+                        .textFieldStyle(OutlinedTextFieldStyle())
+                        .previewLayout(.sizeThatFits)
+                }
+            }
+            
+            ColorPicker("Alter Color", selection: colorBinding)
+            
+            Spacer()
+                .oneVertical()
+            Button(
+                action: {dispatch(AlterSheetActions.SaveAlter)},
+                label: {Text("Save")}
+            ).buttonStyle(PrimaryButton())
+        }
+        .padding()
+        .frame(maxHeight: .infinity)
     }
 }
 
@@ -78,7 +128,7 @@ struct AlterSheetCurrentUser_Previews: PreviewProvider {
     static var previews: some View {
         ForEach(ColorScheme.allCases, id: \.self) {
             AlterSheet_Internal(
-                state: AlterSheetState.Loaeded(
+                state: AlterSheetState.Loaded(
                     alter: AlterUIModel(
                         id: "Test",
                         profileId: "test",
@@ -88,6 +138,7 @@ struct AlterSheetCurrentUser_Previews: PreviewProvider {
                         alterRole: "test role",
                         alterColor: "#4cdbe6",
                         alterProfilePhoto: nil,
+                        alterProfileId: nil,
                         isFronting: false,
                         frontingDate: Date.now
                     ),
@@ -104,7 +155,7 @@ struct FriendsCurrentUser_Previews: PreviewProvider {
     static var previews: some View {
         ForEach(ColorScheme.allCases, id: \.self) {
             AlterSheet_Internal(
-                state: AlterSheetState.Loaeded(
+                state: AlterSheetState.Loaded(
                     alter: AlterUIModel(
                         id: "Test",
                         profileId: "test",
@@ -114,6 +165,7 @@ struct FriendsCurrentUser_Previews: PreviewProvider {
                         alterRole: "test role",
                         alterColor: "#4cdbe6",
                         alterProfilePhoto: nil,
+                        alterProfileId: nil,
                         isFronting: false,
                         frontingDate: Date.now
                     ),

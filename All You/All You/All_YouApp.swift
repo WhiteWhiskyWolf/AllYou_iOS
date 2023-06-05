@@ -38,6 +38,7 @@ extension All_YouApp {
         ServiceContainer.register(type: SaveOnboardingUserProfileUseCase.self, SaveOnboardingUserProfileUseCase())
         ServiceContainer.register(type: GetCurrentUserUseCase.self, GetCurrentUserUseCase())
         ServiceContainer.register(type: GetUserAltersUseCase.self, GetUserAltersUseCase())
+        ServiceContainer.register(type: SaveAlterUseCase.self, SaveAlterUseCase())
     }
 }
 

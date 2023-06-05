@@ -19,7 +19,7 @@ class SearchAltersUseCase {
                 profilePhoto = await profilePhotoRepository.getPhotoForUser(id: alter.alterProfilePhoto!)
             }
             let frontRecord = await frontRepository.getLastFrontRecordForAlter(alterId: alter.id)
-            var isFronting = frontRecord != nil && frontRecord?.endTime != nil
+            let isFronting = frontRecord != nil && frontRecord?.endTime != nil
             return AlterUIModel(
                 fromAlterModel: alter,
                 profilePhotoData: profilePhoto,

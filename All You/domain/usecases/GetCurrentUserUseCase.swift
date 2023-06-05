@@ -14,11 +14,11 @@ class GetCurrentUserUseCase {
     
     func invoke() async -> UserUIModel? {
         if let userId = await authenticationRepository.getUserId() {
-            var foundUser = await userRepsository.getUser(userId: userId)
+            let foundUser = await userRepsository.getUser(userId: userId)
             if (foundUser == nil) {
                 return nil
             }
-            var photo = await profilePhotoRepository.getPhotoForUser(id: userId)
+            let photo = await profilePhotoRepository.getPhotoForUser(id: userId)
             return UserUIModel(userModel: foundUser!, profileImage: photo)
         } else {
             return nil

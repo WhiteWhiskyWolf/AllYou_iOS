@@ -9,7 +9,7 @@ import Foundation
 
 enum AlterSheetState {
     case Loading
-    case Loaeded(
+    case Loaded(
         alter: AlterUIModel,
         isCurrentUser: Bool
     )

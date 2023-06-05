@@ -15,6 +15,6 @@ class UploadProfilePhotoUseCase {
             await profilePhotoRepository.deletePhoto(id: exisitngId!)
         }
         
-        return await profilePhotoRepository.createPhoto(id: UUID().uuidString, data: data)
+        return await profilePhotoRepository.createPhoto(id: exisitngId ?? UUID().uuidString, data: data)
     }
 }

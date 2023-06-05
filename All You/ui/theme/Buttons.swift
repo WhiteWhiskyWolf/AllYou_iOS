@@ -18,3 +18,14 @@ struct PrimaryButton: ButtonStyle {
             .clipShape(Capsule())
     }
 }
+
+struct SecondaryButton: ButtonStyle {
+    func makeBody(configuration: Self.Configuration) -> some View {
+        configuration.label
+            .padding()
+            .frame(maxWidth: .infinity)
+            .background(Color.secondary)
+            .foregroundColor(Color.onSecondary)
+            .clipShape(Capsule())
+    }
+}

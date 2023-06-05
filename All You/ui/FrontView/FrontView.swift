@@ -55,6 +55,14 @@ private struct FrontView_Loaded: View {
     
     var body: some View {
         let searchBinding = Binding(get: {searchString}, set: {dispatch(FrontActions.SearchAlter(searchString: $0))})
+        let selectedAlterBinding = Binding(
+            get: {selectedAlter != nil},
+            set: { shouldClose in
+                if (!shouldClose) {
+                    dispatch(FrontActions.CloseAlter)
+                }
+            }
+        )
         
         VStack {
             VStack(alignment: .leading) {
@@ -106,6 +114,10 @@ private struct FrontView_Loaded: View {
         .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.background)
+        .sheet(
+            isPresented: selectedAlterBinding,
+            content: {AlterSheet(alterId: selectedAlter!)}
+        )
     }
 }
 
@@ -192,6 +204,9 @@ private struct AlterCard: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
             }
         }
+        .onTapGesture {
+            dispatch(FrontActions.SelectAlter(alterId: alter.id))
+        }
         .padding()
         .frame(maxWidth: .infinity)
         .background(Color.tertiary)
@@ -261,6 +276,7 @@ struct FrontView_Loaded_Previews: PreviewProvider {
                             alterRole: "test role",
                             alterColor: "#4cdbe6",
                             alterProfilePhoto: nil,
+                            alterProfileId: nil,
                             isFronting: true,
                             frontingDate: Date.now
                         ),
@@ -273,6 +289,7 @@ struct FrontView_Loaded_Previews: PreviewProvider {
                             alterRole: "test role",
                             alterColor: "#4cdbe6",
                             alterProfilePhoto: nil,
+                            alterProfileId: nil,
                             isFronting: true,
                             frontingDate: Date.now
                         ),
@@ -285,6 +302,7 @@ struct FrontView_Loaded_Previews: PreviewProvider {
                             alterRole: "test role",
                             alterColor: "#4cdbe6",
                             alterProfilePhoto: nil,
+                            alterProfileId: nil,
                             isFronting: false,
                             frontingDate: Date.now
                         ),
@@ -297,6 +315,7 @@ struct FrontView_Loaded_Previews: PreviewProvider {
                             alterRole: "test role",
                             alterColor: "#4cdbe6",
                             alterProfilePhoto: nil,
+                            alterProfileId: nil,
                             isFronting: false,
                             frontingDate: nil
                         ),

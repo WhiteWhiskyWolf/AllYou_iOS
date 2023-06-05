@@ -41,6 +41,8 @@ struct NotificationsPermissions: View {
                             let center = UNUserNotificationCenter.current()
                             center.requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
                                 if let error = error {
+                                    // TODO log errors
+                                    print(error.localizedDescription)
                                 }
                             }
 

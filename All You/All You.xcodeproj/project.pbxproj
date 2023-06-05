@@ -229,6 +229,7 @@
 		030C23792A13FA9700625532 /* GetAlterByIDUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C23762A13FA9700625532 /* GetAlterByIDUseCase.swift */; };
 		030C237C2A13FBF100625532 /* AnimatedTabBar in Frameworks */ = {isa = PBXBuildFile; productRef = 030C237B2A13FBF100625532 /* AnimatedTabBar */; };
 		0313A2F02A16CBCD00FEC459 /* Appwrite in Frameworks */ = {isa = PBXBuildFile; productRef = 0313A2EF2A16CBCD00FEC459 /* Appwrite */; };
+		03EDEDB12A2E24A200CBCA78 /* SaveAlterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EDEDB02A2E24A200CBCA78 /* SaveAlterUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -331,6 +332,7 @@
 		030C23722A13F9BA00625532 /* AlterSheetReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlterSheetReducer.swift; sourceTree = "<group>"; };
 		030C23762A13FA9700625532 /* GetAlterByIDUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAlterByIDUseCase.swift; sourceTree = "<group>"; };
 		030C237D2A1509DD00625532 /* All You.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "All You.entitlements"; sourceTree = "<group>"; };
+		03EDEDB02A2E24A200CBCA78 /* SaveAlterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveAlterUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -478,6 +480,7 @@
 				030C22522A13B5BE00625532 /* IsUserSignedInUseCase.swift */,
 				030C23582A13B97E00625532 /* SearchAltersUseCase.swift */,
 				030C23762A13FA9700625532 /* GetAlterByIDUseCase.swift */,
+				03EDEDB02A2E24A200CBCA78 /* SaveAlterUseCase.swift */,
 			);
 			path = usecases;
 			sourceTree = "<group>";
@@ -894,6 +897,7 @@
 				030C233A2A13B5BE00625532 /* SystemOnbaordingState~.swift in Sources */,
 				030C22E02A13B5BE00625532 /* Store.swift in Sources */,
 				030C23282A13B5BE00625532 /* WelcomePage.swift in Sources */,
+				03EDEDB12A2E24A200CBCA78 /* SaveAlterUseCase.swift in Sources */,
 				030C22DD2A13B5BE00625532 /* FrontSideEffects.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

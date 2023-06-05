@@ -10,11 +10,30 @@ import Foundation
 struct AlterSheetSideEffects {
     @Service var getAlterUseCase: GetAlterByIDUseCase
     @Service var getCurrentUserUseCase: GetCurrentUserUseCase
+    @Service var uploadPhotoUseCase: UploadProfilePhotoUseCase
+    @Service var saveAlterUseCase: SaveAlterUseCase
     
     func sideEffects() -> [SideEffect<AlterSheetState, AlterSheetActions>] {
         return [
-            onLoadSideEffect
+            onLoadSideEffect,
+            onProfilePhoto
         ]
+    }
+    
+    private func onSaveAlter(oldState: AlterSheetState, newState: AlterSheetState, action: AlterSheetActions, dispatch: Dispatch<AlterSheetActions>) async {
+        if case .SaveAlter = action {
+            if case .Loaded(alter: let alter, _) = newState {
+                await saveAlterUseCase.invoke(alter: alter)
+            }
+        }
+    }
+    
+    private func onProfilePhoto(oldState: AlterSheetState, newState: AlterSheetState, action: AlterSheetActions, dispatch: Dispatch<AlterSheetActions>) async {
+        if case .UploadPhoto(_, let alterPhoto) = action {
+            if case .Loaded(alter: let alter, _) = newState {
+                _ = await uploadPhotoUseCase.invoke(data: alterPhoto, exisitngId: alter.alterProfileId)
+            }
+        }
     }
     
     private func onLoadSideEffect(oldState: AlterSheetState, newState: AlterSheetState, action: AlterSheetActions, dispatch: Dispatch<AlterSheetActions>) async {
@@ -35,6 +54,7 @@ struct AlterSheetSideEffects {
                             alterRole: nil,
                             alterColor: "#7f9dbf",
                             alterProfilePhoto: nil,
+                            alterProfileId: nil,
                             isFronting: false,
                             frontingDate: nil
                         ),
