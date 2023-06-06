@@ -40,7 +40,6 @@ class AuthenticationRepository {
     
     func signInWithGoogle() async -> Bool {
         do {
-            let account = Account(appwriteClient.getClient())
             return try account.createOAuth2Session(provider: "google")
         } catch {
             return false

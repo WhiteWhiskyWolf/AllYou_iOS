@@ -20,7 +20,7 @@ class AlterRepository {
                 databaseId: appwriteClient.getDatabaseId(),
                 collectionId: appwriteClient.getAlterRepisotry(),
                 queries: [
-                    Query.equal("userId", value: userId),
+                    Query.equal("profileId", value: userId),
                     Query.search("text_search", value: search)
                 ]
             )
@@ -60,7 +60,7 @@ class AlterRepository {
     
     func getAltersForUser(lastAlterId: String?, userId: String) async -> [AlterModel] {
         do {
-            var querys = [Query.equal("userId", value: userId)]
+            var querys = [Query.equal("profileId", value: userId)]
             if (lastAlterId != nil) {
                 querys.append(Query.cursorAfter(lastAlterId!))
             }

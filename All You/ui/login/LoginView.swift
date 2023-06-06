@@ -49,7 +49,6 @@ private struct LoginView_Internal: View {
         }
         .background(Color.background)
         .padding()
-        .registerOAuthHandler()
     }
 }
 

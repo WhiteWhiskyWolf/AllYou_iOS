@@ -16,13 +16,14 @@ struct AlterSheetSideEffects {
     func sideEffects() -> [SideEffect<AlterSheetState, AlterSheetActions>] {
         return [
             onLoadSideEffect,
-            onProfilePhoto
+            onProfilePhoto,
+            onSaveAlter
         ]
     }
     
     private func onSaveAlter(oldState: AlterSheetState, newState: AlterSheetState, action: AlterSheetActions, dispatch: Dispatch<AlterSheetActions>) async {
         if case .SaveAlter = action {
-            if case .Loaded(alter: let alter, _) = newState {
+            if case .Loaded(alter: let alter, _) = oldState {
                 await saveAlterUseCase.invoke(alter: alter)
             }
         }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AlterSheet: View {
     let alterId: String
-    let store: Store<AlterSheetState, AlterSheetActions>
+    @ObservedObject var store: Store<AlterSheetState, AlterSheetActions>
     
     init(alterId: String) {
         self.alterId = alterId
