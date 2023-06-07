@@ -23,11 +23,19 @@ struct FrontRecord: Codable {
         self.endTime = endTime
     }
     
-    init(fromMap: [String: AnyCodable]) throws {
-        self.id = fromMap["id"]!.value as! String
-        self.alterId = fromMap["atlerId"]!.value as! String
-        self.profileId = fromMap["profileId"]!.value as! String
-        self.startTime = fromMap["startTime"]!.value as! Date
-        self.endTime = fromMap["endTime"]?.value as? Date
+    func copy(
+        id: String? = nil,
+        alterId: String? = nil,
+        profileId: String? = nil,
+        startTime: Date? = nil,
+        endTime: Date? = nil
+    ) -> FrontRecord {
+        return FrontRecord(
+            id: id ?? self.id,
+            alterId: alterId ?? self.alterId,
+            profileId: profileId ?? self.profileId,
+            startTime: startTime ?? self.startTime,
+            endTime: endTime ?? self.endTime
+        )
     }
 }

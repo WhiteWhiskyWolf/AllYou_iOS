@@ -181,18 +181,31 @@ private struct AlterCard: View {
                 Spacer()
                 Button(
                     action: {
-                        dispatch(FrontActions.RemoveAlterFromFront(alterId: alter.id))
+                        if (alter.isFronting) {
+                            dispatch(FrontActions.RemoveAlterFromFront(alter: alter))
+                        } else {
+                            dispatch(FrontActions.SetAlterAsFront(alter: alter))
+                        }
                     },
                     label: {
-                        Image(systemName: "arrow.up")
-                            .accessibilityLabel(
-                                alter.isFronting ? "Remove \(alter.alterName ?? "alter") from front" : "Add \(alter.alterName ?? "alter") to front"
-                            )
-                            .foregroundColor(Color.onTertiary)
+                        if (alter.isFronting) {
+                            Image(systemName: "arrow.down")
+                                .accessibilityLabel("Remove \(alter.alterName ?? "alter") from front")
+                                .foregroundColor(Color.onTertiary)
+                        } else {
+                            Image(systemName: "arrow.up")
+                                .accessibilityLabel("Add \(alter.alterName ?? "alter") to front")
+                                .foregroundColor(Color.onTertiary)
+                        }
+                        
                     }
                 )
             }
             if (alter.frontingDate != nil && alter.isFronting) {
+                Text("Fronting For:")
+                    .font(.subheadline)
+                    .foregroundColor(Color.onTertiary)
+                    .frame(maxWidth: .infinity, alignment: .leading)
                 Text(alter.frontingDate!, style: .relative)
                     .font(.subheadline)
                     .foregroundColor(Color.onTertiary)

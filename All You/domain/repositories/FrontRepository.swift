@@ -20,7 +20,7 @@ class FrontRepository {
                 databaseId: appwriteClient.getDatabaseId(),
                 collectionId: appwriteClient.getFrontRepisotry(),
                 queries: [
-                    Query.equal("profileId", value: alterId),
+                    Query.equal("alterId", value: alterId),
                     Query.limit(1),
                     Query.orderDesc("startTime")
                 ]
@@ -28,9 +28,14 @@ class FrontRepository {
             if (documents.documents.isEmpty) {
                 return nil
             }
-            return try FrontRecord(fromMap: documents.documents.first!.data)
+            let decoder = JSONDecoder()
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSxxxx"
+            decoder.dateDecodingStrategy = .formatted(dateFormatter)
+            let jsonData = try documents.documents.first?.data.toJson().data(using: .utf8)
+            return try decoder.decode(FrontRecord.self, from: jsonData!)
         } catch {
-            logger.error("Unable to get front records: \(error.localizedDescription)")
+            logger.error("Unable to get front records: \(String(describing: error))")
             return nil
         }
     }
@@ -45,8 +50,12 @@ class FrontRepository {
                     Query.isNull("endTime")
                 ]
             )
+            let decoder = JSONDecoder()
+            decoder.dateDecodingStrategy = .iso8601
+            
             return try documents.documents.map { record in
-                try FrontRecord(fromMap: record.data)
+                let jsonData = try documents.documents.first?.data.toJson().data(using: .utf8)
+                return try decoder.decode(FrontRecord.self, from: jsonData!)
             }
         } catch {
             logger.error("Unable to find front recrods \(error.localizedDescription)")
@@ -66,7 +75,10 @@ class FrontRepository {
     
     private func updateRecord(frontRecord: FrontRecord) async -> Bool {
         do {
-            let data = try JSONEncoder().encode(frontRecord)
+            let encoder = JSONEncoder()
+            encoder.dateEncodingStrategy = .iso8601
+            let data = try encoder.encode(frontRecord)
+            
             let jsonDict = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
             _ = try await database.updateDocument(databaseId: appwriteClient.getDatabaseId(), collectionId: appwriteClient.getFrontRepisotry(), documentId: frontRecord.id, data: jsonDict)
             return true
@@ -78,7 +90,10 @@ class FrontRepository {
     
     private func createRecord(frontRecord: FrontRecord) async -> Bool {
         do {
-            let data = try JSONEncoder().encode(frontRecord)
+            let encoder = JSONEncoder()
+            encoder.dateEncodingStrategy = .iso8601
+            let data = try encoder.encode(frontRecord)
+            
             if let jsonDict = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
                 _ = try await database.createDocument(databaseId: appwriteClient.getDatabaseId(), collectionId: appwriteClient.getFrontRepisotry(), documentId: frontRecord.id, data: jsonDict)
             }

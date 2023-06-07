@@ -11,12 +11,28 @@ class FrontSideEffects {
     @Service var getCurrentUserUseCase: GetCurrentUserUseCase
     @Service var getUserAltersUseCase: GetUserAltersUseCase
     @Service var searchAltersUseCase: SearchAltersUseCase
+    @Service var setAlterToFrontUseCase: SetAlterToFrontUseCase
+    @Service var removeAlterFromFrontUseCase: RemoveAlterFromFrontUseCase
     
     func sideEffects() -> [SideEffect<FrontState, FrontActions>] {
         return [
             onLoadSideEffect,
-            onSearchSideEffect
+            onSearchSideEffect,
+            onMoveAlterToFront,
+            onRemoveAlterToFront
         ]
+    }
+    
+    private func onMoveAlterToFront(previousState: FrontState, newState: FrontState, action: FrontActions, dispatch: Dispatch<FrontActions>) async {
+        if case .SetAlterAsFront(let alter) = action {
+            await setAlterToFrontUseCase.invoke(alter: alter)
+        }
+    }
+    
+    private func onRemoveAlterToFront(previousState: FrontState, newState: FrontState, action: FrontActions, dispatch: Dispatch<FrontActions>) async {
+        if case .RemoveAlterFromFront(alter: let alter) = action {
+            await removeAlterFromFrontUseCase.invoke(alter: alter)
+        }
     }
     
     private func onSearchSideEffect(previousState: FrontState, newState: FrontState, action: FrontActions, dispatch: Dispatch<FrontActions>) async {

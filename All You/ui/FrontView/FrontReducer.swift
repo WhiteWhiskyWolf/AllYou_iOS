@@ -47,11 +47,11 @@ struct FrontReducer {
             }
         case .LoadFriend(userId: let userId):
             return state
-        case .SetAlterAsFront(alterId: let alterId):
+        case .SetAlterAsFront(_):
             return state
-        case .ReplaceAlterAsFront(alterId: let alterId):
+        case .ReplaceAlterAsFront(_):
             return state
-        case .RemoveAlterFromFront(alterId: let alterId):
+        case .RemoveAlterFromFront(_):
             return state
         case .SearchAlter(searchString: let searchString):
             if case .Loaded(

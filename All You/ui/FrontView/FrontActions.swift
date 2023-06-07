@@ -20,9 +20,9 @@ enum FrontActions {
         alters: [AlterUIModel]
     )
     case LoadFriend(userId: String)
-    case SetAlterAsFront(alterId: String)
-    case ReplaceAlterAsFront(alterId: String)
-    case RemoveAlterFromFront(alterId: String)
+    case SetAlterAsFront(alter: AlterUIModel)
+    case ReplaceAlterAsFront(alter: AlterUIModel)
+    case RemoveAlterFromFront(alter: AlterUIModel)
     case SearchAlter(searchString: String)
     case SelectAlter(alterId: String)
     case CloseAlter

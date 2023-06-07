@@ -16,7 +16,7 @@ class GetUserAltersUseCase {
         let alters = await alterRepository.getAltersForUser(lastAlterId: lastAlterId, userId: userId)
         return await alters.asyncMap { alter in
             let frontRecord = await frontRepository.getLastFrontRecordForAlter(alterId: alter.id)
-            let isFronting = frontRecord != nil && frontRecord?.endTime != nil
+            let isFronting = frontRecord != nil && frontRecord?.endTime == nil
             return AlterUIModel(
                 fromAlterModel: alter,
                 isFronting: isFronting,
