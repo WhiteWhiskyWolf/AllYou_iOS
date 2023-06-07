@@ -58,6 +58,18 @@ struct AppwriteClient {
         return databaseId
     }
     
+    func getProfilePhotoBucket() -> String {
+        guard let filePath = Bundle.main.path(forResource: "Appwrite", ofType: "plist") else {
+          fatalError("Couldn't find file 'Appwrite.plist'.")
+        }
+        let plist = NSDictionary(contentsOfFile: filePath)
+        
+        guard let profilePhotoBucket = plist?.object(forKey: "PROFILE_PHOTO_BUCKET") as? String else {
+          fatalError("Couldn't find key 'FRONT_REPO' in 'TMDB-Info.plist'.")
+        }
+        return profilePhotoBucket
+    }
+    
     func getClient() -> Client {
         guard let filePath = Bundle.main.path(forResource: "Appwrite", ofType: "plist") else {
           fatalError("Couldn't find file 'Appwrite.plist'.")

@@ -15,14 +15,14 @@ struct OnboardingState {
     let systemName: String
     let systemPronouns: String
     let systemColor: String
-    let systemImage: Data?
+    let systemImage: String?
     
     let isSignlet: Bool
     
     let alterName: String
     let alterPronouns: String
     let alterColor: String
-    let alterImage: Data?
+    let alterImage: String?
     let alterDescription: String?
     let alterRole: String?
     
@@ -53,12 +53,12 @@ struct OnboardingState {
         systemName: String,
         systemPronouns: String,
         systemColor: String,
-        systemImage: Data?,
+        systemImage: String?,
         isSignlet: Bool,
         alterName: String,
         alterPronouns: String,
         alterColor: String,
-        alterImage: Data?,
+        alterImage: String?,
         alterDescription: String?,
         alterRole: String?
     ) {
@@ -85,12 +85,12 @@ struct OnboardingState {
         systemName: String? = nil,
         systemPronouns: String? = nil,
         systemColor: String? = nil,
-        systemImage: Data? = nil,
+        systemImage: String? = nil,
         isSignlet: Bool? = nil,
         alterName: String? = nil,
         alterPronouns: String? = nil,
         alterColor: String? = nil,
-        alterImage: Data? = nil,
+        alterImage: String? = nil,
         alterDescription: String? = nil,
         alterRole: String? = nil
     ) -> OnboardingState {

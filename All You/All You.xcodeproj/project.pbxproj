@@ -231,6 +231,15 @@
 		0313A2F02A16CBCD00FEC459 /* Appwrite in Frameworks */ = {isa = PBXBuildFile; productRef = 0313A2EF2A16CBCD00FEC459 /* Appwrite */; };
 		03EDEDB12A2E24A200CBCA78 /* SaveAlterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EDEDB02A2E24A200CBCA78 /* SaveAlterUseCase.swift */; };
 		03EDEDB32A2E2BAA00CBCA78 /* Appwrite.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03EDEDB22A2E2BAA00CBCA78 /* Appwrite.plist */; };
+		03EDEDB62A30BF0B00CBCA78 /* ProfilePhotoSate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EDEDB52A30BF0B00CBCA78 /* ProfilePhotoSate.swift */; };
+		03EDEDB82A30BF4200CBCA78 /* ProfilePhotoActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EDEDB72A30BF4200CBCA78 /* ProfilePhotoActions.swift */; };
+		03EDEDBA2A30BF6400CBCA78 /* ProfilePhotoReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EDEDB92A30BF6400CBCA78 /* ProfilePhotoReducer.swift */; };
+		03EDEDBC2A30BFD800CBCA78 /* ProfilePhotoSideEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EDEDBB2A30BFD800CBCA78 /* ProfilePhotoSideEffects.swift */; };
+		03EDEDBE2A30C0E100CBCA78 /* GetProfilePhotoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EDEDBD2A30C0E100CBCA78 /* GetProfilePhotoUseCase.swift */; };
+		03EDEDC22A30C69B00CBCA78 /* ProfilePhotoComponentState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EDEDC12A30C69B00CBCA78 /* ProfilePhotoComponentState.swift */; };
+		03EDEDC42A30C6F600CBCA78 /* ProfilePhotoComponentActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EDEDC32A30C6F600CBCA78 /* ProfilePhotoComponentActions.swift */; };
+		03EDEDC62A30C71700CBCA78 /* ProfilePhotoComponentReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EDEDC52A30C71700CBCA78 /* ProfilePhotoComponentReducer.swift */; };
+		03EDEDC82A30C78900CBCA78 /* ProfilePhotoComponentSideEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EDEDC72A30C78900CBCA78 /* ProfilePhotoComponentSideEffects.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -335,6 +344,15 @@
 		030C237D2A1509DD00625532 /* All You.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "All You.entitlements"; sourceTree = "<group>"; };
 		03EDEDB02A2E24A200CBCA78 /* SaveAlterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveAlterUseCase.swift; sourceTree = "<group>"; };
 		03EDEDB22A2E2BAA00CBCA78 /* Appwrite.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Appwrite.plist; sourceTree = "<group>"; };
+		03EDEDB52A30BF0B00CBCA78 /* ProfilePhotoSate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoSate.swift; sourceTree = "<group>"; };
+		03EDEDB72A30BF4200CBCA78 /* ProfilePhotoActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoActions.swift; sourceTree = "<group>"; };
+		03EDEDB92A30BF6400CBCA78 /* ProfilePhotoReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoReducer.swift; sourceTree = "<group>"; };
+		03EDEDBB2A30BFD800CBCA78 /* ProfilePhotoSideEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoSideEffects.swift; sourceTree = "<group>"; };
+		03EDEDBD2A30C0E100CBCA78 /* GetProfilePhotoUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProfilePhotoUseCase.swift; sourceTree = "<group>"; };
+		03EDEDC12A30C69B00CBCA78 /* ProfilePhotoComponentState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoComponentState.swift; sourceTree = "<group>"; };
+		03EDEDC32A30C6F600CBCA78 /* ProfilePhotoComponentActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoComponentActions.swift; sourceTree = "<group>"; };
+		03EDEDC52A30C71700CBCA78 /* ProfilePhotoComponentReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoComponentReducer.swift; sourceTree = "<group>"; };
+		03EDEDC72A30C78900CBCA78 /* ProfilePhotoComponentSideEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoComponentSideEffects.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -484,6 +502,7 @@
 				030C23582A13B97E00625532 /* SearchAltersUseCase.swift */,
 				030C23762A13FA9700625532 /* GetAlterByIDUseCase.swift */,
 				03EDEDB02A2E24A200CBCA78 /* SaveAlterUseCase.swift */,
+				03EDEDBD2A30C0E100CBCA78 /* GetProfilePhotoUseCase.swift */,
 			);
 			path = usecases;
 			sourceTree = "<group>";
@@ -556,9 +575,8 @@
 		030C22632A13B5BE00625532 /* components */ = {
 			isa = PBXGroup;
 			children = (
+				03EDEDB42A30BEE900CBCA78 /* profile */,
 				030C22642A13B5BE00625532 /* SearchBar.swift */,
-				030C22652A13B5BE00625532 /* ProfilePhotoComponent.swift */,
-				030C22662A13B5BE00625532 /* ProfileViewComponent.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -684,6 +702,39 @@
 				030C236E2A13F99A00625532 /* AlterSheetSideEffects.swift */,
 			);
 			path = AlterSheet;
+			sourceTree = "<group>";
+		};
+		03EDEDB42A30BEE900CBCA78 /* profile */ = {
+			isa = PBXGroup;
+			children = (
+				03EDEDC02A30C66A00CBCA78 /* profilePhotoComponent */,
+				03EDEDBF2A30C65C00CBCA78 /* profilePhotoView */,
+			);
+			path = profile;
+			sourceTree = "<group>";
+		};
+		03EDEDBF2A30C65C00CBCA78 /* profilePhotoView */ = {
+			isa = PBXGroup;
+			children = (
+				030C22662A13B5BE00625532 /* ProfileViewComponent.swift */,
+				03EDEDB52A30BF0B00CBCA78 /* ProfilePhotoSate.swift */,
+				03EDEDB72A30BF4200CBCA78 /* ProfilePhotoActions.swift */,
+				03EDEDB92A30BF6400CBCA78 /* ProfilePhotoReducer.swift */,
+				03EDEDBB2A30BFD800CBCA78 /* ProfilePhotoSideEffects.swift */,
+			);
+			path = profilePhotoView;
+			sourceTree = "<group>";
+		};
+		03EDEDC02A30C66A00CBCA78 /* profilePhotoComponent */ = {
+			isa = PBXGroup;
+			children = (
+				030C22652A13B5BE00625532 /* ProfilePhotoComponent.swift */,
+				03EDEDC12A30C69B00CBCA78 /* ProfilePhotoComponentState.swift */,
+				03EDEDC32A30C6F600CBCA78 /* ProfilePhotoComponentActions.swift */,
+				03EDEDC52A30C71700CBCA78 /* ProfilePhotoComponentReducer.swift */,
+				03EDEDC72A30C78900CBCA78 /* ProfilePhotoComponentSideEffects.swift */,
+			);
+			path = profilePhotoComponent;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -840,14 +891,19 @@
 				030C23132A13B5BE00625532 /* AlterUIModel.swift in Sources */,
 				030C23402A13B5BE00625532 /* AlterOnboarding.swift in Sources */,
 				030C22B92A13B5BE00625532 /* GetCurrentUserUseCase.swift in Sources */,
+				03EDEDC42A30C6F600CBCA78 /* ProfilePhotoComponentActions.swift in Sources */,
 				030C23252A13B5BE00625532 /* SavingProfile.swift in Sources */,
+				03EDEDB62A30BF0B00CBCA78 /* ProfilePhotoSate.swift in Sources */,
 				030C22CE2A13B5BE00625532 /* ChatView.swift in Sources */,
 				030C23632A13F89500625532 /* AlterSheetState.swift in Sources */,
+				03EDEDB82A30BF4200CBCA78 /* ProfilePhotoActions.swift in Sources */,
+				03EDEDC62A30C71700CBCA78 /* ProfilePhotoComponentReducer.swift in Sources */,
 				030C22C52A13B5BE00625532 /* SignInWithGoogleUseCase.swift in Sources */,
 				030C22A12A13B5BE00625532 /* FrontRepository.swift in Sources */,
 				030C22E62A13B5BE00625532 /* AlterView.swift in Sources */,
 				030C22CB2A13B5BE00625532 /* HomeView.swift in Sources */,
 				030C23432A13B5BE00625532 /* NotificationsPermissions.swift in Sources */,
+				03EDEDC82A30C78900CBCA78 /* ProfilePhotoComponentSideEffects.swift in Sources */,
 				030C22122A13B2FE00625532 /* All_YouApp.swift in Sources */,
 				030C231F2A13B5BE00625532 /* LoginReducer.swift in Sources */,
 				030C22B32A13B5BE00625532 /* SignInWithAppleUseCase.swift in Sources */,
@@ -861,6 +917,7 @@
 				030C22E32A13B5BE00625532 /* AlterViewState.swift in Sources */,
 				030C23222A13B5BE00625532 /* LoginSideEffects.swift in Sources */,
 				030C22EF2A13B5BE00625532 /* ProfileViewComponent.swift in Sources */,
+				03EDEDBC2A30BFD800CBCA78 /* ProfilePhotoSideEffects.swift in Sources */,
 				030C22BF2A13B5BE00625532 /* GetUserAltersUseCase.swift in Sources */,
 				030C229B2A13B5BE00625532 /* AuthenticationRepository.swift in Sources */,
 				030C230D2A13B5BE00625532 /* SettingsView.swift in Sources */,
@@ -875,6 +932,7 @@
 				030C22E92A13B5BE00625532 /* SearchBar.swift in Sources */,
 				030C22AD2A13B5BE00625532 /* AlterModel.swift in Sources */,
 				030C23312A13B5BE00625532 /* OnboardingState.swift in Sources */,
+				03EDEDBA2A30BF6400CBCA78 /* ProfilePhotoReducer.swift in Sources */,
 				030C232B2A13B5BE00625532 /* OnboardingReducer.swift in Sources */,
 				030C22B62A13B5BE00625532 /* HasUserCompletedOnboardingUseCase.swift in Sources */,
 				030C23772A13FA9700625532 /* GetAlterByIDUseCase.swift in Sources */,
@@ -891,12 +949,14 @@
 				030C22FB2A13B5BE00625532 /* Colors.swift in Sources */,
 				030C22BC2A13B5BE00625532 /* SaveOnboardingUserProfileUseCase.swift in Sources */,
 				030C23492A13B5BE00625532 /* PropertyWrapper.swift in Sources */,
+				03EDEDBE2A30C0E100CBCA78 /* GetProfilePhotoUseCase.swift in Sources */,
 				030C22D42A13B5BE00625532 /* FrontState.swift in Sources */,
 				030C23372A13B5BE00625532 /* SystemOnboarding.swift in Sources */,
 				030C23672A13F8E000625532 /* AlterSheetActions.swift in Sources */,
 				030C23342A13B5BE00625532 /* OnboardingActions.swift in Sources */,
 				030C22952A13B5BE00625532 /* ColorUtils.swift in Sources */,
 				030C22AA2A13B5BE00625532 /* FrontRecord.swift in Sources */,
+				03EDEDC22A30C69B00CBCA78 /* ProfilePhotoComponentState.swift in Sources */,
 				030C23732A13F9BB00625532 /* AlterSheetReducer.swift in Sources */,
 				030C233A2A13B5BE00625532 /* SystemOnbaordingState~.swift in Sources */,
 				030C22E02A13B5BE00625532 /* Store.swift in Sources */,

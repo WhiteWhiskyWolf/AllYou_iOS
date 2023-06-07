@@ -21,7 +21,7 @@ private struct AlterView_Internal: View {
             VStack {
                 SearchBar(text: searchAlterBinding) {
                     ProfilePhotoComponent(
-                        image: state.system.systemProfileImage,
+                        imageId: state.system.systemProfileImage,
                         name: state.system.systemName,
                         color: state.system.systemColor,
                         size: CGFloat(24)

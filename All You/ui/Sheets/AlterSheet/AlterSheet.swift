@@ -83,8 +83,9 @@ private struct CurerntUserAlterSheet: View {
             HStack {
                 ProfileViewComponent(
                     onPictueSelected: { data in
-                        dispatch(AlterSheetActions.UploadPhoto(alterId: alter.id, alterPhoto: data))
-                    }
+                        dispatch(AlterSheetActions.UpdatePhotoId(photoId: data))
+                    },
+                    photoId: alter.alterProfilePhoto
                 )
                 
                 Spacer()
@@ -138,7 +139,6 @@ struct AlterSheetCurrentUser_Previews: PreviewProvider {
                         alterRole: "test role",
                         alterColor: "#4cdbe6",
                         alterProfilePhoto: nil,
-                        alterProfileId: nil,
                         isFronting: false,
                         frontingDate: Date.now
                     ),
@@ -165,7 +165,6 @@ struct FriendsCurrentUser_Previews: PreviewProvider {
                         alterRole: "test role",
                         alterColor: "#4cdbe6",
                         alterProfilePhoto: nil,
-                        alterProfileId: nil,
                         isFronting: false,
                         frontingDate: Date.now
                     ),

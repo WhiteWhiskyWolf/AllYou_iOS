@@ -39,7 +39,7 @@ struct OnboardingReducer {
             return state.copy(systemColor: newColor)
         case .SelectNewSystemProfilePhoto:
             return state.copy(displaySelectPhoto: true)
-        case .UpdateSystemProfilePhoto(newPhoto: let newPhoto):
+        case .UpdateSystemProfilePhoto(newId: let newPhoto):
             return state.copy(systemImage: newPhoto)
         case .IsSignlet:
             return state.copy(page: (state.page + 1), isSignlet: true)

@@ -32,7 +32,7 @@ struct AlterSheetSideEffects {
     private func onProfilePhoto(oldState: AlterSheetState, newState: AlterSheetState, action: AlterSheetActions, dispatch: Dispatch<AlterSheetActions>) async {
         if case .UploadPhoto(_, let alterPhoto) = action {
             if case .Loaded(alter: let alter, _) = newState {
-                _ = await uploadPhotoUseCase.invoke(data: alterPhoto, exisitngId: alter.alterProfileId)
+                _ = await uploadPhotoUseCase.invoke(data: alterPhoto, exisitngId: alter.alterProfilePhoto)
             }
         }
     }
@@ -55,7 +55,6 @@ struct AlterSheetSideEffects {
                             alterRole: nil,
                             alterColor: "#7f9dbf",
                             alterProfilePhoto: nil,
-                            alterProfileId: nil,
                             isFronting: false,
                             frontingDate: nil
                         ),

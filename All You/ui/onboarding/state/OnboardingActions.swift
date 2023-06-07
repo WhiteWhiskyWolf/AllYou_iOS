@@ -19,7 +19,7 @@ enum OnboardingActions {
     case UpdateSystemPronounts(newPronouns: String)
     case UpateSystemColor(newColor: String)
     case SelectNewSystemProfilePhoto
-    case UpdateSystemProfilePhoto(newPhoto: Data)
+    case UpdateSystemProfilePhoto(newId: String?)
     
     case IsSignlet
     
@@ -28,7 +28,7 @@ enum OnboardingActions {
     case UpdateAlterDescription(newDescription: String)
     case UpdateAlterColor(newColor: String)
     case UpdateAlterRole(newRole: String)
-    case UpdateAlterProfilePhoto(newPhoto: Data)
+    case UpdateAlterProfilePhoto(newPhoto: String?)
     
     case SaveProfile
 }

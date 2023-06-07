@@ -18,8 +18,7 @@ class GetCurrentUserUseCase {
             if (foundUser == nil) {
                 return nil
             }
-            let photo = await profilePhotoRepository.getPhotoForUser(id: userId)
-            return UserUIModel(userModel: foundUser!, profileImage: photo)
+            return UserUIModel(userModel: foundUser!)
         } else {
             return nil
         }

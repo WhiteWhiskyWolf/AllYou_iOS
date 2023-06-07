@@ -10,11 +10,14 @@ import Foundation
 class UploadProfilePhotoUseCase {
     @Service var profilePhotoRepository: ProfilePhotoRepository
     
-    func invoke(data: Data, exisitngId: String?) async -> String? {
+    func invoke(data: Data?, exisitngId: String?) async -> String? {
         if (exisitngId?.isEmpty == false) {
             await profilePhotoRepository.deletePhoto(id: exisitngId!)
         }
-        
-        return await profilePhotoRepository.createPhoto(id: exisitngId ?? UUID().uuidString, data: data)
+        if (data != nil) {
+            return await profilePhotoRepository.createPhoto(id: exisitngId ?? UUID().uuidString, data: data!)
+        } else {
+            return nil
+        }
     }
 }

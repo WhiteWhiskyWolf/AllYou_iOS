@@ -15,15 +15,10 @@ class GetUserAltersUseCase {
     func invoke(userId: String, lastAlterId: String?) async -> [AlterUIModel] {
         let alters = await alterRepository.getAltersForUser(lastAlterId: lastAlterId, userId: userId)
         return await alters.asyncMap { alter in
-            var profilePhoto: Data? = nil
-            if (alter.alterProfilePhoto != nil) {
-                profilePhoto = await profilePhotoRepository.getPhotoForUser(id: alter.alterProfilePhoto!)
-            }
             let frontRecord = await frontRepository.getLastFrontRecordForAlter(alterId: alter.id)
             let isFronting = frontRecord != nil && frontRecord?.endTime != nil
             return AlterUIModel(
                 fromAlterModel: alter,
-                profilePhotoData: profilePhoto,
                 isFronting: isFronting,
                 frontingDate: frontRecord?.endTime ?? frontRecord?.startTime
             )

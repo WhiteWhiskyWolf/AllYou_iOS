@@ -31,12 +31,14 @@ struct AlterSheetReducer {
             }
             return state
         case .UploadPhoto(alterId: let alterId, alterPhoto: let alterPhoto):
-            if case .Loaded(alter: let alter, isCurrentUser: let isCurrentUser) = state {
-                return AlterSheetState.Loaded(alter: alter.copy(alterProfilePhoto: alterPhoto), isCurrentUser: isCurrentUser)
-            }
             return state
         case .SaveAlter:
             return AlterSheetState.Loading
+        case .UpdatePhotoId(photoId: let photoId):
+            if case .Loaded(alter: let alter, isCurrentUser: let isCurrentUser) = state {
+                return AlterSheetState.Loaded(alter: alter.copy(alterProfilePhotoId: photoId), isCurrentUser: isCurrentUser)
+            }
+            return state
         }
     }
 }

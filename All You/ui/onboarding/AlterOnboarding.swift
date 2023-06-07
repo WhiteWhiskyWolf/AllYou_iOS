@@ -56,10 +56,10 @@ private struct AlterBody: View {
             
             VStack {
                 ProfileViewComponent(
-                    profilePictureData: state.alterImage,
                     onPictueSelected: { data in
                         dispatch(OnboardingActions.UpdateAlterProfilePhoto(newPhoto: data))
-                    }
+                    },
+                    photoId: state.alterImage
                 )
                 
                 Spacer()

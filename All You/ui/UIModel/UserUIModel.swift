@@ -12,9 +12,9 @@ struct UserUIModel: Identifiable {
     let systemName: String
     let systemPronoun: String
     let systemColor: String
-    let systemProfileImage: Data?
+    let systemProfileImage: String?
     
-    init(userId: String, systemName: String, systemPronoun: String, systemColor: String, systemProfileImage: Data?) {
+    init(userId: String, systemName: String, systemPronoun: String, systemColor: String, systemProfileImage: String?) {
         self.id = userId
         self.systemName = systemName
         self.systemPronoun = systemPronoun
@@ -22,21 +22,21 @@ struct UserUIModel: Identifiable {
         self.systemProfileImage = systemProfileImage
     }
     
-    init(userModel: UserModel, profileImage: Data?) {
+    init(userModel: UserModel) {
         self.id = userModel.userId
         self.systemName = userModel.systemName
         self.systemPronoun = userModel.systemPronoun
         self.systemColor = userModel.systemColor
-        self.systemProfileImage = profileImage
+        self.systemProfileImage = userModel.systemProfileId
     }
     
-    func toDomainModel(profileId: String) -> UserModel {
+    func toDomainModel() -> UserModel {
         return UserModel(
             userId: self.id,
             systemName: self.systemName,
             systemPronoun: self.systemPronoun,
             systemColor: self.systemColor,
-            systemProfileId: profileId
+            systemProfileId: self.systemProfileImage
         )
     }
 }

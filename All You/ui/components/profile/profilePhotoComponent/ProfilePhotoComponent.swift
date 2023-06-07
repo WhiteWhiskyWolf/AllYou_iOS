@@ -8,6 +8,36 @@
 import SwiftUI
 
 struct ProfilePhotoComponent: View {
+    let imageId: String?
+    let name: String
+    let color: String
+    let size: CGFloat
+    @ObservedObject var store: Store<ProfilePhotoComponentState, ProfilePhotoComponentActions>
+    
+    init(imageId: String?, name: String, color: String, size: CGFloat) {
+        self.imageId = imageId
+        self.name = name
+        self.color = color
+        self.size = size
+        self.store = Store(
+            initialAction: .LoadImage(imageId: imageId),
+            initialState: .Loading,
+            reducer: ProfilePhotoComponentReducer().reducer,
+            sideEffects: ProfilePhotoComponentSideEffects().sideEffects()
+        )
+    }
+    
+    var body: some View {
+        switch(store.state) {
+        case .Loading:
+            ProgressView()
+        case .Loaded(imageData: let imageData):
+            ProfilePhotoComponentLoaded(image: imageData, name: self.name, color: self.color, size: self.size)
+        }
+    }
+}
+
+private struct ProfilePhotoComponentLoaded: View {
     let image: Data?
     let name: String
     let color: String
@@ -58,7 +88,7 @@ struct FitToWidth: ViewModifier {
 
 struct ProfilePhotoComponent_Previews: PreviewProvider {
     static var previews: some View {
-        ProfilePhotoComponent(
+        ProfilePhotoComponentLoaded(
             image: nil,
             name: "Cate",
             color: "#01e153",

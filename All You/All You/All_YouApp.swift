@@ -42,6 +42,7 @@ extension All_YouApp {
         ServiceContainer.register(type: SearchAltersUseCase.self, SearchAltersUseCase())
         ServiceContainer.register(type: GetAlterByIDUseCase.self, GetAlterByIDUseCase())
         ServiceContainer.register(type: UploadProfilePhotoUseCase.self, UploadProfilePhotoUseCase())
+        ServiceContainer.register(type: GetProfilePhotoUseCase.self, GetProfilePhotoUseCase())
     }
 }
 

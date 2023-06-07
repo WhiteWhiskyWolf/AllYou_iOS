@@ -41,10 +41,10 @@ struct SystemOnboarding: View {
                 Spacer()
                     .oneVertical()
                 ProfileViewComponent(
-                    profilePictureData: state.systemImage,
                     onPictueSelected: { data in
-                        dispatch(OnboardingActions.UpdateSystemProfilePhoto(newPhoto: data))
-                    }
+                        dispatch(OnboardingActions.UpdateSystemProfilePhoto(newId: data))
+                    },
+                    photoId: state.alterImage
                 )
                 
                 Spacer()
