@@ -116,7 +116,11 @@ private struct FrontView_Loaded: View {
         .background(Color.background)
         .sheet(
             isPresented: selectedAlterBinding,
-            content: {AlterSheet(alterId: selectedAlter!)}
+            content: {
+                AlterSheet(alterId: selectedAlter!) {
+                    dispatch(FrontActions.CloseAlter)
+                }
+            }
         )
     }
 }

@@ -9,10 +9,12 @@ import SwiftUI
 
 struct AlterSheet: View {
     let alterId: String
+    let onClose: () -> Void
     @ObservedObject var store: Store<AlterSheetState, AlterSheetActions>
     
-    init(alterId: String) {
+    init(alterId: String, onClose: @escaping () -> Void) {
         self.alterId = alterId
+        self.onClose = onClose
         self.store = Store(
             initialAction: .LoadAlter(alterId: alterId),
             initialState: AlterSheetState.Loading,
@@ -22,13 +24,18 @@ struct AlterSheet: View {
     }
     
     var body: some View {
-        AlterSheet_Internal(state: store.state, dispatch: store.dispatch)
+        AlterSheet_Internal(
+            state: store.state,
+            dispatch: store.dispatch,
+            onClose: onClose
+        )
     }
 }
 
 private struct AlterSheet_Internal: View {
     let state: AlterSheetState
     let dispatch: Dispatch<AlterSheetActions>
+    let onClose: () -> Void
     
     var body: some View {
         switch(state) {
@@ -38,7 +45,8 @@ private struct AlterSheet_Internal: View {
             if (isCurrentUser) {
                 CurerntUserAlterSheet(
                     alter: alter,
-                    dispatch: dispatch
+                    dispatch: dispatch,
+                    onClose: onClose
                 )
             } else {
                 FriendAlterSheet(
@@ -59,6 +67,7 @@ private struct LoadingAlterSheet: View {
 private struct CurerntUserAlterSheet: View {
     let alter: AlterUIModel
     let dispatch: Dispatch<AlterSheetActions>
+    let onClose: () -> Void
     
     var body: some View {
         let alterNameBinding = Binding(
@@ -107,7 +116,10 @@ private struct CurerntUserAlterSheet: View {
             Spacer()
                 .oneVertical()
             Button(
-                action: {dispatch(AlterSheetActions.SaveAlter)},
+                action: {
+                    dispatch(AlterSheetActions.SaveAlter)
+                    onClose()
+                },
                 label: {Text("Save")}
             ).buttonStyle(PrimaryButton())
         }
@@ -144,7 +156,8 @@ struct AlterSheetCurrentUser_Previews: PreviewProvider {
                     ),
                     isCurrentUser: true
                 ),
-                dispatch: { _ in }
+                dispatch: { _ in },
+                onClose: {}
             ).preferredColorScheme($0)
         }
     }
@@ -170,7 +183,8 @@ struct FriendsCurrentUser_Previews: PreviewProvider {
                     ),
                     isCurrentUser: false
                 ),
-                dispatch: { _ in }
+                dispatch: { _ in },
+                onClose: {}
             ).preferredColorScheme($0)
         }
     }
