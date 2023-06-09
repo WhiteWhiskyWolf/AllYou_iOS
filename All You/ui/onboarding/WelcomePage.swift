@@ -15,7 +15,7 @@ struct WelcomePage: View {
             Spacer()
             Text("Welcome to All You!")
             Spacer()
-                .frame(maxHeight: 8)
+                .oneVertical()
             Text("Let's take a moment to get to know eachother")
             Spacer()
             HStack {

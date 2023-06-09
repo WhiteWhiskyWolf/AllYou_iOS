@@ -44,18 +44,19 @@ class FrontSideEffects {
         }
     }
     
-    private func onLoadSideEffect(previousState: FrontState, newState: FrontState, action: FrontActions, dispatch: Dispatch<FrontActions>) async {
+    private func onLoadSideEffect(previousState: FrontState, newState: FrontState, action: FrontActions, dispatch: @escaping Dispatch<FrontActions>) async {
         if case .LoadCurrentUser = action {
             if let currentUser = await getCurrentUserUseCase.invoke() {
-                let alters = await getUserAltersUseCase.invoke(userId: currentUser.id, lastAlterId: nil)
-                dispatch(
-                    FrontActions.LoadedSystem(
-                        searchString: "",
-                        isCurrentUser: true,
-                        selectedSystem: currentUser,
-                        alters: alters
-                    )
-                )
+                let altersStream = getUserAltersUseCase.invoke(userId: currentUser.id, lastAlterId: nil)
+                for await alters in altersStream {
+                    if case .Loading = newState {
+                        dispatch(
+                            FrontActions.LoadedSystem(searchString: "", isCurrentUser: true, selectedSystem: currentUser, alters: alters)
+                        )
+                    } else {
+                        dispatch(FrontActions.SetAlters(alters: alters))
+                    }
+                }
             }
         }
     }

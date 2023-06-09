@@ -40,7 +40,7 @@ private struct LoginView_Internal: View {
             )
             .buttonStyle(PrimaryButton())
             Spacer()
-                .frame(maxHeight: 8)
+                .oneVertical()
             Button(
                 action: {dispatch(LoginActions.SignInWithGoogle)},
                 label: {Text("Sign in with Google")}

@@ -9,9 +9,6 @@
 /* Begin PBXBuildFile section */
 		030C22122A13B2FE00625532 /* All_YouApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22112A13B2FE00625532 /* All_YouApp.swift */; };
 		030C22192A13B2FF00625532 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 030C22182A13B2FF00625532 /* Preview Assets.xcassets */; };
-		030C22232A13B2FF00625532 /* All_YouTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22222A13B2FF00625532 /* All_YouTests.swift */; };
-		030C222D2A13B2FF00625532 /* All_YouUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C222C2A13B2FF00625532 /* All_YouUITests.swift */; };
-		030C222F2A13B2FF00625532 /* All_YouUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C222E2A13B2FF00625532 /* All_YouUITestsLaunchTests.swift */; };
 		030C22922A13B5BE00625532 /* SequenceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C223C2A13B5BE00625532 /* SequenceUtils.swift */; };
 		030C22932A13B5BE00625532 /* SequenceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C223C2A13B5BE00625532 /* SequenceUtils.swift */; };
 		030C22942A13B5BE00625532 /* SequenceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C223C2A13B5BE00625532 /* SequenceUtils.swift */; };
@@ -228,6 +225,7 @@
 		030C237C2A13FBF100625532 /* AnimatedTabBar in Frameworks */ = {isa = PBXBuildFile; productRef = 030C237B2A13FBF100625532 /* AnimatedTabBar */; };
 		0313A2F02A16CBCD00FEC459 /* Appwrite in Frameworks */ = {isa = PBXBuildFile; productRef = 0313A2EF2A16CBCD00FEC459 /* Appwrite */; };
 		039948DC2A30F087007A7222 /* RemoveAlterFromFront.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039948DB2A30F087007A7222 /* RemoveAlterFromFront.swift */; };
+		039EB2852A3383E400672C2C /* AsyncAlgorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 039EB2842A3383E400672C2C /* AsyncAlgorithms */; };
 		03EDEDB12A2E24A200CBCA78 /* SaveAlterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EDEDB02A2E24A200CBCA78 /* SaveAlterUseCase.swift */; };
 		03EDEDB32A2E2BAA00CBCA78 /* Appwrite.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03EDEDB22A2E2BAA00CBCA78 /* Appwrite.plist */; };
 		03EDEDB62A30BF0B00CBCA78 /* ProfilePhotoSate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EDEDB52A30BF0B00CBCA78 /* ProfilePhotoSate.swift */; };
@@ -265,10 +263,7 @@
 		030C22152A13B2FF00625532 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		030C22182A13B2FF00625532 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		030C221E2A13B2FF00625532 /* All YouTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "All YouTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		030C22222A13B2FF00625532 /* All_YouTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = All_YouTests.swift; sourceTree = "<group>"; };
 		030C22282A13B2FF00625532 /* All YouUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "All YouUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		030C222C2A13B2FF00625532 /* All_YouUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = All_YouUITests.swift; sourceTree = "<group>"; };
-		030C222E2A13B2FF00625532 /* All_YouUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = All_YouUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		030C223C2A13B5BE00625532 /* SequenceUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequenceUtils.swift; sourceTree = "<group>"; };
 		030C223D2A13B5BE00625532 /* ColorUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorUtils.swift; sourceTree = "<group>"; };
 		030C22402A13B5BE00625532 /* UserRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
@@ -364,6 +359,7 @@
 			files = (
 				0313A2F02A16CBCD00FEC459 /* Appwrite in Frameworks */,
 				030C237C2A13FBF100625532 /* AnimatedTabBar in Frameworks */,
+				039EB2852A3383E400672C2C /* AsyncAlgorithms in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,7 +430,6 @@
 		030C22212A13B2FF00625532 /* All YouTests */ = {
 			isa = PBXGroup;
 			children = (
-				030C22222A13B2FF00625532 /* All_YouTests.swift */,
 			);
 			path = "All YouTests";
 			sourceTree = "<group>";
@@ -442,8 +437,6 @@
 		030C222B2A13B2FF00625532 /* All YouUITests */ = {
 			isa = PBXGroup;
 			children = (
-				030C222C2A13B2FF00625532 /* All_YouUITests.swift */,
-				030C222E2A13B2FF00625532 /* All_YouUITestsLaunchTests.swift */,
 			);
 			path = "All YouUITests";
 			sourceTree = "<group>";
@@ -800,6 +793,7 @@
 			packageProductDependencies = (
 				030C237B2A13FBF100625532 /* AnimatedTabBar */,
 				0313A2EF2A16CBCD00FEC459 /* Appwrite */,
+				039EB2842A3383E400672C2C /* AsyncAlgorithms */,
 			);
 			productName = "All You";
 			productReference = 030C220E2A13B2FE00625532 /* All You.app */;
@@ -876,6 +870,7 @@
 			packageReferences = (
 				030C237A2A13FBF100625532 /* XCRemoteSwiftPackageReference "AnimatedTabBar" */,
 				0313A2EE2A16CBCD00FEC459 /* XCRemoteSwiftPackageReference "sdk-for-apple" */,
+				039EB2832A3383E400672C2C /* XCRemoteSwiftPackageReference "swift-async-algorithms" */,
 			);
 			productRefGroup = 030C220F2A13B2FE00625532 /* Products */;
 			projectDirPath = "";
@@ -1075,7 +1070,6 @@
 				030C230B2A13B5BE00625532 /* RootReducer.swift in Sources */,
 				030C22A22A13B5BE00625532 /* FrontRepository.swift in Sources */,
 				030C22B12A13B5BE00625532 /* UserModel.swift in Sources */,
-				030C22232A13B2FF00625532 /* All_YouTests.swift in Sources */,
 				030C23382A13B5BE00625532 /* SystemOnboarding.swift in Sources */,
 				030C23022A13B5BE00625532 /* RootView.swift in Sources */,
 				030C22DB2A13B5BE00625532 /* FrontActions.swift in Sources */,
@@ -1104,12 +1098,10 @@
 				030C22D02A13B5BE00625532 /* ChatView.swift in Sources */,
 				030C23652A13F89500625532 /* AlterSheetState.swift in Sources */,
 				030C22C72A13B5BE00625532 /* SignInWithGoogleUseCase.swift in Sources */,
-				030C222F2A13B2FF00625532 /* All_YouUITestsLaunchTests.swift in Sources */,
 				030C22A32A13B5BE00625532 /* FrontRepository.swift in Sources */,
 				030C22E82A13B5BE00625532 /* AlterView.swift in Sources */,
 				030C22CD2A13B5BE00625532 /* HomeView.swift in Sources */,
 				030C23452A13B5BE00625532 /* NotificationsPermissions.swift in Sources */,
-				030C222D2A13B2FF00625532 /* All_YouUITests.swift in Sources */,
 				030C23212A13B5BE00625532 /* LoginReducer.swift in Sources */,
 				030C22B52A13B5BE00625532 /* SignInWithAppleUseCase.swift in Sources */,
 				030C22942A13B5BE00625532 /* SequenceUtils.swift in Sources */,
@@ -1489,6 +1481,14 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		039EB2832A3383E400672C2C /* XCRemoteSwiftPackageReference "swift-async-algorithms" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-async-algorithms";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1501,6 +1501,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0313A2EE2A16CBCD00FEC459 /* XCRemoteSwiftPackageReference "sdk-for-apple" */;
 			productName = Appwrite;
+		};
+		039EB2842A3383E400672C2C /* AsyncAlgorithms */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 039EB2832A3383E400672C2C /* XCRemoteSwiftPackageReference "swift-async-algorithms" */;
+			productName = AsyncAlgorithms;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

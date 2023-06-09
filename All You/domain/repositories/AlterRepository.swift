@@ -8,10 +8,12 @@
 import Foundation
 import Appwrite
 import os
+import Combine
 
 class AlterRepository {
     @Service var appwriteClient: AppwriteClient
     private lazy var database: Databases = { Databases(appwriteClient.getClient()) }()
+    private lazy var realtime: Realtime = { Realtime(appwriteClient.getClient()) }()
     private let logger = Logger(subsystem: "UserRepository", category: "background")
     
     func searchUserAlters(userId: String, search: String) async -> [AlterModel] {
@@ -55,6 +57,26 @@ class AlterRepository {
         } catch {
             logger.error("Unable to get alters by id \(error.localizedDescription)")
             return nil
+        }
+    }
+    
+    func listenToAltersForUser(userId: String) async -> AsyncStream<[AlterModel]> {
+        return AsyncStream([AlterModel].self) { cont in
+            Task {
+                let initialAlters = await self.getAltersForUser(lastAlterId: nil, userId: userId)
+                cont.yield(initialAlters)
+            }
+            _ = realtime.subscribe(
+                channel: "databases.\(appwriteClient.getDatabaseId()).collections.\(appwriteClient.getAlterRepisotry()).documents",
+                callback: { data in
+                    if (data.events?.isEmpty == false) {
+                        Task.detached {
+                            let alterUpdates = await self.getAltersForUser(lastAlterId: nil, userId: userId)
+                            cont.yield(alterUpdates)
+                        }
+                    }
+                }
+            )
         }
     }
     

@@ -8,11 +8,27 @@
 import Foundation
 import Appwrite
 import os
+import Combine
 
 class FrontRepository {
     @Service var appwriteClient: AppwriteClient
     private lazy var database: Databases = { Databases(appwriteClient.getClient()) }()
+    private lazy var realtime: Realtime = { Realtime(appwriteClient.getClient()) }()
     private let logger = Logger(subsystem: "FrontRepository", category: "background")
+    
+    func listenForUpdates() -> AsyncStream<Bool> {
+        return AsyncStream(Bool.self) { cont in
+            cont.yield(true)
+            _ = realtime.subscribe(
+                channel: "databases.\(appwriteClient.getDatabaseId()).collections.\(appwriteClient.getFrontRepisotry()).documents",
+                callback: { data in
+                    if (data.events?.isEmpty == false) {
+                        cont.yield(true)
+                    }
+                }
+            )
+        }
+    }
     
     func getLastFrontRecordForAlter(alterId: String) async -> FrontRecord? {
         do {

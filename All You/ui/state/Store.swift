@@ -7,7 +7,7 @@
 
 typealias Reducer<State, Action> = (State, Action) -> State
 typealias Dispatch<Action> = (Action) -> Void
-typealias SideEffect<State, Action> = (State, State, Action, Dispatch<Action>) async -> Void
+typealias SideEffect<State, Action> = (State, State, Action, @escaping Dispatch<Action>) async -> Void
 
 import Foundation
 

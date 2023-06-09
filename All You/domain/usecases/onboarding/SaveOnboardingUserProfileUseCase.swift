@@ -28,7 +28,6 @@ class SaveOnboardingUserProfileUseCase {
         alterRole: String?
     ) async {
         let userId = await authenticationRepository.getUserId() ?? UUID().uuidString
-        var profilePhotoId = ""
         let userModel = UserModel(
             userId: userId,
             systemName: systemName,
