@@ -136,7 +136,14 @@ private struct OtherAltersView: View {
                     .font(.title)
                     .foregroundColor(Color.onBackground)
                 Spacer()
-                
+                Button(
+                    action: {dispatch(FrontActions.SelectAlter(alterId: ""))},
+                    label: {
+                        Text("New Alter")
+                            .font(.caption)
+                    }
+                )
+                .buttonStyle(PrimaryButtonSmall())
             }
             
             Divider()

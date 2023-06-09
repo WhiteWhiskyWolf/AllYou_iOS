@@ -10,7 +10,6 @@ import AsyncAlgorithms
 
 class GetUserAltersUseCase {
     @Service var alterRepository: AlterRepository
-    @Service var profilePhotoRepository: ProfilePhotoRepository
     @Service var frontRepository: FrontRepository
     
     func invoke(userId: String, lastAlterId: String?) -> AsyncStream<[AlterUIModel]> {

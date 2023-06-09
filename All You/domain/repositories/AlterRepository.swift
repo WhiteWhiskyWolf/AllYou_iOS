@@ -14,7 +14,7 @@ class AlterRepository {
     @Service var appwriteClient: AppwriteClient
     private lazy var database: Databases = { Databases(appwriteClient.getClient()) }()
     private lazy var realtime: Realtime = { Realtime(appwriteClient.getClient()) }()
-    private let logger = Logger(subsystem: "UserRepository", category: "background")
+    private let logger = Logger(subsystem: "background", category: "UserRepository")
     
     func searchUserAlters(userId: String, search: String) async -> [AlterModel] {
         do {

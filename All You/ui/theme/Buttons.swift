@@ -19,6 +19,16 @@ struct PrimaryButton: ButtonStyle {
     }
 }
 
+struct PrimaryButtonSmall: ButtonStyle {
+    func makeBody(configuration: Self.Configuration) -> some View {
+        configuration.label
+            .padding()
+            .background(Color.primaryColor)
+            .foregroundColor(Color.onPrimary)
+            .clipShape(Capsule())
+    }
+}
+
 struct SecondaryButton: ButtonStyle {
     func makeBody(configuration: Self.Configuration) -> some View {
         configuration.label
