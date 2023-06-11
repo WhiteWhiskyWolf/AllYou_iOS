@@ -12,7 +12,7 @@ class SetAlterToFrontUseCase {
     
     func invoke(alter: AlterUIModel) async {
         let exisitngFrontRecord = await frontRepository.getLastFrontRecordForAlter(alterId: alter.id)
-        if (exisitngFrontRecord?.endTime == nil) {
+        if (exisitngFrontRecord != nil && exisitngFrontRecord?.endTime == nil) {
             return // Alter is already up front
         }
         

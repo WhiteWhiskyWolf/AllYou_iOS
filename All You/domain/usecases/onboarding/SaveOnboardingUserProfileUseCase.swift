@@ -13,7 +13,6 @@ class SaveOnboardingUserProfileUseCase {
     @Service var profilePhotoReposiotry: ProfilePhotoRepository
     @Service var alterRepository: AlterRepository
     @Service var authenticationRepository: AuthenticationRepository
-    @Service var teamRepository: TeamRepository
     
     func invoke(
         systemName: String,
@@ -30,8 +29,6 @@ class SaveOnboardingUserProfileUseCase {
     ) async {
         if let authenticationId = await authenticationRepository.getUserId() {
             let userId = await authenticationRepository.getUserId() ?? UUID().uuidString
-            
-            await teamRepository.createTeam(userId: userId)
             
             let userModel = UserModel(
                 userId: userId,

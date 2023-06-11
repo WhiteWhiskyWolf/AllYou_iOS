@@ -27,17 +27,14 @@ struct All_YouApp: App {
 extension All_YouApp {
     private func setUpDi() {
         // MARK: Repositories
-        ServiceContainer.register(type: AppwriteClient.self, AppwriteClient())
         ServiceContainer.register(type: AuthenticationRepository.self, AuthenticationRepository())
         ServiceContainer.register(type: UserRepsoitory.self, UserRepsoitory())
         ServiceContainer.register(type: AlterRepository.self, AlterRepository())
         ServiceContainer.register(type: ProfilePhotoRepository.self, ProfilePhotoRepository())
         ServiceContainer.register(type: FrontRepository.self, FrontRepository())
-        ServiceContainer.register(type: TeamRepository.self, TeamRepository())
         
         // MARK: Use Cases
         ServiceContainer.register(type: IsUserSignedInUseCase.self, IsUserSignedInUseCase())
-        ServiceContainer.register(type: SignInWithAppleUseCase.self, SignInWithAppleUseCase())
         ServiceContainer.register(type: SignInWithGoogleUseCase.self, SignInWithGoogleUseCase())
         ServiceContainer.register(type: HasUseCompletedOnboardingUseCase.self, HasUseCompletedOnboardingUseCase())
         ServiceContainer.register(type: SaveOnboardingUserProfileUseCase.self, SaveOnboardingUserProfileUseCase())

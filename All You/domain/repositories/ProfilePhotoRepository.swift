@@ -6,38 +6,33 @@
 //
 
 import Foundation
-import Appwrite
+import FirebaseStorage
+import os
 
 class ProfilePhotoRepository {
-    @Service var appwriteClient: AppwriteClient
-    private lazy var storage: Storage = { Storage(appwriteClient.getClient()) }()
+    let logger = Logger(subsystem: "ProfilePhotoRepository", category: "background")
+    let storage = Storage.storage().reference().child("ProfilePhotos")
     
     func getPhotoForId(id: String) async -> Data? {
         do {
-            let file = try await storage.getFileDownload(bucketId: appwriteClient.getProfilePhotoBucket(), fileId: id)
-            return Data(buffer: file)
+            return try await withCheckedThrowingContinuation { continuation in
+                storage.child(id).getData(
+                    maxSize: 5 * 1024 * 1024, // 5MB
+                    completion: { data, error in
+                        if let error = error {
+                            continuation.resume(throwing: error)
+                        } else {
+                            continuation.resume(returning: data!)
+                        }
+                    })
+            }
         } catch {
-            print(error.localizedDescription)
+            logger.error("unable to get photo: \(error.localizedDescription)")
             return nil
         }
     }
     
-    func createPhoto(id: String, data: Data) async -> String? {
-        do {
-            let file = InputFile.fromData(data, filename: id, mimeType: "image/png")
-            let result = try await storage.createFile(bucketId: appwriteClient.getProfilePhotoBucket(), fileId: id, file: file)
-            return result.id
-        } catch {
-            print(error.localizedDescription)
-            return nil
-        }
-    }
-    
-    func deletePhoto(id: String) async {
-        do {
-            _ = try await storage.deleteFile(bucketId: appwriteClient.getProfilePhotoBucket(), fileId: id)
-        } catch {
-            print(error.localizedDescription)
-        }
+    func createPhoto(id: String, data: Data) async {
+        storage.child(id).putData(data, metadata: StorageMetadata(dictionary: ["contentType": "image/png"]))
     }
 }

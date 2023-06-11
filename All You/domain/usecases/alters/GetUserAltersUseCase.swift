@@ -16,10 +16,12 @@ class GetUserAltersUseCase {
         return AsyncStream([AlterUIModel].self) { cont in
             Task {
                 let alterStream = await alterRepository.listenToAltersForUser(userId: userId)
-                let frontRecordStream = frontRepository.listenForUpdates()
-                for await (alters, _) in combineLatest(alterStream, frontRecordStream) {
+                let frontRecordStream = frontRepository.listenForUserFrontRecords(userId: userId)
+                for await (alters, records) in combineLatest(alterStream, frontRecordStream) {
                     let alters = await alters.asyncMap { alter in
-                        let frontRecord = await frontRepository.getLastFrontRecordForAlter(alterId: alter.id)
+                        let frontRecord = records.first(where: { record in
+                            record.alterId == alter.id
+                        })
                         let isFronting = frontRecord != nil && frontRecord?.endTime == nil
                         return AlterUIModel(
                             fromAlterModel: alter,

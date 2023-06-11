@@ -11,7 +11,7 @@ import Foundation
 class IsUserSignedInUseCase {
     @Service var authenticationRepository: AuthenticationRepository
     
-    func invoke() async -> Bool {
-        return await self.authenticationRepository.isSignedIn()
+    func invoke() -> AsyncStream<Bool> {
+        return self.authenticationRepository.isSignedIn()
     }
 }

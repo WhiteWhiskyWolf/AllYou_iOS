@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import JSONCodable
 
 struct UserModel: Codable {
     let userId: String
@@ -21,13 +20,5 @@ struct UserModel: Codable {
         self.systemPronoun = systemPronoun
         self.systemColor = systemColor
         self.systemProfileId = systemProfileId
-    }
-    
-    init(fromDict: [String: AnyCodable]) {
-        self.userId = fromDict["userId"]?.value as! String
-        self.systemName = fromDict["systemName"]?.value as! String
-        self.systemPronoun = fromDict["systemPronoun"]?.value as! String
-        self.systemColor = fromDict["systemColor"]?.value as! String
-        self.systemProfileId = fromDict["systemProfileId"]?.value as? String
     }
 }

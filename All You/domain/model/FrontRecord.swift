@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import JSONCodable
 
 struct FrontRecord: Codable {
     let id: String
@@ -14,14 +13,6 @@ struct FrontRecord: Codable {
     let profileId: String
     let startTime: Date
     let endTime: Date?
-    
-    init(id: String, alterId: String, profileId: String, startTime: Date, endTime: Date?) {
-        self.id = id
-        self.alterId = alterId
-        self.profileId = profileId
-        self.startTime = startTime
-        self.endTime = endTime
-    }
     
     func copy(
         id: String? = nil,

@@ -9,7 +9,6 @@ import Foundation
 
 
 struct LoginSideEffects {
-    @Service var signInWithAppleUseCase: SignInWithAppleUseCase
     @Service var signInWithGoogleUseCase: SignInWithGoogleUseCase
     
     let onSucessSignIn: () -> Void
@@ -21,7 +20,6 @@ struct LoginSideEffects {
     func sideEffects() -> [SideEffect<LoginState, LoginActions>]  {
         return [
             onSignInSuccess,
-            onSignInWithApple,
             onSignInWithGoogle
         ]
     }
@@ -29,12 +27,6 @@ struct LoginSideEffects {
     private func onSignInSuccess(oldState: LoginState, newState: LoginState, action: LoginActions, dispatch: Dispatch<LoginActions>) {
         if (.SuccessfulSignIn == action) {
             onSucessSignIn()
-        }
-    }
-    
-    private func onSignInWithApple(oldState: LoginState, newState: LoginState, action: LoginActions, dispatch: Dispatch<LoginActions>) async {
-        if (.SignInWithApple == action) {
-            _ = await signInWithAppleUseCase.invoke()
         }
     }
     

@@ -32,7 +32,8 @@ struct AlterSheetSideEffects {
     private func onProfilePhoto(oldState: AlterSheetState, newState: AlterSheetState, action: AlterSheetActions, dispatch: Dispatch<AlterSheetActions>) async {
         if case .UploadPhoto(_, let alterPhoto) = action {
             if case .Loaded(alter: let alter, _) = newState {
-                _ = await uploadPhotoUseCase.invoke(data: alterPhoto, exisitngId: alter.alterProfilePhoto)
+                let id = await uploadPhotoUseCase.invoke(data: alterPhoto, exisitngId: alter.alterProfilePhoto)
+                dispatch(AlterSheetActions.UpdatePhotoId(photoId: id))
             }
         }
     }

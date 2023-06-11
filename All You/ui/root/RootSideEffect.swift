@@ -19,9 +19,11 @@ struct RootSideEffects {
     
     private func checkAuthSideEffect(oldState: RootState, newState: RootState, action: RootActions, dispatch: Dispatch<RootActions>) async {
         if case .CheckAuth = action {
-            let signedIn = await isUserSignedInUseCase.invoke()
-            let completedOnboarding = await hasUseCompletedOnboardingUseCase.invoke()
-            dispatch(RootActions.AuthStatus(isSignedIn: signedIn, comletedOnboarding: completedOnboarding))
+            let authStream = isUserSignedInUseCase.invoke()
+            for await isSignedIn in authStream {
+                let completedOnboarding = await hasUseCompletedOnboardingUseCase.invoke()
+                dispatch(RootActions.AuthStatus(isSignedIn: isSignedIn, comletedOnboarding: completedOnboarding))
+            }
         }
     }
 }

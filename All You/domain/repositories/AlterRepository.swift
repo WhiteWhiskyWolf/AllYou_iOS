@@ -6,54 +6,48 @@
 //
 
 import Foundation
-import Appwrite
+import FirebaseFirestore
 import os
 import Combine
 
 class AlterRepository {
-    @Service var appwriteClient: AppwriteClient
-    private lazy var database: Databases = { Databases(appwriteClient.getClient()) }()
-    private lazy var realtime: Realtime = { Realtime(appwriteClient.getClient()) }()
-    private let logger = Logger(subsystem: "background", category: "UserRepository")
+    private lazy var database = Firestore.firestore().collection("Alters")
+    private let logger = Logger(subsystem: "AlterRepository", category: "background")
     
     func searchUserAlters(userId: String, search: String) async -> [AlterModel] {
         do {
-            let documents = try await database.listDocuments(
-                databaseId: appwriteClient.getDatabaseId(),
-                collectionId: appwriteClient.getAlterRepisotry(),
-                queries: [
-                    Query.equal("profileId", value: userId),
-                    Query.search("text_search", value: search)
-                ]
-            )
+            let documents = try await database
+                .whereField("profileId", isEqualTo: userId)
+                .whereField("name", arrayContains: search)
+                .getDocuments()
             
             if (documents.documents.isEmpty) {
                 return []
             }
             
-            return documents.documents.map { alter in
-                return AlterModel(fromMap: alter.data)
+            return documents.documents.compactMap { record in
+                RepositoryUtils.decodeObject(AlterModel.self, data: record.data())
             }
+        
         } catch {
             logger.error("Unable to search alters: \(error.localizedDescription)")
             return []
         }
     }
     
-    func getAltersById(id: String) async ->AlterModel? {
+    func getAltersById(id: String) async -> AlterModel? {
+        if (id.isEmpty) {
+            return nil
+        }
+        
         do {
-            let documents = try await database.listDocuments(
-                databaseId: appwriteClient.getDatabaseId(),
-                collectionId: appwriteClient.getAlterRepisotry(),
-                queries: [
-                    Query.equal("id", value: id)
-                ]
-            )
-            if (documents.documents.isEmpty) {
+            let docSnapshot = try await database.document(id).getDocument()
+            
+            if (!docSnapshot.exists) {
                 return nil
-            } else {
-                return AlterModel(fromMap: documents.documents.first!.data)
             }
+            
+            return RepositoryUtils.decodeObject(AlterModel.self, data: docSnapshot.data()!)
         } catch {
             logger.error("Unable to get alters by id \(error.localizedDescription)")
             return nil
@@ -62,94 +56,31 @@ class AlterRepository {
     
     func listenToAltersForUser(userId: String) async -> AsyncStream<[AlterModel]> {
         return AsyncStream([AlterModel].self) { cont in
-            Task {
-                let initialAlters = await self.getAltersForUser(lastAlterId: nil, userId: userId)
-                cont.yield(initialAlters)
-            }
-            _ = realtime.subscribe(
-                channel: "databases.\(appwriteClient.getDatabaseId()).collections.\(appwriteClient.getAlterRepisotry()).documents",
-                callback: { data in
-                    if (data.events?.isEmpty == false) {
-                        Task.detached {
-                            let alterUpdates = await self.getAltersForUser(lastAlterId: nil, userId: userId)
-                            cont.yield(alterUpdates)
-                        }
+            database
+                .whereField("profileId", isEqualTo: userId)
+                .addSnapshotListener { snapshot, error in
+                    if (error != nil) {
+                        self.logger.error("Unable to get front records: \(error.debugDescription)")
+                        cont.yield([])
                     }
+                    
+                    let alterRecords = snapshot?.documents.compactMap { record in
+                        RepositoryUtils.decodeObject(AlterModel.self, data: record.data())
+                    }
+                    cont.yield(alterRecords ?? [])
                 }
-            )
-        }
-    }
-    
-    func getAltersForUser(lastAlterId: String?, userId: String) async -> [AlterModel] {
-        do {
-            var querys = [Query.equal("profileId", value: userId)]
-            if (lastAlterId != nil) {
-                querys.append(Query.cursorAfter(lastAlterId!))
-            }
-            let documents = try await database.listDocuments(
-                databaseId: appwriteClient.getDatabaseId(),
-                collectionId: appwriteClient.getAlterRepisotry(),
-                queries: querys
-            )
-            return documents.documents.map{ record in
-                AlterModel.init(fromMap: record.data)
-            }
-        } catch {
-            logger.error("Unable to get alters \(error.localizedDescription)")
-            return []
         }
     }
     
     func saveAlter(alterModel: AlterModel, userId: String) async {
         do {
-            _ = try await database.getDocument(databaseId: appwriteClient.getDatabaseId(), collectionId: appwriteClient.getAlterRepisotry(), documentId: alterModel.id)
-            await updateAlter(alterModel: alterModel, userId: userId)
-        } catch {
-            // new user
-            await createAlter(alterModel: alterModel, userId: userId)
-        }
-    }
-    
-    private func updateAlter(alterModel: AlterModel, userId: String) async {
-        do {
-            let data = try JSONEncoder().encode(alterModel)
-            let jsonDict = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
-            _ = try await database.updateDocument(
-                databaseId: appwriteClient.getDatabaseId(),
-                collectionId: appwriteClient.getAlterRepisotry(),
-                documentId: alterModel.id,
-                data: jsonDict,
-                permissions: [
-                    Permission.read(Role.team(userId)),
-                    Permission.delete(Role.user(userId)),
-                    Permission.write(Role.user(userId)),
-                    Permission.update(Role.user(userId))
-                ]
-            )
-        } catch {
-            logger.error("Unable to update alter: \(error.localizedDescription)")
-        }
-    }
-    
-    private func createAlter(alterModel: AlterModel, userId: String) async {
-        do {
-            let data = try JSONEncoder().encode(alterModel)
-            if let jsonDict = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
-                _ = try await database.createDocument(
-                    databaseId: appwriteClient.getDatabaseId(),
-                    collectionId: appwriteClient.getAlterRepisotry(),
-                    documentId: alterModel.id,
-                    data: jsonDict,
-                    permissions: [
-                        Permission.read(Role.team(userId)),
-                        Permission.delete(Role.user(userId)),
-                        Permission.write(Role.user(userId)),
-                        Permission.update(Role.user(userId))
-                    ]
-                )
+            let foundAtler = database.document(alterModel.id)
+            let jsonData = RepositoryUtils.encodeObject(data: alterModel)
+            if (jsonData != nil) {
+                try await foundAtler.setData(jsonData!, merge: true)
             }
         } catch {
-            logger.error("Unale to create alter: \(error.localizedDescription)")
+            logger.error("Unabel to save user: \(error.localizedDescription)")
         }
     }
 }

@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import Appwrite
 
 struct RootView: View {
     
@@ -32,7 +31,6 @@ struct RootView: View {
                     }
                 }
             )
-            .registerOAuthHandler()
     }
 }
 

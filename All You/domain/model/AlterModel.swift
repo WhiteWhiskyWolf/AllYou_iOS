@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import JSONCodable
 
 struct AlterModel: Codable {
     let id: String
@@ -27,16 +26,5 @@ struct AlterModel: Codable {
         self.alterRole = alterRole
         self.alterColor = alterColor
         self.alterProfilePhoto = alterProfilePhoto
-    }
-    
-    init(fromMap: [String: AnyCodable]) {
-        self.id = fromMap["$id"]?.value as! String
-        self.profileId = fromMap["profileId"]?.value as! String
-        self.alterName = fromMap["alterName"]?.value as? String
-        self.alterPronouns = fromMap["alterPronouns"]?.value as? String
-        self.alterDescription = fromMap["alterDescription"]?.value as? String
-        self.alterRole = fromMap["alterRole"]?.value as? String
-        self.alterColor = fromMap["alterColor"]?.value as! String
-        self.alterProfilePhoto = fromMap["alterProfilePhoto"]?.value as? String
     }
 }

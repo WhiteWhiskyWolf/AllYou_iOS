@@ -6,26 +6,26 @@
 //
 
 import Foundation
-import Appwrite
 import FirebaseAuth
 import Firebase
 import GoogleSignIn
 
 class AuthenticationRepository {
-    @Service var appwriteClient: AppwriteClient
-    private lazy var account: Account = { Account(appwriteClient.getClient()) }()
     
     func getUserId() async -> String? {
-        do {
-            let account = try await account.get()
-            return account.id
-        } catch {
-            return nil
-        }
+        return Auth.auth().currentUser?.uid
     }
     
-    func isSignedIn() async -> Bool {
-        return Auth.auth().currentUser != nil
+    func isSignedIn() -> AsyncStream<Bool> {
+        AsyncStream(Bool.self) { cont in
+            Auth.auth().addStateDidChangeListener { auth, user in
+                if user != nil {
+                    cont.yield(true)
+                } else {
+                    cont.yield(false)
+                }
+            }
+        }
     }
     
     @MainActor
