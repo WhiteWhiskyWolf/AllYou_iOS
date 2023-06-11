@@ -100,31 +100,53 @@ class AlterRepository {
         }
     }
     
-    func saveAlter(alterModel: AlterModel) async {
+    func saveAlter(alterModel: AlterModel, userId: String) async {
         do {
             _ = try await database.getDocument(databaseId: appwriteClient.getDatabaseId(), collectionId: appwriteClient.getAlterRepisotry(), documentId: alterModel.id)
-            await updateAlter(alterModel: alterModel)
+            await updateAlter(alterModel: alterModel, userId: userId)
         } catch {
             // new user
-            await createAlter(alterModel: alterModel)
+            await createAlter(alterModel: alterModel, userId: userId)
         }
     }
     
-    private func updateAlter(alterModel: AlterModel) async {
+    private func updateAlter(alterModel: AlterModel, userId: String) async {
         do {
             let data = try JSONEncoder().encode(alterModel)
             let jsonDict = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
-            _ = try await database.updateDocument(databaseId: appwriteClient.getDatabaseId(), collectionId: appwriteClient.getAlterRepisotry(), documentId: alterModel.id, data: jsonDict)
+            _ = try await database.updateDocument(
+                databaseId: appwriteClient.getDatabaseId(),
+                collectionId: appwriteClient.getAlterRepisotry(),
+                documentId: alterModel.id,
+                data: jsonDict,
+                permissions: [
+                    Permission.read(Role.team(userId)),
+                    Permission.delete(Role.user(userId)),
+                    Permission.write(Role.user(userId)),
+                    Permission.update(Role.user(userId))
+                ]
+            )
         } catch {
             logger.error("Unable to update alter: \(error.localizedDescription)")
         }
     }
     
-    private func createAlter(alterModel: AlterModel) async {
+    private func createAlter(alterModel: AlterModel, userId: String) async {
         do {
             let data = try JSONEncoder().encode(alterModel)
             if let jsonDict = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
-                _ = try await database.createDocument(databaseId: appwriteClient.getDatabaseId(), collectionId: appwriteClient.getAlterRepisotry(), documentId: alterModel.id, data: jsonDict)
+                _ = try await database.createDocument(
+                    databaseId: appwriteClient.getDatabaseId(),
+                    collectionId: appwriteClient.getAlterRepisotry(),
+                    documentId: alterModel.id,
+                    data: jsonDict,
+                    permissions: [
+                        Permission.read(Role.team(userId)),
+                        Permission.delete(Role.user(userId)),
+                        Permission.write(Role.user(userId)),
+                        Permission.update(Role.user(userId))
+                    ]
+                )
             }
         } catch {
             logger.error("Unale to create alter: \(error.localizedDescription)")

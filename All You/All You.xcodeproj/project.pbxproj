@@ -42,9 +42,6 @@
 		030C22B02A13B5BE00625532 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22492A13B5BE00625532 /* UserModel.swift */; };
 		030C22B12A13B5BE00625532 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22492A13B5BE00625532 /* UserModel.swift */; };
 		030C22B22A13B5BE00625532 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C22492A13B5BE00625532 /* UserModel.swift */; };
-		030C22B32A13B5BE00625532 /* SignInWithAppleUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C224B2A13B5BE00625532 /* SignInWithAppleUseCase.swift */; };
-		030C22B42A13B5BE00625532 /* SignInWithAppleUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C224B2A13B5BE00625532 /* SignInWithAppleUseCase.swift */; };
-		030C22B52A13B5BE00625532 /* SignInWithAppleUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C224B2A13B5BE00625532 /* SignInWithAppleUseCase.swift */; };
 		030C22B62A13B5BE00625532 /* HasUserCompletedOnboardingUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C224C2A13B5BE00625532 /* HasUserCompletedOnboardingUseCase.swift */; };
 		030C22B72A13B5BE00625532 /* HasUserCompletedOnboardingUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C224C2A13B5BE00625532 /* HasUserCompletedOnboardingUseCase.swift */; };
 		030C22B82A13B5BE00625532 /* HasUserCompletedOnboardingUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C224C2A13B5BE00625532 /* HasUserCompletedOnboardingUseCase.swift */; };
@@ -224,8 +221,18 @@
 		030C23792A13FA9700625532 /* GetAlterByIDUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C23762A13FA9700625532 /* GetAlterByIDUseCase.swift */; };
 		030C237C2A13FBF100625532 /* AnimatedTabBar in Frameworks */ = {isa = PBXBuildFile; productRef = 030C237B2A13FBF100625532 /* AnimatedTabBar */; };
 		0313A2F02A16CBCD00FEC459 /* Appwrite in Frameworks */ = {isa = PBXBuildFile; productRef = 0313A2EF2A16CBCD00FEC459 /* Appwrite */; };
+		034D201F2A36123600A612B9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 034D201E2A36123600A612B9 /* GoogleService-Info.plist */; };
+		034D20222A36178D00A612B9 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 034D20212A36178D00A612B9 /* GoogleSignIn */; };
+		034D20242A36178D00A612B9 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 034D20232A36178D00A612B9 /* GoogleSignInSwift */; };
 		039948DC2A30F087007A7222 /* RemoveAlterFromFront.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039948DB2A30F087007A7222 /* RemoveAlterFromFront.swift */; };
 		039EB2852A3383E400672C2C /* AsyncAlgorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 039EB2842A3383E400672C2C /* AsyncAlgorithms */; };
+		039EB2872A33946A00672C2C /* TeamRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039EB2862A33946A00672C2C /* TeamRepository.swift */; };
+		039EB2882A33946A00672C2C /* TeamRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039EB2862A33946A00672C2C /* TeamRepository.swift */; };
+		039EB2892A33946A00672C2C /* TeamRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039EB2862A33946A00672C2C /* TeamRepository.swift */; };
+		039EB28C2A33C60A00672C2C /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 039EB28B2A33C60A00672C2C /* FirebaseAnalytics */; };
+		039EB28E2A33C60A00672C2C /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 039EB28D2A33C60A00672C2C /* FirebaseAuth */; };
+		039EB2902A33C60A00672C2C /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 039EB28F2A33C60A00672C2C /* FirebaseCrashlytics */; };
+		039EB2922A33C60A00672C2C /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 039EB2912A33C60A00672C2C /* FirebaseFirestore */; };
 		03EDEDB12A2E24A200CBCA78 /* SaveAlterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EDEDB02A2E24A200CBCA78 /* SaveAlterUseCase.swift */; };
 		03EDEDB32A2E2BAA00CBCA78 /* Appwrite.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03EDEDB22A2E2BAA00CBCA78 /* Appwrite.plist */; };
 		03EDEDB62A30BF0B00CBCA78 /* ProfilePhotoSate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EDEDB52A30BF0B00CBCA78 /* ProfilePhotoSate.swift */; };
@@ -275,7 +282,6 @@
 		030C22472A13B5BE00625532 /* FrontRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrontRecord.swift; sourceTree = "<group>"; };
 		030C22482A13B5BE00625532 /* AlterModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlterModel.swift; sourceTree = "<group>"; };
 		030C22492A13B5BE00625532 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
-		030C224B2A13B5BE00625532 /* SignInWithAppleUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInWithAppleUseCase.swift; sourceTree = "<group>"; };
 		030C224C2A13B5BE00625532 /* HasUserCompletedOnboardingUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HasUserCompletedOnboardingUseCase.swift; sourceTree = "<group>"; };
 		030C224D2A13B5BE00625532 /* GetCurrentUserUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCurrentUserUseCase.swift; sourceTree = "<group>"; };
 		030C224E2A13B5BE00625532 /* SaveOnboardingUserProfileUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveOnboardingUserProfileUseCase.swift; sourceTree = "<group>"; };
@@ -337,7 +343,10 @@
 		030C23722A13F9BA00625532 /* AlterSheetReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlterSheetReducer.swift; sourceTree = "<group>"; };
 		030C23762A13FA9700625532 /* GetAlterByIDUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAlterByIDUseCase.swift; sourceTree = "<group>"; };
 		030C237D2A1509DD00625532 /* All You.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "All You.entitlements"; sourceTree = "<group>"; };
+		034D201E2A36123600A612B9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		034D20252A3617E400A612B9 /* All-You-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "All-You-Info.plist"; sourceTree = SOURCE_ROOT; };
 		039948DB2A30F087007A7222 /* RemoveAlterFromFront.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveAlterFromFront.swift; sourceTree = "<group>"; };
+		039EB2862A33946A00672C2C /* TeamRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamRepository.swift; sourceTree = "<group>"; };
 		03EDEDB02A2E24A200CBCA78 /* SaveAlterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveAlterUseCase.swift; sourceTree = "<group>"; };
 		03EDEDB22A2E2BAA00CBCA78 /* Appwrite.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Appwrite.plist; sourceTree = "<group>"; };
 		03EDEDB52A30BF0B00CBCA78 /* ProfilePhotoSate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoSate.swift; sourceTree = "<group>"; };
@@ -357,9 +366,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				034D20242A36178D00A612B9 /* GoogleSignInSwift in Frameworks */,
 				0313A2F02A16CBCD00FEC459 /* Appwrite in Frameworks */,
+				034D20222A36178D00A612B9 /* GoogleSignIn in Frameworks */,
+				039EB28E2A33C60A00672C2C /* FirebaseAuth in Frameworks */,
 				030C237C2A13FBF100625532 /* AnimatedTabBar in Frameworks */,
+				039EB2902A33C60A00672C2C /* FirebaseCrashlytics in Frameworks */,
+				039EB28C2A33C60A00672C2C /* FirebaseAnalytics in Frameworks */,
 				039EB2852A3383E400672C2C /* AsyncAlgorithms in Frameworks */,
+				039EB2922A33C60A00672C2C /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +399,7 @@
 			isa = PBXGroup;
 			children = (
 				03EDEDB22A2E2BAA00CBCA78 /* Appwrite.plist */,
+				034D201E2A36123600A612B9 /* GoogleService-Info.plist */,
 				030C22102A13B2FE00625532 /* All You */,
 				030C22212A13B2FF00625532 /* All YouTests */,
 				030C222B2A13B2FF00625532 /* All YouUITests */,
@@ -404,6 +420,7 @@
 		030C22102A13B2FE00625532 /* All You */ = {
 			isa = PBXGroup;
 			children = (
+				034D20252A3617E400A612B9 /* All-You-Info.plist */,
 				030C237D2A1509DD00625532 /* All You.entitlements */,
 				030C228E2A13B5BE00625532 /* Assets.xcassets */,
 				030C228B2A13B5BE00625532 /* di */,
@@ -469,6 +486,7 @@
 				030C22432A13B5BE00625532 /* FrontRepository.swift */,
 				030C22442A13B5BE00625532 /* AlterRepository.swift */,
 				030C22452A13B5BE00625532 /* AppwriteClient.swift */,
+				039EB2862A33946A00672C2C /* TeamRepository.swift */,
 			);
 			path = repositories;
 			sourceTree = "<group>";
@@ -729,7 +747,6 @@
 			isa = PBXGroup;
 			children = (
 				030C22522A13B5BE00625532 /* IsUserSignedInUseCase.swift */,
-				030C224B2A13B5BE00625532 /* SignInWithAppleUseCase.swift */,
 				030C22512A13B5BE00625532 /* SignInWithGoogleUseCase.swift */,
 			);
 			path = authentication;
@@ -794,6 +811,12 @@
 				030C237B2A13FBF100625532 /* AnimatedTabBar */,
 				0313A2EF2A16CBCD00FEC459 /* Appwrite */,
 				039EB2842A3383E400672C2C /* AsyncAlgorithms */,
+				039EB28B2A33C60A00672C2C /* FirebaseAnalytics */,
+				039EB28D2A33C60A00672C2C /* FirebaseAuth */,
+				039EB28F2A33C60A00672C2C /* FirebaseCrashlytics */,
+				039EB2912A33C60A00672C2C /* FirebaseFirestore */,
+				034D20212A36178D00A612B9 /* GoogleSignIn */,
+				034D20232A36178D00A612B9 /* GoogleSignInSwift */,
 			);
 			productName = "All You";
 			productReference = 030C220E2A13B2FE00625532 /* All You.app */;
@@ -871,6 +894,8 @@
 				030C237A2A13FBF100625532 /* XCRemoteSwiftPackageReference "AnimatedTabBar" */,
 				0313A2EE2A16CBCD00FEC459 /* XCRemoteSwiftPackageReference "sdk-for-apple" */,
 				039EB2832A3383E400672C2C /* XCRemoteSwiftPackageReference "swift-async-algorithms" */,
+				039EB28A2A33C60A00672C2C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				034D20202A36178D00A612B9 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 			);
 			productRefGroup = 030C220F2A13B2FE00625532 /* Products */;
 			projectDirPath = "";
@@ -890,6 +915,7 @@
 			files = (
 				03EDEDB32A2E2BAA00CBCA78 /* Appwrite.plist in Resources */,
 				030C234F2A13B5BE00625532 /* Preview Assets.xcassets in Resources */,
+				034D201F2A36123600A612B9 /* GoogleService-Info.plist in Resources */,
 				030C22192A13B2FF00625532 /* Preview Assets.xcassets in Resources */,
 				030C234C2A13B5BE00625532 /* Assets.xcassets in Resources */,
 			);
@@ -945,7 +971,6 @@
 				03EDEDC82A30C78900CBCA78 /* ProfilePhotoComponentSideEffects.swift in Sources */,
 				030C22122A13B2FE00625532 /* All_YouApp.swift in Sources */,
 				030C231F2A13B5BE00625532 /* LoginReducer.swift in Sources */,
-				030C22B32A13B5BE00625532 /* SignInWithAppleUseCase.swift in Sources */,
 				030C22922A13B5BE00625532 /* SequenceUtils.swift in Sources */,
 				030C235F2A13BCE000625532 /* AlterSheet.swift in Sources */,
 				030C236F2A13F99A00625532 /* AlterSheetSideEffects.swift in Sources */,
@@ -972,6 +997,7 @@
 				030C22AD2A13B5BE00625532 /* AlterModel.swift in Sources */,
 				030C23312A13B5BE00625532 /* OnboardingState.swift in Sources */,
 				03EDEDBA2A30BF6400CBCA78 /* ProfilePhotoReducer.swift in Sources */,
+				039EB2872A33946A00672C2C /* TeamRepository.swift in Sources */,
 				030C232B2A13B5BE00625532 /* OnboardingReducer.swift in Sources */,
 				030C22B62A13B5BE00625532 /* HasUserCompletedOnboardingUseCase.swift in Sources */,
 				030C23772A13FA9700625532 /* GetAlterByIDUseCase.swift in Sources */,
@@ -1013,7 +1039,6 @@
 			files = (
 				030C22AE2A13B5BE00625532 /* AlterModel.swift in Sources */,
 				030C22FF2A13B5BE00625532 /* RootActions.swift in Sources */,
-				030C22B42A13B5BE00625532 /* SignInWithAppleUseCase.swift in Sources */,
 				030C233E2A13B5BE00625532 /* Onboarding.swift in Sources */,
 				030C22D22A13B5BE00625532 /* FrontReducer.swift in Sources */,
 				030C23172A13B5BE00625532 /* LoginView.swift in Sources */,
@@ -1021,6 +1046,7 @@
 				030C22ED2A13B5BE00625532 /* ProfilePhotoComponent.swift in Sources */,
 				030C234A2A13B5BE00625532 /* PropertyWrapper.swift in Sources */,
 				030C23232A13B5BE00625532 /* LoginSideEffects.swift in Sources */,
+				039EB2882A33946A00672C2C /* TeamRepository.swift in Sources */,
 				030C23112A13B5BE00625532 /* UserUIModel.swift in Sources */,
 				030C23702A13F99A00625532 /* AlterSheetSideEffects.swift in Sources */,
 				030C22B72A13B5BE00625532 /* HasUserCompletedOnboardingUseCase.swift in Sources */,
@@ -1096,6 +1122,7 @@
 				030C22BB2A13B5BE00625532 /* GetCurrentUserUseCase.swift in Sources */,
 				030C23272A13B5BE00625532 /* SavingProfile.swift in Sources */,
 				030C22D02A13B5BE00625532 /* ChatView.swift in Sources */,
+				039EB2892A33946A00672C2C /* TeamRepository.swift in Sources */,
 				030C23652A13F89500625532 /* AlterSheetState.swift in Sources */,
 				030C22C72A13B5BE00625532 /* SignInWithGoogleUseCase.swift in Sources */,
 				030C22A32A13B5BE00625532 /* FrontRepository.swift in Sources */,
@@ -1103,7 +1130,6 @@
 				030C22CD2A13B5BE00625532 /* HomeView.swift in Sources */,
 				030C23452A13B5BE00625532 /* NotificationsPermissions.swift in Sources */,
 				030C23212A13B5BE00625532 /* LoginReducer.swift in Sources */,
-				030C22B52A13B5BE00625532 /* SignInWithAppleUseCase.swift in Sources */,
 				030C22942A13B5BE00625532 /* SequenceUtils.swift in Sources */,
 				030C23612A13BCE000625532 /* AlterSheet.swift in Sources */,
 				030C23712A13F99A00625532 /* AlterSheetSideEffects.swift in Sources */,
@@ -1299,6 +1325,7 @@
 				DEVELOPMENT_TEAM = LM7DLL82HX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "All-You-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1309,7 +1336,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.whitewhiskywolf.AllYou-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = com.whitewhiskywolf.allyou.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1329,6 +1356,7 @@
 				DEVELOPMENT_TEAM = LM7DLL82HX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "All-You-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1339,7 +1367,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.whitewhiskywolf.AllYou-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = com.whitewhiskywolf.allyou.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1481,12 +1509,28 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		034D20202A36178D00A612B9 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 		039EB2832A3383E400672C2C /* XCRemoteSwiftPackageReference "swift-async-algorithms" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/apple/swift-async-algorithms";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 0.1.0;
+			};
+		};
+		039EB28A2A33C60A00672C2C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -1502,10 +1546,40 @@
 			package = 0313A2EE2A16CBCD00FEC459 /* XCRemoteSwiftPackageReference "sdk-for-apple" */;
 			productName = Appwrite;
 		};
+		034D20212A36178D00A612B9 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 034D20202A36178D00A612B9 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		034D20232A36178D00A612B9 /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 034D20202A36178D00A612B9 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
 		039EB2842A3383E400672C2C /* AsyncAlgorithms */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 039EB2832A3383E400672C2C /* XCRemoteSwiftPackageReference "swift-async-algorithms" */;
 			productName = AsyncAlgorithms;
+		};
+		039EB28B2A33C60A00672C2C /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 039EB28A2A33C60A00672C2C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		039EB28D2A33C60A00672C2C /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 039EB28A2A33C60A00672C2C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		039EB28F2A33C60A00672C2C /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 039EB28A2A33C60A00672C2C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		039EB2912A33C60A00672C2C /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 039EB28A2A33C60A00672C2C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

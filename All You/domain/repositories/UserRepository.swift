@@ -8,6 +8,7 @@
 import Foundation
 import Appwrite
 import os
+import Firebase
 
 class UserRepsoitory {
     @Service var appwriteClient: AppwriteClient
