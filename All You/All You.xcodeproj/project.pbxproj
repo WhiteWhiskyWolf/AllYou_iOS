@@ -230,6 +230,8 @@
 		034D201F2A36123600A612B9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 034D201E2A36123600A612B9 /* GoogleService-Info.plist */; };
 		034D20222A36178D00A612B9 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 034D20212A36178D00A612B9 /* GoogleSignIn */; };
 		034D20242A36178D00A612B9 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 034D20232A36178D00A612B9 /* GoogleSignInSwift */; };
+		036D380A2A376EAB00EADBBE /* AlgoliaSearchClient in Frameworks */ = {isa = PBXBuildFile; productRef = 036D38092A376EAB00EADBBE /* AlgoliaSearchClient */; };
+		036D380C2A376F3800EADBBE /* algolia.plist in Resources */ = {isa = PBXBuildFile; fileRef = 036D380B2A376F3800EADBBE /* algolia.plist */; };
 		039948DC2A30F087007A7222 /* RemoveAlterFromFront.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039948DB2A30F087007A7222 /* RemoveAlterFromFront.swift */; };
 		039EB2852A3383E400672C2C /* AsyncAlgorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 039EB2842A3383E400672C2C /* AsyncAlgorithms */; };
 		03EDEDB12A2E24A200CBCA78 /* SaveAlterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EDEDB02A2E24A200CBCA78 /* SaveAlterUseCase.swift */; };
@@ -343,6 +345,7 @@
 		030C237D2A1509DD00625532 /* All You.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "All You.entitlements"; sourceTree = "<group>"; };
 		034D201E2A36123600A612B9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		034D20262A361E4A00A612B9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		036D380B2A376F3800EADBBE /* algolia.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = algolia.plist; sourceTree = "<group>"; };
 		039948DB2A30F087007A7222 /* RemoveAlterFromFront.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveAlterFromFront.swift; sourceTree = "<group>"; };
 		03EDEDB02A2E24A200CBCA78 /* SaveAlterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveAlterUseCase.swift; sourceTree = "<group>"; };
 		03EDEDB52A30BF0B00CBCA78 /* ProfilePhotoSate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoSate.swift; sourceTree = "<group>"; };
@@ -365,6 +368,7 @@
 				0305FB2F2A364DF8002EEA75 /* FirebaseMessaging in Frameworks */,
 				0305FB232A364DF8002EEA75 /* FirebaseAnalyticsSwift in Frameworks */,
 				034D20242A36178D00A612B9 /* GoogleSignInSwift in Frameworks */,
+				036D380A2A376EAB00EADBBE /* AlgoliaSearchClient in Frameworks */,
 				034D20222A36178D00A612B9 /* GoogleSignIn in Frameworks */,
 				0305FB2B2A364DF8002EEA75 /* FirebaseFirestore in Frameworks */,
 				030C237C2A13FBF100625532 /* AnimatedTabBar in Frameworks */,
@@ -399,6 +403,7 @@
 			isa = PBXGroup;
 			children = (
 				034D201E2A36123600A612B9 /* GoogleService-Info.plist */,
+				036D380B2A376F3800EADBBE /* algolia.plist */,
 				034D20262A361E4A00A612B9 /* Info.plist */,
 				030C22102A13B2FE00625532 /* All You */,
 				030C22212A13B2FF00625532 /* All YouTests */,
@@ -819,6 +824,7 @@
 				0305FB2C2A364DF8002EEA75 /* FirebaseFirestoreSwift */,
 				0305FB2E2A364DF8002EEA75 /* FirebaseMessaging */,
 				0305FB302A364DF8002EEA75 /* FirebaseStorage */,
+				036D38092A376EAB00EADBBE /* AlgoliaSearchClient */,
 			);
 			productName = "All You";
 			productReference = 030C220E2A13B2FE00625532 /* All You.app */;
@@ -897,6 +903,7 @@
 				039EB2832A3383E400672C2C /* XCRemoteSwiftPackageReference "swift-async-algorithms" */,
 				034D20202A36178D00A612B9 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 				0305FB1F2A364DF8002EEA75 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				036D38082A376EAB00EADBBE /* XCRemoteSwiftPackageReference "algoliasearch-client-swift" */,
 			);
 			productRefGroup = 030C220F2A13B2FE00625532 /* Products */;
 			projectDirPath = "";
@@ -914,6 +921,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				036D380C2A376F3800EADBBE /* algolia.plist in Resources */,
 				030C234F2A13B5BE00625532 /* Preview Assets.xcassets in Resources */,
 				034D201F2A36123600A612B9 /* GoogleService-Info.plist in Resources */,
 				030C22192A13B2FF00625532 /* Preview Assets.xcassets in Resources */,
@@ -1512,6 +1520,14 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		036D38082A376EAB00EADBBE /* XCRemoteSwiftPackageReference "algoliasearch-client-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/algolia/algoliasearch-client-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
 		039EB2832A3383E400672C2C /* XCRemoteSwiftPackageReference "swift-async-algorithms" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/apple/swift-async-algorithms";
@@ -1582,6 +1598,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 034D20202A36178D00A612B9 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
 			productName = GoogleSignInSwift;
+		};
+		036D38092A376EAB00EADBBE /* AlgoliaSearchClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 036D38082A376EAB00EADBBE /* XCRemoteSwiftPackageReference "algoliasearch-client-swift" */;
+			productName = AlgoliaSearchClient;
 		};
 		039EB2842A3383E400672C2C /* AsyncAlgorithms */ = {
 			isa = XCSwiftPackageProductDependency;

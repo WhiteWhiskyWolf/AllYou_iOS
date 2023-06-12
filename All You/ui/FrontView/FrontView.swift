@@ -64,7 +64,7 @@ private struct FrontView_Loaded: View {
             }
         )
         
-        VStack {
+        ScrollView {
             VStack(alignment: .leading) {
                 SearchBar(text: searchBinding) {
                     ProfilePhotoComponent(

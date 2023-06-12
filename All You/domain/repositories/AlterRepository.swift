@@ -8,29 +8,37 @@
 import Foundation
 import FirebaseFirestore
 import os
-import Combine
+import AlgoliaSearchClient
 
 class AlterRepository {
     private lazy var database = Firestore.firestore().collection("Alters")
+    private lazy var searchIndex = RepositoryUtils.getAgoliaClient().index(withName: "alter-search")
     private let logger = Logger(subsystem: "AlterRepository", category: "background")
     
     func searchUserAlters(userId: String, search: String) async -> [AlterModel] {
         do {
-            let documents = try await database
-                .whereField("profileId", isEqualTo: userId)
-                .whereField("name", arrayContains: search)
-                .getDocuments()
-            
-            if (documents.documents.isEmpty) {
-                return []
-            }
-            
-            return documents.documents.compactMap { record in
-                RepositoryUtils.decodeObject(AlterModel.self, data: record.data())
-            }
-        
+            return try await withCheckedThrowingContinuation({ cont in
+                var query = AlgoliaSearchClient.Query(search)
+                query.filters = "profileId:\(userId)"
+                
+                searchIndex.search(query: query) { result in
+                    switch(result) {
+                    case .success(let response):
+                        do {
+                            let results: [AlterModel] =  try response.extractHits()
+                            cont.resume(returning: results)
+                        } catch {
+                            self.logger.error("Unable to search: \(error.localizedDescription)")
+                            cont.resume(throwing: error)
+                        }
+                    case .failure(let error):
+                        self.logger.error("Unable to search alters: \(error.localizedDescription)")
+                        cont.resume(returning: [])
+                    }
+                }
+            })
         } catch {
-            logger.error("Unable to search alters: \(error.localizedDescription)")
+            logger.error("Unable to search: \(error.localizedDescription)")
             return []
         }
     }
