@@ -15,6 +15,6 @@ class UploadProfilePhotoUseCase {
         if (data != nil) {
             await profilePhotoRepository.createPhoto(id: id, data: data!)
         }
-        return id
+        return "\(id)_200x200"
     }
 }

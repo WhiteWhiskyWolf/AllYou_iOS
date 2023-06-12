@@ -54,7 +54,10 @@ private struct FrontView_Loaded: View {
     let dispatch: Dispatch<FrontActions>
     
     var body: some View {
-        let searchBinding = Binding(get: {searchString}, set: {dispatch(FrontActions.SearchAlter(searchString: $0))})
+        let searchBinding = Binding(
+            get: {searchString},
+            set: {dispatch(FrontActions.SearchAlter(searchString: $0))}
+        )
         let selectedAlterBinding = Binding(
             get: {selectedAlter != nil},
             set: { shouldClose in
