@@ -27,6 +27,25 @@ struct AlterSheetSideEffects {
             if case .Loaded(let alter, let isCurrentUser) = newState {
                 if isCurrentUser {
                     await saveAlterUseCase.invoke(alter: alter)
+                    let currentUser = await getCurrentUserUseCase.invoke()
+                    dispatch(
+                        .LoaedAlter(
+                            alter: AlterUIModel(
+                                id: UUID().uuidString,
+                                profileId: currentUser?.id ?? UUID().uuidString,
+                                hostId: alter.id,
+                                alterName: nil,
+                                alterPronouns: nil,
+                                alterDescription: nil,
+                                alterRole: nil,
+                                alterColor: "#7f9dbf",
+                                alterProfilePhoto: nil,
+                                isFronting: false,
+                                frontingDate: nil
+                            ),
+                            isCurrentUser: true
+                        )
+                    )
                 }
             }
         }
@@ -36,24 +55,6 @@ struct AlterSheetSideEffects {
         if case .SaveAlter = action {
             if case .Loaded(alter: let alter, _) = oldState {
                 await saveAlterUseCase.invoke(alter: alter)
-                let currentUser = await getCurrentUserUseCase.invoke()
-                dispatch(
-                    .LoaedAlter(
-                        alter: AlterUIModel(
-                            id: UUID().uuidString,
-                            profileId: currentUser?.id ?? UUID().uuidString,
-                            alterName: nil,
-                            alterPronouns: nil,
-                            alterDescription: nil,
-                            alterRole: nil,
-                            alterColor: "#7f9dbf",
-                            alterProfilePhoto: nil,
-                            isFronting: false,
-                            frontingDate: nil
-                        ),
-                        isCurrentUser: true
-                    )
-                )
             }
         }
     }
@@ -79,6 +80,7 @@ struct AlterSheetSideEffects {
                         alter: AlterUIModel(
                             id: UUID().uuidString,
                             profileId: currentUser?.id ?? UUID().uuidString,
+                            hostId: nil,
                             alterName: nil,
                             alterPronouns: nil,
                             alterDescription: nil,

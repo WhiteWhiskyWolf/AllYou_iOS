@@ -10,6 +10,7 @@ import Foundation
 struct AlterUIModel: Identifiable {
     let id: String
     let profileId: String
+    let hostId: String?
     let alterName: String?
     let alterPronouns: String?
     let alterDescription: String?
@@ -22,6 +23,7 @@ struct AlterUIModel: Identifiable {
     init(
         id: String,
         profileId: String,
+        hostId: String?,
         alterName: String?,
         alterPronouns: String?,
         alterDescription: String?,
@@ -33,6 +35,7 @@ struct AlterUIModel: Identifiable {
     ) {
         self.id = id
         self.profileId = profileId
+        self.hostId = hostId
         self.alterName = alterName
         self.alterPronouns = alterPronouns
         self.alterDescription = alterDescription
@@ -46,6 +49,7 @@ struct AlterUIModel: Identifiable {
     init(fromAlterModel: AlterModel, isFronting: Bool, frontingDate: Date?) {
         self.id = fromAlterModel.id
         self.profileId = fromAlterModel.profileId
+        self.hostId = fromAlterModel.hostId
         self.alterName = fromAlterModel.alterName
         self.alterPronouns = fromAlterModel.alterPronouns
         self.alterDescription = fromAlterModel.alterDescription
@@ -59,6 +63,7 @@ struct AlterUIModel: Identifiable {
     func copy(
         id: String? = nil,
         profileId: String? = nil,
+        hostId: String? = nil,
         alterName: String? = nil,
         alterPronouns: String? = nil,
         alterDescription: String? = nil,
@@ -71,6 +76,7 @@ struct AlterUIModel: Identifiable {
         return AlterUIModel(
             id: id ?? self.id,
             profileId: profileId ?? self.profileId,
+            hostId: hostId ?? self.hostId,
             alterName: alterName ?? self.alterName,
             alterPronouns: alterPronouns ?? self.alterPronouns,
             alterDescription: alterDescription ?? self.alterDescription,
@@ -86,6 +92,7 @@ struct AlterUIModel: Identifiable {
         return AlterModel(
             id: self.id,
             profileId: self.profileId,
+            hostId: self.hostId,
             alterName: self.alterName,
             alterPronouns: self.alterPronouns,
             alterDescription: self.alterDescription,

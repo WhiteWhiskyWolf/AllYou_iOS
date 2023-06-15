@@ -297,6 +297,7 @@ struct FrontView_Loaded_Previews: PreviewProvider {
                         AlterUIModel(
                             id: "test",
                             profileId: "test",
+                            hostId: nil,
                             alterName: "Test Alter",
                             alterPronouns: "He/Him",
                             alterDescription: "Test des",
@@ -309,6 +310,7 @@ struct FrontView_Loaded_Previews: PreviewProvider {
                         AlterUIModel(
                             id: "test",
                             profileId: "test",
+                            hostId: nil,
                             alterName: "Test Alter",
                             alterPronouns: "He/Him",
                             alterDescription: "Test des",
@@ -321,6 +323,7 @@ struct FrontView_Loaded_Previews: PreviewProvider {
                         AlterUIModel(
                             id: "test",
                             profileId: "test",
+                            hostId: nil,
                             alterName: "Test Alter",
                             alterPronouns: "He/Him",
                             alterDescription: "Test des",
@@ -333,6 +336,7 @@ struct FrontView_Loaded_Previews: PreviewProvider {
                         AlterUIModel(
                             id: "test",
                             profileId: "test",
+                            hostId: nil,
                             alterName: "Test Alter",
                             alterPronouns: "He/Him",
                             alterDescription: "Test des",

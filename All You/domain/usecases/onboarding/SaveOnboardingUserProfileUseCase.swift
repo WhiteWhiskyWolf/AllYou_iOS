@@ -43,6 +43,7 @@ class SaveOnboardingUserProfileUseCase {
                 let alterModel = AlterModel(
                     id: UUID().uuidString,
                     profileId: userModel.userId,
+                    hostId: nil,
                     alterName: systemName,
                     alterPronouns: systemPronouns,
                     alterDescription: nil,
@@ -55,6 +56,7 @@ class SaveOnboardingUserProfileUseCase {
                 let alterModel = AlterModel(
                     id: UUID().uuidString,
                     profileId: userModel.userId,
+                    hostId: nil,
                     alterName: alterName,
                     alterPronouns: alterPronouns,
                     alterDescription: alterDescription,

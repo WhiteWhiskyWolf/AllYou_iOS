@@ -645,11 +645,11 @@
 		030C227D2A13B5BE00625532 /* onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				030C22862A13B5BE00625532 /* system */,
+				030C22802A13B5BE00625532 /* state */,
 				030C227E2A13B5BE00625532 /* SavingProfile.swift */,
 				030C227F2A13B5BE00625532 /* WelcomePage.swift */,
-				030C22802A13B5BE00625532 /* state */,
 				030C22852A13B5BE00625532 /* SystemOnboarding.swift */,
-				030C22862A13B5BE00625532 /* system */,
 				030C22882A13B5BE00625532 /* Onboarding.swift */,
 				030C22892A13B5BE00625532 /* AlterOnboarding.swift */,
 				030C228A2A13B5BE00625532 /* NotificationsPermissions.swift */,

@@ -10,6 +10,7 @@ import Foundation
 struct AlterModel: Codable {
     let id: String
     let profileId: String
+    let hostId: String?
     let alterName: String?
     let alterPronouns: String?
     let alterDescription: String?
@@ -17,9 +18,10 @@ struct AlterModel: Codable {
     let alterColor: String
     let alterProfilePhoto: String?
     
-    init(id: String, profileId: String, alterName: String?, alterPronouns: String?, alterDescription: String?, alterRole: String?, alterColor: String, alterProfilePhoto: String?) {
+    init(id: String, profileId: String, hostId: String?, alterName: String?, alterPronouns: String?, alterDescription: String?, alterRole: String?, alterColor: String, alterProfilePhoto: String?) {
         self.id = id
         self.profileId = profileId
+        self.hostId = hostId
         self.alterName = alterName
         self.alterPronouns = alterPronouns
         self.alterDescription = alterDescription

@@ -139,8 +139,7 @@ private struct CurerntUserAlterSheet: View {
             
             Button(
                 action: {
-                    dispatch(AlterSheetActions.SaveAlter)
-                    onClose()
+                    dispatch(AlterSheetActions.SplitAlter)
                 },
                 label: {Text("Split")}
             ).buttonStyle(PrimaryButton())
@@ -178,6 +177,7 @@ struct AlterSheetCurrentUser_Previews: PreviewProvider {
                     alter: AlterUIModel(
                         id: "Test",
                         profileId: "test",
+                        hostId: nil,
                         alterName: "Test Alter",
                         alterPronouns: "He/him",
                         alterDescription: "test des",
@@ -205,6 +205,7 @@ struct FriendsCurrentUser_Previews: PreviewProvider {
                     alter: AlterUIModel(
                         id: "Test",
                         profileId: "test",
+                        hostId: nil,
                         alterName: "Test Alter",
                         alterPronouns: "He/him",
                         alterDescription: "test des",
