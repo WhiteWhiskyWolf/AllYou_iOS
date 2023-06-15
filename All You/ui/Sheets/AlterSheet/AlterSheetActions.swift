@@ -17,5 +17,6 @@ enum AlterSheetActions {
     case UpdateColor(color: String)
     case UpdateDescription(description: String)
     case UpdateRole(role: String)
+    case SplitAlter
     case SaveAlter
 }

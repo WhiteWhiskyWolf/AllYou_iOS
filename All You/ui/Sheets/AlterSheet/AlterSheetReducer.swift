@@ -49,6 +49,8 @@ struct AlterSheetReducer {
                 return AlterSheetState.Loaded(alter: alter.copy(alterRole: role), isCurrentUser: isCurrentUser)
             }
             return state
+        case .SplitAlter:
+            return state
         }
     }
 }

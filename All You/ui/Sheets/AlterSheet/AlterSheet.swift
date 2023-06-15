@@ -136,6 +136,18 @@ private struct CurerntUserAlterSheet: View {
                 .previewLayout(.sizeThatFits)
             
             Spacer()
+            
+            Button(
+                action: {
+                    dispatch(AlterSheetActions.SaveAlter)
+                    onClose()
+                },
+                label: {Text("Split")}
+            ).buttonStyle(PrimaryButton())
+            
+            Spacer()
+                .oneVertical()
+            
             Button(
                 action: {
                     dispatch(AlterSheetActions.SaveAlter)
