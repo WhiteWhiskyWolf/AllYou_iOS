@@ -39,6 +39,16 @@ struct AlterSheetReducer {
                 return AlterSheetState.Loaded(alter: alter.copy(alterProfilePhotoId: photoId), isCurrentUser: isCurrentUser)
             }
             return state
+        case .UpdateDescription(description: let description):
+            if case .Loaded(alter: let alter, isCurrentUser: let isCurrentUser) = state {
+                return AlterSheetState.Loaded(alter: alter.copy(alterDescription: description), isCurrentUser: isCurrentUser)
+            }
+            return state
+        case .UpdateRole(role: let role):
+            if case .Loaded(alter: let alter, isCurrentUser: let isCurrentUser) = state {
+                return AlterSheetState.Loaded(alter: alter.copy(alterRole: role), isCurrentUser: isCurrentUser)
+            }
+            return state
         }
     }
 }

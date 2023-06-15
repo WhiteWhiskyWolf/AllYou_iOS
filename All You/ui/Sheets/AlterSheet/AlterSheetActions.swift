@@ -15,5 +15,7 @@ enum AlterSheetActions {
     case UpdateName(name: String)
     case UpdatePronouns(pronouns: String)
     case UpdateColor(color: String)
+    case UpdateDescription(description: String)
+    case UpdateRole(role: String)
     case SaveAlter
 }

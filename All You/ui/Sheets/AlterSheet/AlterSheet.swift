@@ -88,6 +88,14 @@ private struct CurerntUserAlterSheet: View {
             get: {Color(hex: alter.alterColor)},
             set: { dispatch(AlterSheetActions.UpdateColor(color: $0.hexString())) }
         )
+        let descriptionBinding = Binding(
+            get: {alter.alterDescription ?? ""},
+            set: {dispatch(AlterSheetActions.UpdateDescription(description: $0))}
+        )
+        let roleBinding = Binding(
+            get: {alter.alterRole ?? ""},
+            set: {dispatch(AlterSheetActions.UpdateRole(role: $0))}
+        )
         VStack {
             HStack {
                 ProfileViewComponent(
@@ -115,6 +123,19 @@ private struct CurerntUserAlterSheet: View {
             
             Spacer()
                 .oneVertical()
+            
+            TextField("Alter Description", text: descriptionBinding, axis: .horizontal)
+                .textFieldStyle(OutlinedTextFieldStyle())
+                .previewLayout(.sizeThatFits)
+            
+            Spacer()
+                .oneVertical()
+            
+            TextField("Alter Role", text: roleBinding, axis: .horizontal)
+                .textFieldStyle(OutlinedTextFieldStyle())
+                .previewLayout(.sizeThatFits)
+            
+            Spacer()
             Button(
                 action: {
                     dispatch(AlterSheetActions.SaveAlter)
