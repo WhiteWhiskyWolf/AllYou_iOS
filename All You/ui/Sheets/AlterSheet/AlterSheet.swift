@@ -41,13 +41,28 @@ private struct AlterSheet_Internal: View {
         switch(state) {
         case .Loading:
             LoadingAlterSheet()
-        case .Loaded(let alter, isCurrentUser: let isCurrentUser):
+        case .Loaded(
+            alter: let alter,
+            host: let host,
+            isCurrentUser: let isCurrentUser,
+            displayHostSelection: let displayHostSelection):
+            let hostPopupBinding = Binding<Bool>(
+                get: {displayHostSelection},
+                set: {_ in dispatch(AlterSheetActions.SelectedHost(alterId: ""))}
+            )
             if (isCurrentUser) {
                 CurerntUserAlterSheet(
                     alter: alter,
+                    alterHost: host,
                     dispatch: dispatch,
                     onClose: onClose
-                )
+                ).popover(isPresented: hostPopupBinding) {
+                    HostPopup(
+                        onHostSelected: {hostId in
+                            dispatch(AlterSheetActions.SelectedHost(alterId: hostId))
+                        }
+                    )
+                }
             } else {
                 FriendAlterSheet(
                     alter: alter,
@@ -66,6 +81,7 @@ private struct LoadingAlterSheet: View {
 
 private struct CurerntUserAlterSheet: View {
     let alter: AlterUIModel
+    let alterHost: AlterUIModel?
     let dispatch: Dispatch<AlterSheetActions>
     let onClose: () -> Void
     
@@ -96,7 +112,7 @@ private struct CurerntUserAlterSheet: View {
             get: {alter.alterRole ?? ""},
             set: {dispatch(AlterSheetActions.UpdateRole(role: $0))}
         )
-        VStack {
+        VStack(alignment: .leading) {
             HStack {
                 ProfileViewComponent(
                     onPictueSelected: { data in
@@ -124,36 +140,65 @@ private struct CurerntUserAlterSheet: View {
             Spacer()
                 .oneVertical()
             
-            TextField("Alter Description", text: descriptionBinding, axis: .horizontal)
-                .textFieldStyle(OutlinedTextFieldStyle())
-                .previewLayout(.sizeThatFits)
+            Text("Host")
+            HStack {
+                if (alterHost == nil ) {
+                    Image(systemName: "person.fill")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 30, height: 30)
+                        .clipShape(Circle())
+                } else {
+                    ProfilePhotoComponent(
+                        imageId: alterHost!.alterProfilePhoto,
+                        name: alterHost!.alterName ?? "",
+                        color: alterHost!.alterColor,
+                        size: CGFloat(30)
+                    )
+                    Spacer()
+                        .oneHorizontal()
+                    Text(alterHost?.alterName ?? "Host Alter")
+                }
+            }
+            .onTapGesture {
+                dispatch(AlterSheetActions.SelectHost)
+            }
             
-            Spacer()
-                .oneVertical()
-            
-            TextField("Alter Role", text: roleBinding, axis: .horizontal)
-                .textFieldStyle(OutlinedTextFieldStyle())
-                .previewLayout(.sizeThatFits)
-            
-            Spacer()
-            
-            Button(
-                action: {
-                    dispatch(AlterSheetActions.SplitAlter)
-                },
-                label: {Text("Split")}
-            ).buttonStyle(PrimaryButton())
-            
-            Spacer()
-                .oneVertical()
-            
-            Button(
-                action: {
-                    dispatch(AlterSheetActions.SaveAlter)
-                    onClose()
-                },
-                label: {Text("Save")}
-            ).buttonStyle(PrimaryButton())
+            VStack {
+                Spacer()
+                    .oneVertical()
+                
+                TextField("Alter Description", text: descriptionBinding, axis: .horizontal)
+                    .textFieldStyle(OutlinedTextFieldStyle())
+                    .previewLayout(.sizeThatFits)
+                
+                Spacer()
+                    .oneVertical()
+                
+                TextField("Alter Role", text: roleBinding, axis: .horizontal)
+                    .textFieldStyle(OutlinedTextFieldStyle())
+                    .previewLayout(.sizeThatFits)
+                
+                Spacer()
+                
+                Button(
+                    action: {
+                        dispatch(AlterSheetActions.SplitAlter)
+                    },
+                    label: {Text("Split")}
+                ).buttonStyle(PrimaryButton())
+                
+                Spacer()
+                    .oneVertical()
+                
+                Button(
+                    action: {
+                        dispatch(AlterSheetActions.SaveAlter)
+                        onClose()
+                    },
+                    label: {Text("Save")}
+                ).buttonStyle(PrimaryButton())
+            }
         }
         .padding()
         .frame(maxHeight: .infinity)
@@ -175,7 +220,7 @@ struct AlterSheetCurrentUser_Previews: PreviewProvider {
             AlterSheet_Internal(
                 state: AlterSheetState.Loaded(
                     alter: AlterUIModel(
-                        id: "Test",
+                        id: "Test1",
                         profileId: "test",
                         hostId: nil,
                         alterName: "Test Alter",
@@ -187,7 +232,21 @@ struct AlterSheetCurrentUser_Previews: PreviewProvider {
                         isFronting: false,
                         frontingDate: Date.now
                     ),
-                    isCurrentUser: true
+                    host: AlterUIModel(
+                        id: "Test2",
+                        profileId: "test",
+                        hostId: nil,
+                        alterName: "Test Alter",
+                        alterPronouns: "He/him",
+                        alterDescription: "test des",
+                        alterRole: "test role",
+                        alterColor: "#4cdbe6",
+                        alterProfilePhoto: nil,
+                        isFronting: false,
+                        frontingDate: Date.now
+                    ),
+                    isCurrentUser: true,
+                    displayHostSelection: false
                 ),
                 dispatch: { _ in },
                 onClose: {}
@@ -203,7 +262,7 @@ struct FriendsCurrentUser_Previews: PreviewProvider {
             AlterSheet_Internal(
                 state: AlterSheetState.Loaded(
                     alter: AlterUIModel(
-                        id: "Test",
+                        id: "Test1",
                         profileId: "test",
                         hostId: nil,
                         alterName: "Test Alter",
@@ -215,7 +274,21 @@ struct FriendsCurrentUser_Previews: PreviewProvider {
                         isFronting: false,
                         frontingDate: Date.now
                     ),
-                    isCurrentUser: false
+                    host: AlterUIModel(
+                        id: "Test2",
+                        profileId: "test",
+                        hostId: nil,
+                        alterName: "Test Alter",
+                        alterPronouns: "He/him",
+                        alterDescription: "test des",
+                        alterRole: "test role",
+                        alterColor: "#4cdbe6",
+                        alterProfilePhoto: nil,
+                        isFronting: false,
+                        frontingDate: Date.now
+                    ),
+                    isCurrentUser: false,
+                    displayHostSelection: false
                 ),
                 dispatch: { _ in },
                 onClose: {}

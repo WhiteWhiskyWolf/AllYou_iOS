@@ -9,7 +9,7 @@ import Foundation
 
 enum AlterSheetActions {
     case LoadAlter(alterId: String)
-    case LoaedAlter(alter: AlterUIModel, isCurrentUser: Bool)
+    case LoaedAlter(alter: AlterUIModel, isCurrentUser: Bool, host: AlterUIModel?)
     case UploadPhoto(alterId: String, alterPhoto: Data)
     case UpdatePhotoId(photoId: String?)
     case UpdateName(name: String)
@@ -19,4 +19,6 @@ enum AlterSheetActions {
     case UpdateRole(role: String)
     case SplitAlter
     case SaveAlter
+    case SelectHost
+    case SelectedHost(alterId: String)
 }

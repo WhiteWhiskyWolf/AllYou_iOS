@@ -10,24 +10,24 @@ import Foundation
 struct AlterSheetReducer {
     let reducer: Reducer<AlterSheetState, AlterSheetActions> = { state, action in
         switch (action) {
-        case .LoadAlter(let alterId):
+        case .LoadAlter(alterId: let alterId):
             return state
-        case .LoaedAlter(let alter, let isCurrentUser):
-            return AlterSheetState.Loaded(alter: alter, isCurrentUser: isCurrentUser)
+        case .LoaedAlter(alter: let alter, isCurrentUser: let isCurrentUser, host: let host):
+            return AlterSheetState.Loaded(alter: alter, host: host, isCurrentUser: isCurrentUser, displayHostSelection: false)
         case .UpdateName(name: let name):
-            if case .Loaded(alter: let alter, isCurrentUser: let isCurrentUser) = state {
-                return AlterSheetState.Loaded(alter: alter.copy(alterName: name), isCurrentUser: isCurrentUser)
+            if case .Loaded(alter: let alter, host: let host, isCurrentUser: let isCurrentUser, displayHostSelection: let displayHostSelection) = state {
+                return AlterSheetState.Loaded(alter: alter.copy(alterName: name), host: host, isCurrentUser: isCurrentUser, displayHostSelection: displayHostSelection)
             }
             return state
         case .UpdatePronouns(pronouns: let pronouns):
-            if case .Loaded(alter: let alter, isCurrentUser: let isCurrentUser) = state {
-                return AlterSheetState.Loaded(alter: alter.copy(alterPronouns: pronouns), isCurrentUser: isCurrentUser)
+            if case .Loaded(alter: let alter, host: let host, isCurrentUser: let isCurrentUser, displayHostSelection: let displayHostSelection) = state {
+                return AlterSheetState.Loaded(alter: alter.copy(alterPronouns: pronouns), host: host, isCurrentUser: isCurrentUser, displayHostSelection: displayHostSelection)
             }
             return state
         
         case .UpdateColor(color: let color):
-            if case .Loaded(alter: let alter, isCurrentUser: let isCurrentUser) = state {
-                return AlterSheetState.Loaded(alter: alter.copy(alterColor: color), isCurrentUser: isCurrentUser)
+            if case .Loaded(alter: let alter, host: let host, isCurrentUser: let isCurrentUser, displayHostSelection: let displayHostSelection) = state {
+                return AlterSheetState.Loaded(alter: alter.copy(alterColor: color), host: host, isCurrentUser: isCurrentUser, displayHostSelection: displayHostSelection)
             }
             return state
         case .UploadPhoto(alterId: let alterId, alterPhoto: let alterPhoto):
@@ -35,21 +35,31 @@ struct AlterSheetReducer {
         case .SaveAlter:
             return AlterSheetState.Loading
         case .UpdatePhotoId(photoId: let photoId):
-            if case .Loaded(alter: let alter, isCurrentUser: let isCurrentUser) = state {
-                return AlterSheetState.Loaded(alter: alter.copy(alterProfilePhotoId: photoId), isCurrentUser: isCurrentUser)
+            if case .Loaded(alter: let alter, host: let host, isCurrentUser: let isCurrentUser, displayHostSelection: let displayHostSelection) = state {
+                return AlterSheetState.Loaded(alter: alter.copy(alterProfilePhotoId: photoId), host: host, isCurrentUser: isCurrentUser, displayHostSelection: displayHostSelection)
             }
             return state
         case .UpdateDescription(description: let description):
-            if case .Loaded(alter: let alter, isCurrentUser: let isCurrentUser) = state {
-                return AlterSheetState.Loaded(alter: alter.copy(alterDescription: description), isCurrentUser: isCurrentUser)
+            if case .Loaded(alter: let alter, host: let host, isCurrentUser: let isCurrentUser, displayHostSelection: let displayHostSelection) = state {
+                return AlterSheetState.Loaded(alter: alter.copy(alterDescription: description), host: host, isCurrentUser: isCurrentUser, displayHostSelection: displayHostSelection)
             }
             return state
         case .UpdateRole(role: let role):
-            if case .Loaded(alter: let alter, isCurrentUser: let isCurrentUser) = state {
-                return AlterSheetState.Loaded(alter: alter.copy(alterRole: role), isCurrentUser: isCurrentUser)
+            if case .Loaded(alter: let alter, host: let host, isCurrentUser: let isCurrentUser, displayHostSelection: let displayHostSelection) = state {
+                return AlterSheetState.Loaded(alter: alter.copy(alterRole: role), host: host, isCurrentUser: isCurrentUser, displayHostSelection: displayHostSelection)
             }
             return state
         case .SplitAlter:
+            return state
+        case .SelectHost:
+            if case .Loaded(alter: let alter, host: let host, isCurrentUser: let isCurrentUser, displayHostSelection: _) = state {
+                return AlterSheetState.Loaded(alter: alter, host: host, isCurrentUser: isCurrentUser, displayHostSelection: true)
+            }
+            return state
+        case .SelectedHost(alterId: _):
+            if case .Loaded(alter: let alter, host: let host, isCurrentUser: let isCurrentUser, displayHostSelection: _) = state {
+                return AlterSheetState.Loaded(alter: alter, host: host, isCurrentUser: isCurrentUser, displayHostSelection: false)
+            }
             return state
         }
     }

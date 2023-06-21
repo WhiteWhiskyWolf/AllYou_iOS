@@ -227,6 +227,11 @@
 		030C23782A13FA9700625532 /* GetAlterByIDUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C23762A13FA9700625532 /* GetAlterByIDUseCase.swift */; };
 		030C23792A13FA9700625532 /* GetAlterByIDUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030C23762A13FA9700625532 /* GetAlterByIDUseCase.swift */; };
 		030C237C2A13FBF100625532 /* AnimatedTabBar in Frameworks */ = {isa = PBXBuildFile; productRef = 030C237B2A13FBF100625532 /* AnimatedTabBar */; };
+		032D2CD52A435C220057BA8C /* HostPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032D2CD42A435C220057BA8C /* HostPopup.swift */; };
+		032D2CD72A435D9C0057BA8C /* HostPopupState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032D2CD62A435D9C0057BA8C /* HostPopupState.swift */; };
+		032D2CD92A435E2B0057BA8C /* HostPopupActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032D2CD82A435E2B0057BA8C /* HostPopupActions.swift */; };
+		032D2CDB2A43757A0057BA8C /* HostPopupReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032D2CDA2A43757A0057BA8C /* HostPopupReducer.swift */; };
+		032D2CDD2A4376220057BA8C /* HostPopupSideEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032D2CDC2A4376220057BA8C /* HostPopupSideEffects.swift */; };
 		034D201F2A36123600A612B9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 034D201E2A36123600A612B9 /* GoogleService-Info.plist */; };
 		034D20222A36178D00A612B9 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 034D20212A36178D00A612B9 /* GoogleSignIn */; };
 		034D20242A36178D00A612B9 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 034D20232A36178D00A612B9 /* GoogleSignInSwift */; };
@@ -343,6 +348,11 @@
 		030C23722A13F9BA00625532 /* AlterSheetReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlterSheetReducer.swift; sourceTree = "<group>"; };
 		030C23762A13FA9700625532 /* GetAlterByIDUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAlterByIDUseCase.swift; sourceTree = "<group>"; };
 		030C237D2A1509DD00625532 /* All You.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "All You.entitlements"; sourceTree = "<group>"; };
+		032D2CD42A435C220057BA8C /* HostPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostPopup.swift; sourceTree = "<group>"; };
+		032D2CD62A435D9C0057BA8C /* HostPopupState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostPopupState.swift; sourceTree = "<group>"; };
+		032D2CD82A435E2B0057BA8C /* HostPopupActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostPopupActions.swift; sourceTree = "<group>"; };
+		032D2CDA2A43757A0057BA8C /* HostPopupReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostPopupReducer.swift; sourceTree = "<group>"; };
+		032D2CDC2A4376220057BA8C /* HostPopupSideEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostPopupSideEffects.swift; sourceTree = "<group>"; };
 		034D201E2A36123600A612B9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		034D20262A361E4A00A612B9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		036D380B2A376F3800EADBBE /* algolia.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = algolia.plist; sourceTree = "<group>"; };
@@ -696,6 +706,7 @@
 		030C235C2A13BC5000625532 /* Sheets */ = {
 			isa = PBXGroup;
 			children = (
+				032D2CD32A435C150057BA8C /* HostPopup */,
 				030C235D2A13BC5700625532 /* AlterSheet */,
 			);
 			path = Sheets;
@@ -711,6 +722,18 @@
 				030C236E2A13F99A00625532 /* AlterSheetSideEffects.swift */,
 			);
 			path = AlterSheet;
+			sourceTree = "<group>";
+		};
+		032D2CD32A435C150057BA8C /* HostPopup */ = {
+			isa = PBXGroup;
+			children = (
+				032D2CD42A435C220057BA8C /* HostPopup.swift */,
+				032D2CD62A435D9C0057BA8C /* HostPopupState.swift */,
+				032D2CD82A435E2B0057BA8C /* HostPopupActions.swift */,
+				032D2CDA2A43757A0057BA8C /* HostPopupReducer.swift */,
+				032D2CDC2A4376220057BA8C /* HostPopupSideEffects.swift */,
+			);
+			path = HostPopup;
 			sourceTree = "<group>";
 		};
 		03EDEDB42A30BEE900CBCA78 /* profile */ = {
@@ -958,6 +981,7 @@
 			files = (
 				030C231C2A13B5BE00625532 /* LoginState.swift in Sources */,
 				0305FB1E2A363DC8002EEA75 /* RepositoryUtils.swift in Sources */,
+				032D2CDD2A4376220057BA8C /* HostPopupSideEffects.swift in Sources */,
 				030C22F22A13B5BE00625532 /* Buttons.swift in Sources */,
 				030C22D12A13B5BE00625532 /* FrontReducer.swift in Sources */,
 				030C230A2A13B5BE00625532 /* RootReducer.swift in Sources */,
@@ -984,6 +1008,7 @@
 				030C235F2A13BCE000625532 /* AlterSheet.swift in Sources */,
 				030C236F2A13F99A00625532 /* AlterSheetSideEffects.swift in Sources */,
 				030C22EC2A13B5BE00625532 /* ProfilePhotoComponent.swift in Sources */,
+				032D2CD52A435C220057BA8C /* HostPopup.swift in Sources */,
 				030C22B02A13B5BE00625532 /* UserModel.swift in Sources */,
 				030C22C22A13B5BE00625532 /* UploadProfilePhotoUseCase.swift in Sources */,
 				030C232E2A13B5BE00625532 /* OnboardingSideEffects.swift in Sources */,
@@ -1008,6 +1033,7 @@
 				030C232B2A13B5BE00625532 /* OnboardingReducer.swift in Sources */,
 				030C22B62A13B5BE00625532 /* HasUserCompletedOnboardingUseCase.swift in Sources */,
 				030C23772A13FA9700625532 /* GetAlterByIDUseCase.swift in Sources */,
+				032D2CD72A435D9C0057BA8C /* HostPopupState.swift in Sources */,
 				030C22D72A13B5BE00625532 /* FrontView.swift in Sources */,
 				030C22FE2A13B5BE00625532 /* RootActions.swift in Sources */,
 				030C229E2A13B5BE00625532 /* ProfilePhotoRepository.swift in Sources */,
@@ -1019,6 +1045,7 @@
 				030C22F82A13B5BE00625532 /* TextInput.swift in Sources */,
 				030C23192A13B5BE00625532 /* LoginActions.swift in Sources */,
 				030C23102A13B5BE00625532 /* UserUIModel.swift in Sources */,
+				032D2CDB2A43757A0057BA8C /* HostPopupReducer.swift in Sources */,
 				030C22FB2A13B5BE00625532 /* Colors.swift in Sources */,
 				030C22BC2A13B5BE00625532 /* SaveOnboardingUserProfileUseCase.swift in Sources */,
 				030C23492A13B5BE00625532 /* PropertyWrapper.swift in Sources */,
@@ -1026,6 +1053,7 @@
 				030C22D42A13B5BE00625532 /* FrontState.swift in Sources */,
 				030C23372A13B5BE00625532 /* SystemOnboarding.swift in Sources */,
 				030C23672A13F8E000625532 /* AlterSheetActions.swift in Sources */,
+				032D2CD92A435E2B0057BA8C /* HostPopupActions.swift in Sources */,
 				030C23342A13B5BE00625532 /* OnboardingActions.swift in Sources */,
 				030C22952A13B5BE00625532 /* ColorUtils.swift in Sources */,
 				030C22AA2A13B5BE00625532 /* FrontRecord.swift in Sources */,

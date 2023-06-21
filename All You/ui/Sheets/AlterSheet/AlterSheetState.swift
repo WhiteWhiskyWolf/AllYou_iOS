@@ -11,6 +11,8 @@ enum AlterSheetState {
     case Loading
     case Loaded(
         alter: AlterUIModel,
-        isCurrentUser: Bool
+        host: AlterUIModel?,
+        isCurrentUser: Bool,
+        displayHostSelection: Bool
     )
 }
