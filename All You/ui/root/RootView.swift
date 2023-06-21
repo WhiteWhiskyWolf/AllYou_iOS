@@ -15,7 +15,7 @@ struct RootView: View {
     init() {
         self.rootStore = Store(
             initialAction: .CheckAuth,
-            initialState: RootState(),
+            initialState: RootState.loading,
             reducer: RootReducer().reduce,
             sideEffects: RootSideEffects().sideEffects()
         )
@@ -39,16 +39,19 @@ private struct RootViewInternal: View {
     var dispatch: Dispatch<RootActions>
     
     var body: some View {
-        if (state.isLoggedIn && state.completedOnboarding) {
-            HomeView()
-        } else if (!state.completedOnboarding && state.isLoggedIn) {
-            Onboarding {
-                dispatch(RootActions.CheckAuth)
-            }
-        } else {
+        switch(state) {
+        case .loading:
+            LoadingView()
+        case .logIn:
             LoginView {
                 dispatch(RootActions.CheckAuth)
             }
+        case .onboarding:
+            Onboarding {
+                dispatch(RootActions.CheckAuth)
+            }
+        case .loggedIn:
+            HomeView()
         }
     }
 }

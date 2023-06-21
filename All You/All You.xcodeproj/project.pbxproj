@@ -232,6 +232,7 @@
 		032D2CD92A435E2B0057BA8C /* HostPopupActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032D2CD82A435E2B0057BA8C /* HostPopupActions.swift */; };
 		032D2CDB2A43757A0057BA8C /* HostPopupReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032D2CDA2A43757A0057BA8C /* HostPopupReducer.swift */; };
 		032D2CDD2A4376220057BA8C /* HostPopupSideEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032D2CDC2A4376220057BA8C /* HostPopupSideEffects.swift */; };
+		032D2CDF2A4397070057BA8C /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032D2CDE2A4397070057BA8C /* LoadingView.swift */; };
 		034D201F2A36123600A612B9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 034D201E2A36123600A612B9 /* GoogleService-Info.plist */; };
 		034D20222A36178D00A612B9 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 034D20212A36178D00A612B9 /* GoogleSignIn */; };
 		034D20242A36178D00A612B9 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 034D20232A36178D00A612B9 /* GoogleSignInSwift */; };
@@ -353,6 +354,7 @@
 		032D2CD82A435E2B0057BA8C /* HostPopupActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostPopupActions.swift; sourceTree = "<group>"; };
 		032D2CDA2A43757A0057BA8C /* HostPopupReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostPopupReducer.swift; sourceTree = "<group>"; };
 		032D2CDC2A4376220057BA8C /* HostPopupSideEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostPopupSideEffects.swift; sourceTree = "<group>"; };
+		032D2CDE2A4397070057BA8C /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		034D201E2A36123600A612B9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		034D20262A361E4A00A612B9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		036D380B2A376F3800EADBBE /* algolia.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = algolia.plist; sourceTree = "<group>"; };
@@ -619,6 +621,7 @@
 				030C226F2A13B5BE00625532 /* RootSideEffect.swift */,
 				030C22702A13B5BE00625532 /* RootState.swift */,
 				030C22712A13B5BE00625532 /* RootReducer.swift */,
+				032D2CDE2A4397070057BA8C /* LoadingView.swift */,
 			);
 			path = root;
 			sourceTree = "<group>";
@@ -1062,6 +1065,7 @@
 				030C233A2A13B5BE00625532 /* SystemOnbaordingState~.swift in Sources */,
 				03EDEDD02A30D6C200CBCA78 /* SetAlterToFrontUseCase.swift in Sources */,
 				030C22E02A13B5BE00625532 /* Store.swift in Sources */,
+				032D2CDF2A4397070057BA8C /* LoadingView.swift in Sources */,
 				030C23282A13B5BE00625532 /* WelcomePage.swift in Sources */,
 				03EDEDB12A2E24A200CBCA78 /* SaveAlterUseCase.swift in Sources */,
 				030C22DD2A13B5BE00625532 /* FrontSideEffects.swift in Sources */,

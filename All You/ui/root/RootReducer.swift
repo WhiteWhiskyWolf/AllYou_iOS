@@ -13,9 +13,14 @@ struct RootReducer {
         case .CheckAuth: do {
             return state
         }
-        case .AuthStatus(let isLoggedIn, let completedOnboarding): do {
-            return state.copy(isLoggedIn: isLoggedIn, completedOnboarding: completedOnboarding)
-        }
+        case .AuthStatus(let isLoggedIn, let completedOnboarding):
+            if (!isLoggedIn) {
+                return RootState.logIn
+            } else if (!completedOnboarding) {
+                return RootState.onboarding
+            } else {
+                return RootState.loggedIn
+            }
         }
     }
 }
