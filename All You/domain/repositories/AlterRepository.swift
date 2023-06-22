@@ -15,6 +15,8 @@ class AlterRepository {
     private lazy var searchIndex = RepositoryUtils.getAgoliaClient().index(withName: "alter-search")
     private let logger = Logger(subsystem: "AlterRepository", category: "background")
     
+    // MARK: - searchUserAlters
+    
     func searchUserAlters(userId: String, search: String) async -> [AlterModel] {
         do {
             return try await withCheckedThrowingContinuation({ cont in
@@ -43,6 +45,8 @@ class AlterRepository {
         }
     }
     
+    // MARK: - getAltersById
+    
     func getAltersById(id: String) async -> AlterModel? {
         if (id.isEmpty) {
             return nil
@@ -62,6 +66,8 @@ class AlterRepository {
         }
     }
     
+    // MARK: - listenToAltersForUser
+    
     func listenToAltersForUser(userId: String) async -> AsyncStream<[AlterModel]> {
         return AsyncStream([AlterModel].self) { cont in
             database
@@ -79,6 +85,33 @@ class AlterRepository {
                 }
         }
     }
+    
+    // MARK: - getSubAlters
+    
+    func getSubAltersForAlter(alterId: String) async -> [AlterModel] {
+        do {
+            return try await withCheckedThrowingContinuation({ cont in
+                database
+                    .whereField("hostId", isEqualTo: alterId)
+                    .getDocuments { snapshot, error in
+                        if (error != nil) {
+                            self.logger.error("Unable to get front records: \(error.debugDescription)")
+                            cont.resume(returning: [])
+                        }
+                        
+                        let alterRecords = snapshot?.documents.compactMap { record in
+                            RepositoryUtils.decodeObject(AlterModel.self, data: record.data())
+                        }
+                        cont.resume(returning: alterRecords ?? [])
+                    }
+            })
+        } catch {
+            logger.error("Unable to get sub alters: \(error.localizedDescription)")
+            return []
+        }
+    }
+    
+    // MARK: - Save Alters
     
     func saveAlter(alterModel: AlterModel, userId: String) async {
         do {

@@ -233,6 +233,12 @@
 		032D2CDB2A43757A0057BA8C /* HostPopupReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032D2CDA2A43757A0057BA8C /* HostPopupReducer.swift */; };
 		032D2CDD2A4376220057BA8C /* HostPopupSideEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032D2CDC2A4376220057BA8C /* HostPopupSideEffects.swift */; };
 		032D2CDF2A4397070057BA8C /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032D2CDE2A4397070057BA8C /* LoadingView.swift */; };
+		032D2CE22A4398A70057BA8C /* AlterGroupState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032D2CE12A4398A70057BA8C /* AlterGroupState.swift */; };
+		032D2CE42A43992D0057BA8C /* AlterGroupActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032D2CE32A43992D0057BA8C /* AlterGroupActions.swift */; };
+		032D2CE62A4399AA0057BA8C /* AlterGroupReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032D2CE52A4399AA0057BA8C /* AlterGroupReducer.swift */; };
+		032D2CE82A439A9C0057BA8C /* AlterGroupSideEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032D2CE72A439A9C0057BA8C /* AlterGroupSideEffects.swift */; };
+		032D2CEA2A43A9070057BA8C /* GetSubAltersUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032D2CE92A43A9070057BA8C /* GetSubAltersUseCase.swift */; };
+		032D2CEC2A43AA220057BA8C /* AlterGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032D2CEB2A43AA220057BA8C /* AlterGroup.swift */; };
 		034D201F2A36123600A612B9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 034D201E2A36123600A612B9 /* GoogleService-Info.plist */; };
 		034D20222A36178D00A612B9 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 034D20212A36178D00A612B9 /* GoogleSignIn */; };
 		034D20242A36178D00A612B9 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 034D20232A36178D00A612B9 /* GoogleSignInSwift */; };
@@ -240,6 +246,10 @@
 		036D380C2A376F3800EADBBE /* algolia.plist in Resources */ = {isa = PBXBuildFile; fileRef = 036D380B2A376F3800EADBBE /* algolia.plist */; };
 		039948DC2A30F087007A7222 /* RemoveAlterFromFront.swift in Sources */ = {isa = PBXBuildFile; fileRef = 039948DB2A30F087007A7222 /* RemoveAlterFromFront.swift */; };
 		039EB2852A3383E400672C2C /* AsyncAlgorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 039EB2842A3383E400672C2C /* AsyncAlgorithms */; };
+		03C37D2C2A4487E300E9A6D7 /* AlterViewActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C37D2B2A4487E300E9A6D7 /* AlterViewActions.swift */; };
+		03C37D2E2A44886100E9A6D7 /* AlterViewReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C37D2D2A44886100E9A6D7 /* AlterViewReducer.swift */; };
+		03C37D302A4489C000E9A6D7 /* AlterViewSideEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C37D2F2A4489C000E9A6D7 /* AlterViewSideEffects.swift */; };
+		03C37D322A448B2400E9A6D7 /* GetRootAltersUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C37D312A448B2400E9A6D7 /* GetRootAltersUseCase.swift */; };
 		03EDEDB12A2E24A200CBCA78 /* SaveAlterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EDEDB02A2E24A200CBCA78 /* SaveAlterUseCase.swift */; };
 		03EDEDB62A30BF0B00CBCA78 /* ProfilePhotoSate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EDEDB52A30BF0B00CBCA78 /* ProfilePhotoSate.swift */; };
 		03EDEDB82A30BF4200CBCA78 /* ProfilePhotoActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03EDEDB72A30BF4200CBCA78 /* ProfilePhotoActions.swift */; };
@@ -355,10 +365,20 @@
 		032D2CDA2A43757A0057BA8C /* HostPopupReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostPopupReducer.swift; sourceTree = "<group>"; };
 		032D2CDC2A4376220057BA8C /* HostPopupSideEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostPopupSideEffects.swift; sourceTree = "<group>"; };
 		032D2CDE2A4397070057BA8C /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		032D2CE12A4398A70057BA8C /* AlterGroupState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlterGroupState.swift; sourceTree = "<group>"; };
+		032D2CE32A43992D0057BA8C /* AlterGroupActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlterGroupActions.swift; sourceTree = "<group>"; };
+		032D2CE52A4399AA0057BA8C /* AlterGroupReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlterGroupReducer.swift; sourceTree = "<group>"; };
+		032D2CE72A439A9C0057BA8C /* AlterGroupSideEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlterGroupSideEffects.swift; sourceTree = "<group>"; };
+		032D2CE92A43A9070057BA8C /* GetSubAltersUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSubAltersUseCase.swift; sourceTree = "<group>"; };
+		032D2CEB2A43AA220057BA8C /* AlterGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlterGroup.swift; sourceTree = "<group>"; };
 		034D201E2A36123600A612B9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		034D20262A361E4A00A612B9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		036D380B2A376F3800EADBBE /* algolia.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = algolia.plist; sourceTree = "<group>"; };
 		039948DB2A30F087007A7222 /* RemoveAlterFromFront.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveAlterFromFront.swift; sourceTree = "<group>"; };
+		03C37D2B2A4487E300E9A6D7 /* AlterViewActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlterViewActions.swift; sourceTree = "<group>"; };
+		03C37D2D2A44886100E9A6D7 /* AlterViewReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlterViewReducer.swift; sourceTree = "<group>"; };
+		03C37D2F2A4489C000E9A6D7 /* AlterViewSideEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlterViewSideEffects.swift; sourceTree = "<group>"; };
+		03C37D312A448B2400E9A6D7 /* GetRootAltersUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRootAltersUseCase.swift; sourceTree = "<group>"; };
 		03EDEDB02A2E24A200CBCA78 /* SaveAlterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveAlterUseCase.swift; sourceTree = "<group>"; };
 		03EDEDB52A30BF0B00CBCA78 /* ProfilePhotoSate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoSate.swift; sourceTree = "<group>"; };
 		03EDEDB72A30BF4200CBCA78 /* ProfilePhotoActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoActions.swift; sourceTree = "<group>"; };
@@ -587,8 +607,12 @@
 		030C22602A13B5BE00625532 /* AlterView */ = {
 			isa = PBXGroup;
 			children = (
+				032D2CE02A4398990057BA8C /* AlterGroup */,
 				030C22612A13B5BE00625532 /* AlterViewState.swift */,
 				030C22622A13B5BE00625532 /* AlterView.swift */,
+				03C37D2B2A4487E300E9A6D7 /* AlterViewActions.swift */,
+				03C37D2D2A44886100E9A6D7 /* AlterViewReducer.swift */,
+				03C37D2F2A4489C000E9A6D7 /* AlterViewSideEffects.swift */,
 			);
 			path = AlterView;
 			sourceTree = "<group>";
@@ -739,6 +763,18 @@
 			path = HostPopup;
 			sourceTree = "<group>";
 		};
+		032D2CE02A4398990057BA8C /* AlterGroup */ = {
+			isa = PBXGroup;
+			children = (
+				032D2CE12A4398A70057BA8C /* AlterGroupState.swift */,
+				032D2CE32A43992D0057BA8C /* AlterGroupActions.swift */,
+				032D2CE52A4399AA0057BA8C /* AlterGroupReducer.swift */,
+				032D2CE72A439A9C0057BA8C /* AlterGroupSideEffects.swift */,
+				032D2CEB2A43AA220057BA8C /* AlterGroup.swift */,
+			);
+			path = AlterGroup;
+			sourceTree = "<group>";
+		};
 		03EDEDB42A30BEE900CBCA78 /* profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -807,6 +843,8 @@
 				030C23582A13B97E00625532 /* SearchAltersUseCase.swift */,
 				030C23762A13FA9700625532 /* GetAlterByIDUseCase.swift */,
 				03EDEDB02A2E24A200CBCA78 /* SaveAlterUseCase.swift */,
+				032D2CE92A43A9070057BA8C /* GetSubAltersUseCase.swift */,
+				03C37D312A448B2400E9A6D7 /* GetRootAltersUseCase.swift */,
 			);
 			path = alters;
 			sourceTree = "<group>";
@@ -996,6 +1034,7 @@
 				030C23252A13B5BE00625532 /* SavingProfile.swift in Sources */,
 				03EDEDB62A30BF0B00CBCA78 /* ProfilePhotoSate.swift in Sources */,
 				030C22CE2A13B5BE00625532 /* ChatView.swift in Sources */,
+				032D2CE22A4398A70057BA8C /* AlterGroupState.swift in Sources */,
 				030C23632A13F89500625532 /* AlterSheetState.swift in Sources */,
 				03EDEDB82A30BF4200CBCA78 /* ProfilePhotoActions.swift in Sources */,
 				03EDEDC62A30C71700CBCA78 /* ProfilePhotoComponentReducer.swift in Sources */,
@@ -1020,6 +1059,7 @@
 				030C22EF2A13B5BE00625532 /* ProfileViewComponent.swift in Sources */,
 				03EDEDBC2A30BFD800CBCA78 /* ProfilePhotoSideEffects.swift in Sources */,
 				030C22BF2A13B5BE00625532 /* GetUserAltersUseCase.swift in Sources */,
+				03C37D2C2A4487E300E9A6D7 /* AlterViewActions.swift in Sources */,
 				030C229B2A13B5BE00625532 /* AuthenticationRepository.swift in Sources */,
 				030C230D2A13B5BE00625532 /* SettingsView.swift in Sources */,
 				030C23592A13B97E00625532 /* SearchAltersUseCase.swift in Sources */,
@@ -1028,6 +1068,7 @@
 				030C22C82A13B5BE00625532 /* IsUserSignedInUseCase.swift in Sources */,
 				030C22982A13B5BE00625532 /* UserRepository.swift in Sources */,
 				030C23012A13B5BE00625532 /* RootView.swift in Sources */,
+				03C37D322A448B2400E9A6D7 /* GetRootAltersUseCase.swift in Sources */,
 				030C23072A13B5BE00625532 /* RootState.swift in Sources */,
 				030C22E92A13B5BE00625532 /* SearchBar.swift in Sources */,
 				030C22AD2A13B5BE00625532 /* AlterModel.swift in Sources */,
@@ -1036,12 +1077,15 @@
 				030C232B2A13B5BE00625532 /* OnboardingReducer.swift in Sources */,
 				030C22B62A13B5BE00625532 /* HasUserCompletedOnboardingUseCase.swift in Sources */,
 				030C23772A13FA9700625532 /* GetAlterByIDUseCase.swift in Sources */,
+				032D2CE42A43992D0057BA8C /* AlterGroupActions.swift in Sources */,
 				032D2CD72A435D9C0057BA8C /* HostPopupState.swift in Sources */,
 				030C22D72A13B5BE00625532 /* FrontView.swift in Sources */,
 				030C22FE2A13B5BE00625532 /* RootActions.swift in Sources */,
 				030C229E2A13B5BE00625532 /* ProfilePhotoRepository.swift in Sources */,
 				030C233D2A13B5BE00625532 /* Onboarding.swift in Sources */,
 				030C23162A13B5BE00625532 /* LoginView.swift in Sources */,
+				032D2CEC2A43AA220057BA8C /* AlterGroup.swift in Sources */,
+				032D2CEA2A43A9070057BA8C /* GetSubAltersUseCase.swift in Sources */,
 				030C23042A13B5BE00625532 /* RootSideEffect.swift in Sources */,
 				030C22F52A13B5BE00625532 /* Spacing.swift in Sources */,
 				039948DC2A30F087007A7222 /* RemoveAlterFromFront.swift in Sources */,
@@ -1053,8 +1097,11 @@
 				030C22BC2A13B5BE00625532 /* SaveOnboardingUserProfileUseCase.swift in Sources */,
 				030C23492A13B5BE00625532 /* PropertyWrapper.swift in Sources */,
 				03EDEDBE2A30C0E100CBCA78 /* GetProfilePhotoUseCase.swift in Sources */,
+				032D2CE62A4399AA0057BA8C /* AlterGroupReducer.swift in Sources */,
+				03C37D302A4489C000E9A6D7 /* AlterViewSideEffects.swift in Sources */,
 				030C22D42A13B5BE00625532 /* FrontState.swift in Sources */,
 				030C23372A13B5BE00625532 /* SystemOnboarding.swift in Sources */,
+				03C37D2E2A44886100E9A6D7 /* AlterViewReducer.swift in Sources */,
 				030C23672A13F8E000625532 /* AlterSheetActions.swift in Sources */,
 				032D2CD92A435E2B0057BA8C /* HostPopupActions.swift in Sources */,
 				030C23342A13B5BE00625532 /* OnboardingActions.swift in Sources */,
@@ -1064,6 +1111,7 @@
 				030C23732A13F9BB00625532 /* AlterSheetReducer.swift in Sources */,
 				030C233A2A13B5BE00625532 /* SystemOnbaordingState~.swift in Sources */,
 				03EDEDD02A30D6C200CBCA78 /* SetAlterToFrontUseCase.swift in Sources */,
+				032D2CE82A439A9C0057BA8C /* AlterGroupSideEffects.swift in Sources */,
 				030C22E02A13B5BE00625532 /* Store.swift in Sources */,
 				032D2CDF2A4397070057BA8C /* LoadingView.swift in Sources */,
 				030C23282A13B5BE00625532 /* WelcomePage.swift in Sources */,

@@ -7,7 +7,13 @@
 
 import Foundation
 
-struct AlterViewState {
-    let system: UserUIModel
-    let alters: [AlterUIModel]
+
+enum AlterViewState {
+    case loading
+    case loaded(
+        system: UserUIModel,
+        alters: [AlterUIModel],
+        search: String?,
+        filteredAlters: [AlterUIModel]
+    )
 }

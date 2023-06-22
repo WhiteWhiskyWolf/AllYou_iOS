@@ -47,6 +47,8 @@ extension All_YouApp {
         ServiceContainer.register(type: GetProfilePhotoUseCase.self, GetProfilePhotoUseCase())
         ServiceContainer.register(type: SetAlterToFrontUseCase.self, SetAlterToFrontUseCase())
         ServiceContainer.register(type: RemoveAlterFromFrontUseCase.self, RemoveAlterFromFrontUseCase())
+        ServiceContainer.register(type: GetSubAltersUseCase.self, GetSubAltersUseCase())
+        ServiceContainer.register(type: GetRootAltersUseCase.self, GetRootAltersUseCase())
     }
 }
 
