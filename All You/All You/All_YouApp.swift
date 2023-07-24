@@ -32,6 +32,7 @@ extension All_YouApp {
         ServiceContainer.register(type: AlterRepository.self, AlterRepository())
         ServiceContainer.register(type: ProfilePhotoRepository.self, ProfilePhotoRepository())
         ServiceContainer.register(type: FrontRepository.self, FrontRepository())
+        ServiceContainer.register(type: ThreadRepository.self, ThreadRepository())
         
         // MARK: Use Cases
         ServiceContainer.register(type: IsUserSignedInUseCase.self, IsUserSignedInUseCase())
@@ -49,6 +50,9 @@ extension All_YouApp {
         ServiceContainer.register(type: RemoveAlterFromFrontUseCase.self, RemoveAlterFromFrontUseCase())
         ServiceContainer.register(type: GetSubAltersUseCase.self, GetSubAltersUseCase())
         ServiceContainer.register(type: GetRootAltersUseCase.self, GetRootAltersUseCase())
+        ServiceContainer.register(type: GetAllVisibleAltersUseCase.self, GetAllVisibleAltersUseCase())
+        ServiceContainer.register(type: SaveThreadUseCase.self, SaveThreadUseCase())
+        ServiceContainer.register(type: GetVisibleSystemsUseCase.self, GetVisibleSystemsUseCase())
     }
 }
 

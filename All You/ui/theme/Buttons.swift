@@ -39,3 +39,13 @@ struct SecondaryButton: ButtonStyle {
             .clipShape(Capsule())
     }
 }
+
+struct SecondaryButtonSmall: ButtonStyle {
+    func makeBody(configuration: Self.Configuration) -> some View {
+        configuration.label
+            .padding()
+            .background(Color.secondary)
+            .foregroundColor(Color.onSecondary)
+            .clipShape(Capsule())
+    }
+}

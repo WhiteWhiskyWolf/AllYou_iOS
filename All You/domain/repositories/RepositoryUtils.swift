@@ -40,15 +40,15 @@ struct RepositoryUtils {
     
     static func getAgoliaClient() -> SearchClient {
         guard let filePath = Bundle.main.path(forResource: "algolia", ofType: "plist") else {
-            fatalError("Couldn't find file 'Appwrite.plist'.")
+            fatalError("Couldn't find file 'algolia.plist'.")
         }
         let plist = NSDictionary(contentsOfFile: filePath)
         
         guard let appId = plist?.object(forKey: "APP_ID") as? String else {
-            fatalError("Couldn't find key 'USER_REPO' in 'TMDB-Info.plist'.")
+            fatalError("Couldn't find key 'USER_REPO' in 'algolia.plist'.")
         }
         guard let apiKey = plist?.object(forKey: "API_KEY") as? String else {
-            fatalError("Couldn't find key 'USER_REPO' in 'TMDB-Info.plist'.")
+            fatalError("Couldn't find key 'USER_REPO' in 'algolia.plist'.")
         }
         
         return SearchClient(appID: ApplicationID(rawValue: appId), apiKey: APIKey(rawValue: apiKey))

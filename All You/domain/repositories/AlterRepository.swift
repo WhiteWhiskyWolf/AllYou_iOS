@@ -66,6 +66,21 @@ class AlterRepository {
         }
     }
     
+    // MARK: - getAltersForUser
+    func getAltersForUser(userId: String) async -> [AlterModel] {
+        do {
+            let documents = try await database
+                .whereField("profileId", isEqualTo: userId)
+                .getDocuments()
+            return documents.documents.compactMap { doc in
+                RepositoryUtils.decodeObject(AlterModel.self, data: doc.data())
+            }
+        } catch {
+            logger.error("Unable to get alters: \(error.localizedDescription)")
+            return []
+        }
+    }
+    
     // MARK: - listenToAltersForUser
     
     func listenToAltersForUser(userId: String) async -> AsyncStream<[AlterModel]> {

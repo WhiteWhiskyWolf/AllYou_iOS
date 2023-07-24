@@ -266,6 +266,8 @@ private struct FrontAltersView: View {
     }
 }
 
+// MARK: - Previews
+
 struct FrontView_Loading_Previews: PreviewProvider {
     static var previews: some View {
         ForEach(ColorScheme.allCases, id: \.self) {

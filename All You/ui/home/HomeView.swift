@@ -16,7 +16,7 @@ struct HomeView: View {
             TabView(selection: $selectedIndex){
                 FrontView()
                     .tag(0)
-                ChatView()
+                ThreadsView()
                     .tag(1)
                 AlterView()
                     .tag(2)
