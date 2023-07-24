@@ -14,7 +14,8 @@ enum NewThreadActions {
     case setThreadPhotoId(String)
     case toggleParticipant(alters: AlterUIModel)
     case toggleSystem(system: UserUIModel)
-    case setError(String?)
     case saveThread
     case search(searchString: String)
+    case setError(message: String)
+    case clearError
 }

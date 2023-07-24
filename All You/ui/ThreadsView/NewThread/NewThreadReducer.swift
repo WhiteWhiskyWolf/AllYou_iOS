@@ -30,12 +30,14 @@ struct NewThreadReducer {
             } else {
                 return state.copy(systemParticipants: state.systemParticipants + [system])
             }
-        case .setError(let error):
-            return state.copy(error: error)
         case .saveThread:
             return state
         case .search(searchString: let searchString):
             return state.copy(searchString: searchString)
+        case .clearError:
+            return state.copy(error: nil)
+        case .setError(message: let message):
+            return state.copy(error: message)
         }
     }
 }

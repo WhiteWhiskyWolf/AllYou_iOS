@@ -11,14 +11,14 @@ struct NewThreadView: View {
     @ObservedObject var store: Store<NewThreadState, NewThreadActions> = Store(
         initialAction: NewThreadActions.getAlters,
         initialState: NewThreadState(
-            error: nil,
             searchString: "",
             threadName: "",
             alters: [],
             systems: [],
             systemParticipants: [],
             alterParticipants: [],
-            threadPhotoId: nil
+            threadPhotoId: nil,
+            error: nil
         ),
         reducer: NewThreadReducer().reducer,
         sideEffects: NewThreadsSideEffects().sideEffects()
@@ -75,6 +75,11 @@ struct NewThreadView_Internal: View {
             Divider()
             
             SearchBar(text: searchBinding) {}
+            
+            if (state.error != nil) {
+                Text(state.error!)
+                    .foregroundColor(Color.error)
+            }
             
             ForEach(systemsWithAlters, id: \.id) { systemWithAlters in
                 let systemBinding = Binding<Bool>(
@@ -144,7 +149,6 @@ struct NewThreadView_Previews: PreviewProvider {
     static var previews: some View {
         NewThreadView_Internal(
             state: NewThreadState(
-                error: nil,
                 searchString: "test",
                 threadName: "Test Name",
                 alters: [
@@ -193,7 +197,8 @@ struct NewThreadView_Previews: PreviewProvider {
                 ],
                 systemParticipants: [],
                 alterParticipants: [],
-                threadPhotoId: nil
+                threadPhotoId: nil,
+                error: "Please select participants"
             ),
             dispatch: {_ in }
         )

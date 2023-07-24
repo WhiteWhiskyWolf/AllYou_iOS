@@ -8,7 +8,6 @@
 import Foundation
 
 struct NewThreadState {
-    let error: String?
     let searchString: String
     let threadName: String
     let alters: [AlterUIModel]
@@ -16,26 +15,27 @@ struct NewThreadState {
     let systemParticipants: [UserUIModel]
     let alterParticipants: [AlterUIModel]
     let threadPhotoId: String?
+    let error: String?
     
     func copy(
-        error: String? = nil,
         searchString: String? = nil,
         threadName: String? = nil,
         systems: [UserUIModel]? = nil,
         alters: [AlterUIModel]? = nil,
         systemParticipants: [UserUIModel]? = nil,
         alterParticipants: [AlterUIModel]? = nil,
-        threadPhotoId: String? = nil
+        threadPhotoId: String? = nil,
+        error: String? = nil
     ) -> NewThreadState {
         return NewThreadState(
-            error: error ?? self.error,
             searchString: searchString ?? self.searchString,
             threadName: threadName ?? self.threadName,
             alters: alters ?? self.alters,
             systems: systems ?? self.systems,
             systemParticipants: systemParticipants ?? self.systemParticipants,
             alterParticipants: alterParticipants ?? self.alterParticipants,
-            threadPhotoId: threadPhotoId ?? self.threadPhotoId
+            threadPhotoId: threadPhotoId ?? self.threadPhotoId,
+            error: error ?? self.error
         )
     }
 }
